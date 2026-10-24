@@ -88,6 +88,18 @@ for i, s in enumerate(picks["strip"]):
 R["STRIP_IMGS"] = "\n          ".join(strips)
 R["STRIP0"] = "photos/strip/0-w.jpg"
 R["STRIP_CAPTION0"] = esc(picks["strip"][0]["cap"])
+L = json.load(open(J("data", "links.json"), encoding="utf-8"))
+A = lambda key, text: f'<a href="{L[key]}">{text}</a>'
+gstr = []
+for i, s_ in enumerate(picks["gstrip"]):
+    wsrc, ww, wh = export(s_["file"], f"gstrip/{i}-w.jpg", 5.0, (1600, 320), s_["y"])
+    msrc, mw, mh = export(s_["file"], f"gstrip/{i}-m.jpg", 2.0, (1000, 500), s_["y"])
+    gstr.append(f'<img class="{"is-on" if i == 0 else ""}" src="{wsrc}" data-mobile="{msrc}" data-cap="{esc(s_["cap"])}" alt="{esc(s_["cap"])}" width="{ww}" height="{wh}"{"" if i == 0 else " loading=\"lazy\""}>')
+R["G_STRIP_IMGS"] = "\n          ".join(gstr)
+R["G_STRIP0"] = "photos/gstrip/0-w.jpg"
+R["G_STRIP_CAPTION0"] = esc(picks["gstrip"][0]["cap"])
+for k, key in {"APPLY": "gla-strath_2", "MATCH": "gla-uog_2", "FLY": "glenfinnan_0", "SETTLE": "gla-city_1"}.items():
+    R["GI_" + k] = export(key, f"intro/g-{k.lower()}.jpg", 4 / 3, (300, 225))[0]
 
 # Intro thumbs
 for k, key in picks["intro"].items():
@@ -139,10 +151,10 @@ R["MAP_SVG"] = (f'<svg class="map" id="map" viewBox="{vx:.1f} {vy:.1f} {vw:.1f} 
 
 # Verb panels
 VERBS = [
- ("apply", "Apply", "<p>Through NTU's GEM Explorer. You need two NTU semesters done, a CGPA of 3.3 or more, and no earlier in-person exchange. Rank your top three universities.</p><ul><li>Strathclyde takes nominations 1 March – 15 May for a September start, 15 September – 15 October for January.</li><li>Then Strathclyde invites you to apply online: passport, NTU transcript, class choices.</li></ul>"),
- ("match", "Match", "<p>Find past matches in CourseFinder, then submit each one in NTU's online course matching system.</p><ul><li>Strathclyde's rule: classes from at most two departments. Ours were flexible: one MAE student had MAE, EEE and DMEM approved.</li><li>Exchange grades count towards your AUs, not your CGPA.</li><li>Choices are provisional until you arrive, so keep backups.</li></ul>"),
- ("fly", "Fly", "<p>Get a UK ETA first: £20 on GOV.UK or the UK ETA app, usually decided within a day (allow 3 working days), valid 2 years.</p><ul><li>You enter as a Standard Visitor: study up to 6 months, no work or internships.</li><li>Carry your acceptance letter, accommodation details and proof of funds. Keep your boarding pass.</li><li>NTU first: briefing, indemnity letter, ISOS app, Travel Registry.</li></ul>"),
- ("settle", "Settle", "<p>Airport Express 500 to Buchanan Bus Station runs every 10 minutes, 24 hours. Collect keys at Lord Todd, where past students leave free plates and cutlery.</p><ul><li>Week one: UK SIM, Railcard, Monzo, ESNcard at the society fair (it sells out).</li><li>TJ Hughes in the St Enoch Centre for bedding and pans.</li><li>Go to every class in week 1: attendance rules differ.</li></ul>"),
+ ("apply", "Apply", f"<p>You apply through NTU's {A('gem_explorer', 'GEM Explorer')} on the {A('gem_portal', 'GEM Mobility Portal')}. You need two NTU semesters done, a CGPA of 3.3 or more, and no earlier in-person exchange. You rank three universities, and NTU allocates places by CGPA band, citizenship, your ranking and how many spots each school has.</p><ul><li>{A('strath_partners', 'Strathclyde takes nominations')} 1 March – 15 May for a September start and 15 September – 15 October for January. NTU does the nominating; you just wait for Strath's email.</li><li>Then you apply to Strath online with your passport, NTU transcript and class choices.</li></ul>"),
+ ("match", "Match", f"<p>Course matching is the part everyone panics about. Find past matches in {A('coursefinder', 'CourseFinder')}, then submit each one in NTU's {A('coursematching', 'online course matching system')} (both need your NTU login).</p><ul><li>Pick from Strath's {A('strath_classes', 'exchange class catalogue')} and check for timetable clashes yourself.</li><li>Officially Strath allows classes from at most two departments. Honestly, don't stress: NTU is known at Strath for being a headache to course-match, so the coordinators are flexible as long as most of your classes are in your primary department. One of us (MAE) had MAE, EEE and DMEM classes approved.</li><li>Exchange grades count towards your AUs, not your CGPA.</li></ul>"),
+ ("fly", "Fly", f"<p>Get a {A('eta', 'UK ETA')} before you fly: £20 on GOV.UK or the UK ETA app. It's usually decided within a day, but give it 3 working days. It lasts 2 years.</p><ul><li>You enter as a {A('visit_study', 'Standard Visitor')}, which lets you study for up to 6 months but not work, not even an unpaid internship.</li><li>Before you leave, do NTU's briefing, indemnity letter, ISOS app and {A('ntu_predep', 'Travel Registry')} declaration, and {A('mfa_eregister', 'eRegister with MFA')} for the trip.</li><li>At the border, carry your acceptance letter, accommodation details and proof of funds. Keep your boarding pass afterwards too.</li></ul>"),
+ ("settle", "Settle", f"<p>From the airport, take the {A('airport500', 'Airport Express 500')}. It runs every 10 minutes, 24 hours a day, to Buchanan Bus Station, about a 15-minute walk from the halls. Collect your keys at Lord Todd. Right after, there's a free market of stuff past students left behind (cutlery, plates, decor, storage), so take what you need.</p><ul><li>Week one: a {A('lebara', 'UK SIM')}, a {A('railcard1625', 'Railcard')}, {A('monzo', 'Monzo')}, and the {A('esncard', 'ESNcard')} at the society fair. Get it early: it sold out last time and wasn't restocked until the end of the semester.</li><li>Then TJ Hughes in the St Enoch Centre for bedding, pans and a laundry basket. Split an Uber back four ways and it's cheap.</li><li>Go to every class in week 1. Every lecturer takes attendance differently: QR code, password or paper.</li></ul>"),
 ]
 panels = []
 for vid, word, facts in VERBS:
@@ -202,6 +214,9 @@ P = [
   ("City Chambers", "Walk", "Tours Mon–Fri 10:30 and 14:30", "Free", None),
   ("Tennent's Brewery", "Walk", "1.5-hour tours", "From £17, 18+", None)]),
 ]
+PLACE_NOTE = {'Isle of Skye': "Easily the most scenic hike we did (Old Man of Storr), but you need luck with the weather or you'll get blown off the mountain.", 'Glencoe': "A must, even though it's annoying to get to.", 'Glenfinnan': "The Harry Potter viaduct. One of the ESN tours we'd recommend.", 'Dunkeld & Birnam': "One of my favourite places in Scotland. On a good weather day it's so scenic, very reconnect-with-nature vibes.", 'Aviemore & Rothiemurchus': 'Highly recommend. Outdoor heaven: trails, quad bikes, ziplining, horse riding.', 'Stirling': 'Very hilly, so give yourself time. If you pay for the castle, follow the free guided tour.', 'Falkirk': 'A very therapeutic walk along the canal from the Wheel to the Kelpies.', 'New Lanark': "A surreal place. It's a steep walk down from the station.", 'East Linton & Preston Mill': "Proper village vibes, farmers' markets and a very modern bakery.", 'Thurso & Wick': 'Only for the very adventurous: remote and peaceful, with a lovely coastal walk.', 'Isle of Arran': 'Absolutely beautiful, and close to school. I cannot recommend this island enough.', 'Inchcolm Island': 'An abandoned abbey on an uninhabited island. Queensferry, where the boat leaves, is a beautiful seaside town.', 'Puffins & North Berwick': 'Book fast when tickets drop: the cheap Puffin Express sold out in a day. We saw so many puffins, and seals too.', 'St Andrews': 'Go on a Sunday, when the Old Course opens to the public. Cheesy Toast Shack and Jannettas Gelateria are so good.', 'Culross': 'A small town that looks like the Italian countryside.', 'Edinburgh': "Calton Hill and its café are a nice chill spot. Bertie's might be the best fish and chips in Scotland.", 'Cathedral & Necropolis': 'Walkable from school, and great at golden hour.', 'Pollok Park & the Burrell': 'Highland cows up close, and a free art museum.'}
+PLACE_LINK = {'Glencoe': 'ember', 'Glenfinnan': 'glenfinnan', 'Loch Ness': 'urquhart', 'Dunkeld & Birnam': 'hermitage', 'Oban': 'staffa', 'Stirling': 'stirling_castle', 'Falkirk': 'falkirk_wheel', 'New Lanark': 'newlanark', 'Dunnottar Castle': 'dunnottar', 'East Linton & Preston Mill': 'prestonmill', 'Linlithgow': 'linlithgow', 'Isle of Arran': 'calmac_arran', 'Inchcolm Island': 'maidoftheforth', 'Puffins & North Berwick': 'seabird', 'Isle of May': 'isleofmay', 'Shetland': 'northlink', 'St Andrews': 'standrews_castle', 'Culross': 'culross', 'Anstruther & Fife Coastal Path': 'dayrider', 'Edinburgh': 'edinburgh_castle', "Giant's Causeway & Belfast": 'belfast923', 'West End & Kelvingrove': 'kelvingrove', 'Cathedral & Necropolis': 'necropolis', 'Pollok Park & the Burrell': 'burrell', 'Hunterian Museum': 'hunterian', 'City Chambers': 'citychambers', "Tennent's Brewery": 'tennents'}
+NOTE = {'Weekend tours': lambda t: t.replace('ESN Strathclyde', A('esn_strath', 'ESN Strathclyde')), 'By train': lambda t: t.replace('ScotRail', A('scotrail', 'ScotRail')).replace('A Railcard', 'A ' + A('railcard1625', 'Railcard')), 'By bus': lambda t: t.replace('Stagecoach East Scotland DayRider', A('dayrider', 'Stagecoach East Scotland DayRider')), 'By coach': lambda t: t.replace('Flixbus', A('flixbus', 'Flixbus')).replace('Student Beans', A('flix_sb', 'Student Beans'))}
 groups, count = [], 0
 for title, note, rows in P:
     lis = []
@@ -214,8 +229,11 @@ for title, note, rows in P:
         else:
             thumb, prev = '', ' data-nothumb'
         info = f'<span>{esc(how)}</span><span>{esc(when)}</span><span>{esc(cost)}</span>'
-        lis.append(f'<li class="index__row" tabindex="0"{prev}>{thumb}<span class="index__name">{esc(name)}</span><span class="index__info">{info}</span></li>')
-    groups.append(f'<div class="index__group"><h3>{esc(title)}</h3><p>{esc(note)}</p><ul class="index__list">{"".join(lis)}</ul></div>')
+        nm = f'<a class="index__name" href="{L[PLACE_LINK[name]]}">{esc(name)}</a>' if name in PLACE_LINK else f'<span class="index__name">{esc(name)}</span>'
+        ti = '' if name in PLACE_LINK else ' tabindex="0"'
+        nt = f'<span class="index__note">{esc(PLACE_NOTE[name])}</span>' if name in PLACE_NOTE else ''
+        lis.append(f'<li class="index__row"{ti}{prev}>{thumb}{nm}<span class="index__info">{info}</span>{nt}</li>')
+    groups.append(f'<div class="index__group"><h3>{esc(title)}</h3><p>{NOTE.get(title, lambda t: t)(esc(note))}</p><ul class="index__list">{"".join(lis)}</ul></div>')
 R["PLACES"] = "\n    ".join(groups)
 first = P[0][2][0]
 R["PLACE0"] = export(first[4], f"places/{first[4]}.jpg", 4 / 5, (600, 750), 0.62)[0]
@@ -297,12 +315,13 @@ S = [
 ]
 R["SOURCES"] = "".join(f'<div><b>{esc(g)}</b>{"".join(f"<a href=\"{u}\">{esc(t)}</a>" for t, u in links)}</div>' for g, links in S)
 
-page = open(J("src", "template.html"), encoding="utf-8").read()
-for k, v in R.items():
-    page = page.replace("{{" + k + "}}", v)
-left = re.findall(r"\{\{[A-Z0-9_]+\}\}", page)
-assert not left, left
-open(J("index.html"), "w", encoding="utf-8").write(page)
+for src_name, out_name in (("guide.html", "index.html"), ("travel.html", "travel.html")):
+    page = open(J("src", src_name), encoding="utf-8").read()
+    for k, v in R.items():
+        page = page.replace("{{" + k + "}}", v)
+    left = re.findall(r"\{\{[A-Z0-9_]+\}\}", page)
+    assert not left, (src_name, left)
+    open(J(out_name), "w", encoding="utf-8").write(page)
 n = sum(len(fs) for _, _, fs in os.walk(PH))
 mb = sum(os.path.getsize(os.path.join(d, f)) for d, _, fs in os.walk(PH) for f in fs) / 1e6
-print(f"index.html written. {count} places, {len(order)} wall photos, {n} image files, {mb:.1f} MB")
+print(f"index.html + travel.html written. {count} places, {len(order)} wall photos, {n} image files, {mb:.1f} MB")

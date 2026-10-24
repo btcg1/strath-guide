@@ -272,5 +272,47 @@
   "falkirk_2",
   "luss_4"
  ],
- "hero": "glenfinnan-view_1"
+ "hero": "glenfinnan-view_1",
+ "gstrip": [
+  {
+   "file": "gla-strath_2",
+   "y": 0.7,
+   "cap": "University of Strathclyde"
+  },
+  {
+   "file": "gla-uog_2",
+   "y": 0.55,
+   "cap": "University of Glasgow"
+  },
+  {
+   "file": "gla-city_1",
+   "y": 0.7,
+   "cap": "Glasgow city centre"
+  },
+  {
+   "file": "gla-cathedral_7",
+   "y": 0.55,
+   "cap": "Glasgow Cathedral, next to campus"
+  },
+  {
+   "file": "gla-kelvingrove_5",
+   "y": 0.4,
+   "cap": "Kelvingrove Art Gallery"
+  },
+  {
+   "file": "gla-pollok_5",
+   "y": 0.7,
+   "cap": "Highland cows, Pollok Park"
+  },
+  {
+   "file": "gla-strath_5",
+   "y": 0.7,
+   "cap": "Strathclyde campus"
+  },
+  {
+   "file": "gla-necropolis_1",
+   "y": 0.7,
+   "cap": "Glasgow Necropolis"
+  }
+ ]
 }

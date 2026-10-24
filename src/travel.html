@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Travel – Strath Field Guide</title>
+<meta name="description" content="Where we went from Glasgow in one semester: 24 trips on a map, 36 places with prices and opening times, and our photos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="preload" as="image" href="{{STRIP0}}" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="hero" id="top">
+  <nav class="topnav" aria-label="Main">
+    <a class="wordmark" href="index.html">Strath Field Guide</a>
+    <div class="tabs" aria-label="Pages"><a href="index.html">Guide</a><a href="travel.html" aria-current="page">Travel</a></div>
+    <div class="topnav__links"><a href="#trips">Map</a><a href="#places">Places</a><a href="#photos">Photos</a></div>
+  </nav>
+  <div class="hero__body">
+    <h1 class="hero__title">
+      <span class="hero__line"><span class="hero__word">Glasgow to</span>
+        <span class="stripwrap"><span class="strip shutter" data-strip>
+          {{STRIP_IMGS}}
+        </span><span class="strip__caption" data-strip-caption>{{STRIP_CAPTION0}}</span></span></span>
+      <span class="hero__line hero__line--2"><span class="hero__word">and back</span></span>
+    </h1>
+    <p class="hero__lead">Every weekend we could, we left Glasgow. Here's where we went: 24 trips on a map, 36 places with prices and opening times, and way too many photos.</p>
+    <div class="hero__actions"><a class="button" href="#trips">See the trips</a><a class="hero__alt" href="index.html#apply">How to apply</a></div>
+    <p class="strip__caption strip__caption--phone" data-strip-caption>{{STRIP_CAPTION0}}</p>
+  </div>
+</header>
+
+<main>
+<section class="intro" aria-label="Introduction">
+  <p class="statement" data-reveal>One semester: lectures by the <span class="frame"><img src="{{INTRO_CAMPUS}}" alt="" width="120" height="90" loading="lazy"></span> cathedral, <span class="frame"><img src="{{INTRO_HAGGIS}}" alt="" width="120" height="90" loading="lazy"></span> haggis for lunch, <span class="frame"><img src="{{INTRO_FERRY}}" alt="" width="120" height="90" loading="lazy"></span> ferries at dawn and <span class="frame"><img src="{{INTRO_SKYE}}" alt="" width="120" height="90" loading="lazy"></span> 24&nbsp;trips out of Glasgow.</p>
+</section>
+
+<section class="trips" id="trips">
+  <div class="trips__text">
+    <h2 class="h2 h2--strip">Fourteen weeks, <span class="hstrip"><img src="{{HS_TRIPS}}" alt="" width="480" height="160"></span> 24&nbsp;trips</h2>
+    <p class="trips__lead" data-reveal>Strath is in an amazing spot for travelling: four stations are a walk from the halls. Every pin is a trip we took in semester 1, 2025, from Oban on 14 September to North Wales the week before Christmas. Drag through the weeks.</p>
+    <div class="weeks" data-weeks hidden>
+      <label class="weeks__label" for="week">Week <output id="weekOut">4</output> of 16, <span data-week-dates>29 Sep – 5 Oct</span></label>
+      <input id="week" type="range" min="1" max="16" value="4" step="1">
+      <div class="weeks__nav"><button type="button" class="textbutton" data-prev>Previous trip</button><button type="button" class="textbutton" data-next>Next trip</button></div>
+    </div>
+    <div class="trip" data-trip aria-live="polite">
+      <ol class="triplist">
+        {{TRIP_FALLBACK}}
+      </ol>
+    </div>
+  </div>
+  <div class="trips__map">
+    {{MAP_SVG}}
+  </div>
+</section>
+
+<section class="year" id="year">
+  <div class="year__head">
+    <h2 class="h2 h2--strip">April to <span class="hstrip"><img src="{{HS_YEAR}}" alt="" width="480" height="160" loading="lazy"></span> October</h2>
+    <p class="year__lead" data-reveal>Island boats, the steam train and several castles only run from April to October. Here are <a href="https://www.strath.ac.uk/keydates/2026-27/">Strathclyde’s 2026/27 dates</a> against them. Arrive in September for the end of the season, in January for the start of the next.</p>
+  </div>
+  <div class="season" role="img" aria-label="September 2026 to June 2027. Semester 1 teaching 21 September to 6 December, assessments 7 to 18 December. Winter vacation 19 December to 10 January. Semester 2 teaching 18 January to 4 April, spring vacation 5 to 18 April, assessments 19 April to 21 May. Island boats, the steam train, Culross Palace and Inchcolm Abbey run April to October. Seabird Centre boats run late March to early October. Preston Mill closes 20 December to 28 February. Eilean Donan closes in January.">
+    <div class="srow srow--head"><span></span><div class="months"><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div></div>
+    <div class="srow"><span class="what">Semester 1<small>14 Sep – 18 Dec</small></span><div class="track"><i class="soft" style="--s:4.29;--w:2.31"></i><i class="uni" style="--s:6.6;--w:25.41"></i><i class="exam" style="--s:32.01;--w:3.96"></i></div></div>
+    <div class="srow"><span class="what">Semester 2<small>11 Jan – 21 May</small></span><div class="track"><i class="soft" style="--s:43.56;--w:2.31"></i><i class="uni" style="--s:45.87;--w:25.41"></i><i class="soft" style="--s:71.29;--w:4.62"></i><i class="exam" style="--s:75.91;--w:10.89"></i></div></div>
+    <div class="srow"><span class="what">Exam timetables out<small>early Nov, early Mar</small></span><div class="track"><i class="pin" style="--s:21.12"></i><i class="pin" style="--s:61.06"></i></div></div>
+    <div class="srow"><span class="what">Island boats, steam train, Culross, Inchcolm<small>April to October</small></span><div class="track"><i class="open" style="--s:0;--w:20.13"></i><i class="open" style="--s:69.97;--w:30.03"></i></div></div>
+    <div class="srow"><span class="what">Seabird Centre boats<small>late March to early October</small></span><div class="track"><i class="open" style="--s:0;--w:11.55"></i><i class="open" style="--s:67.66;--w:32.34"></i></div></div>
+    <div class="srow"><span class="what">Preston Mill<small>Saturdays Nov–Dec, shut to 28 Feb</small></span><div class="track"><i class="open" style="--s:0;--w:20.13"></i><i class="part" style="--s:22.11;--w:14.19"></i><i class="open" style="--s:59.74;--w:40.26"></i></div></div>
+    <div class="srow"><span class="what">Eilean Donan<small>shut all January</small></span><div class="track"><i class="open" style="--s:0;--w:40.26"></i><i class="open" style="--s:50.5;--w:49.5"></i></div></div>
+    <p class="season__key"><span><i class="k uni"></i>Teaching</span><span><i class="k exam"></i>Assessments</span><span><i class="k soft"></i>Welcome week and holidays</span><span><i class="k open"></i>Open</span><span><i class="k part"></i>Saturdays only</span></p>
+  </div>
+</section>
+
+<section class="places" id="places">
+  <h2 class="h2 h2--strip places__title">Where to go <span class="hstrip"><img src="{{HS_PLACES}}" alt="" width="480" height="160" loading="lazy"></span> next</h2>
+  <p class="places__lead">Thirty-six places, with how to get there, when they open and what they cost. Point at a row to see it.</p>
+  <div class="index">
+    <div class="index__groups">{{PLACES}}</div>
+    <div class="index__aside" aria-hidden="true"><div class="index__frame"><img alt="" src="{{PLACE0}}"><p class="index__framecap">{{PLACE0_NAME}}</p></div></div>
+  </div>
+</section>
+
+<section class="roll" id="photos">
+  <div class="roll__field">
+    <h2 class="roll__title"><span>Camera</span><span>roll</span></h2>
+    {{PRINTS}}
+    <p class="roll__note">Every photo here is ours, shot on a Ricoh GR between September and December 2025.</p>
+  </div>
+  <div class="wall" data-wall>
+    {{WALL}}
+  </div>
+  <div class="wall__more"><button type="button" class="button button--quiet" data-wall-more>Show all {{WALL_COUNT}} photos</button></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <div>
+      <p class="foot__invite">See you in&nbsp;Glasgow</p>
+      <a class="button button--light" href="index.html#apply">How to apply</a>
+    </div>
+    <ul class="foot__links">
+      <li><a href="https://www.ntu.edu.sg/education/student-exchanges/exchange-programmes/gem-explorer">NTU GEM Explorer</a></li>
+      <li><a href="https://www.strath.ac.uk/studywithus/studyabroad/comingtostrathclyde/">Strathclyde exchange</a></li>
+      <li><a href="https://www.gov.uk/eta/apply">UK ETA</a></li>
+      <li><a href="index.html#sources">All sources</a></li>
+    </ul>
+  </div>
+  <p class="foot__legal"><span>Written by NTU students after a semester at Strathclyde. Photos are our own.</span><span>Map outline: Natural Earth.</span></p>
+  <p class="foot__mark" aria-hidden="true">Strathclyde</p>
+</footer>
+
+<dialog class="lightbox" data-lightbox aria-label="Photo">
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="lightbox__close" data-lb-close>Close</button>
+  <button type="button" class="lightbox__prev" data-lb-prev>Previous</button>
+  <button type="button" class="lightbox__next" data-lb-next>Next</button>
+</dialog>
+
+<script>window.TRIPS = {{TRIPS_JSON}}; window.COORDS = {{COORDS_JSON}}; window.MAPPROJ = {{MAPPROJ}};</script>
+<script src="js/site.js" defer></script>
+</body>
+</html>

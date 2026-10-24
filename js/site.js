@@ -28,7 +28,7 @@
   staggerGrid('.wall figure');
   staggerGrid('.food__pics figure');
 
-  /* Hero strip: the missing word cycles through the trips. */
+  /* Hero strip: the missing word cycles through photos. */
   const strip = $('[data-strip]');
   const caps = $$('[data-strip-caption]');
   if (strip) {
@@ -54,14 +54,14 @@
   const conv = () => { const v = parseFloat(gbp.value); sgd.textContent = Number.isFinite(v) && v >= 0 ? `S$${(v * RATE).toFixed(2)}` : 'S$–'; };
   if (gbp) { gbp.addEventListener('input', conv); conv(); }
   const setRate = (r, when) => {
-    RATE = r; conv();
+    RATE = r; if (gbp) conv();
     const [a, b] = r.toFixed(2).split('.');
     const ii = $('[data-fx-int]'), dd = $('[data-fx-dec]'), ww = $('[data-fx-when]');
     if (ii) ii.textContent = a; if (dd) dd.textContent = `.${b}`;
     if (ww) ww.textContent = `today (rate of ${when})`;
   };
   const fmt = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-  fetch('https://open.er-api.com/v6/latest/GBP').then((r) => r.json()).then((j) => {
+  if (gbp || $('[data-fx-int]')) fetch('https://open.er-api.com/v6/latest/GBP').then((r) => r.json()).then((j) => {
     if (j && j.rates && j.rates.SGD) setRate(j.rates.SGD, fmt(new Date(j.time_last_update_unix * 1000))); else throw 0;
   }).catch(() => fetch('https://api.frankfurter.app/latest?from=GBP&to=SGD').then((r) => r.json()).then((j) => {
     if (j && j.rates && j.rates.SGD) setRate(j.rates.SGD, fmt(new Date(j.date)));
@@ -160,7 +160,7 @@
     };
     rows.forEach((row) => {
       row.addEventListener('pointerenter', () => { hovering = true; show(row); });
-      row.addEventListener('focus', () => show(row));
+      row.addEventListener('focusin', () => show(row));
     });
     index.addEventListener('pointerleave', () => { hovering = false; });
     if ('IntersectionObserver' in window) {
