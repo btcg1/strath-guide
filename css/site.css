@@ -717,3 +717,15 @@ html { scroll-padding-top: calc(var(--nav-h) + 12px); }
 
 /* Stacked hero: say what this is and offer the button before the photo */
 @media (max-width: 900px) { .hero__body { grid-template-areas: "title" "pitch" "frame"; } }
+
+/* Photos tab: trip list, and place sub-groups inside each trip */
+.tripjump { padding: 72px var(--m) 0; }
+.tripjump__list { list-style: none; margin: 0; padding: 0; columns: 3 16rem; column-gap: calc(var(--gutter) * 2); }
+.tripjump__list li { break-inside: avoid; display: flex; justify-content: space-between; gap: 16px; padding: 7px 0; }
+.tripjump__list a { color: var(--ink); text-decoration: none; font-size: var(--step-body); }
+@media (hover: hover) and (pointer: fine) { .tripjump__list a:hover { color: var(--accent); text-decoration: underline; } }
+.tripjump__list span { color: var(--muted); font-size: var(--step-small); white-space: nowrap; }
+.album__secs { display: grid; gap: 36px; }
+.album__place { margin: 0 0 12px; font-family: var(--text-face); font-size: var(--step-body); font-weight: 500; letter-spacing: 0.01em; }
+.album__group { scroll-margin-top: calc(var(--nav-h) + 16px); }
+@media (max-width: 720px) { .tripjump__list span, .album__when, .roll__note { font-size: var(--step-body); } .tripjump__list { columns: 1; } }

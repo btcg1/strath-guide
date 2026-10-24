@@ -1,49 +1,49 @@
 {
  "trips": {
   "oban": [
-   "kilchurn_1",
-   "oban_2",
+   "r-oban-oban_1",
+   "r-oban-oban_17",
    "inveraray_1"
   ],
   "york": [
-   "york_1",
-   "york_2",
-   "york_8"
+   "r-york_60",
+   "r-york_68",
+   "r-york_78"
   ],
   "glenfinnan": [
    "glenfinnan_6",
-   "glenfinnan_0",
+   "r-glenfinnan-viewpoints_2",
    "luss_1"
   ],
   "falkirk": [
-   "falkirk_3",
-   "falkirk_4",
-   "falkirk_1"
+   "r-falkirk_32",
+   "r-falkirk_51",
+   "r-falkirk_64"
   ],
   "inchcolm": [
    "inchcolm_6",
-   "queensferry_3",
+   "r-inchcolm-inchcolm-island_19",
    "inchcolm-boat_0"
   ],
   "lochness": [
-   "lochness_8",
-   "glencoe_1",
+   "r-loch-ness-inverness_1",
+   "r-loch-ness-inverness_10",
    "fortaugustus_5"
   ],
   "arbroath": [
    "arbroath_3",
-   "arbroath_2",
-   "arbroath-docks_4"
+   "r-arbroath-docks_30",
+   "r-arbroath-docks_35"
   ],
   "hamilton": [
-   "hamilton_1",
+   "r-hamilton_17",
    "hamilton_4",
    "hamilton_2"
   ],
   "stirling": [
-   "wallace_0",
-   "wallace_3",
-   "stirling_3"
+   "r-stirling_39",
+   "r-stirling_67",
+   "r-stirling-wallace-monument_5"
   ],
   "skye": [
    "skye-storr_4",
@@ -51,69 +51,69 @@
    "skye-eileandonan_1"
   ],
   "culross": [
-   "culross_4",
-   "culross_2",
-   "culross_5"
+   "r-culross_23",
+   "r-culross_76",
+   "r-culross_11"
   ],
   "dunnottar": [
-   "dunnottar_2",
-   "dunnottar_8",
+   "r-dunnottar-dunnottar-castle_4",
+   "r-dunnottar-dundee-toilet_5",
    "stonehaven_3"
   ],
   "standrews": [
-   "standrews_5",
+   "r-st-andrews-city_10",
    "oldcourse_4",
    "standrews_3"
   ],
   "arran": [
-   "arran_1",
-   "arran_0",
+   "r-arran_20",
+   "r-arran_21",
    "arran_4"
   ],
   "newlanark": [
-   "newlanark_3",
+   "x-clyde_12",
    "lanark_8",
-   "newlanark_7"
+   "r-new-lanark-river-clyde_19"
   ],
   "edinburgh": [
-   "edinburgh_0",
-   "edinburgh_2",
-   "edinburgh_5"
+   "r-edinburgh-city_11",
+   "r-edinburgh-museum_8",
+   "r-edinburgh-arthur-s-seat_20"
   ],
   "lomond": [
-   "lomond_5",
+   "r-lomund-hill-house-hill-house_5",
    "lomond_3",
-   "hillhouse_5"
+   "r-lomund-hill-house-hill-house_13"
   ],
   "aberdeen": [
    "footdee_3",
    "crathes_7",
-   "aber-city_3"
+   "r-aberdeen-crathes-castle_76"
   ],
   "prestonmill": [
    "prestonmill_1",
    "tantallon_2",
-   "northberwick_7"
+   "r-preston-mill-preston-mill_1"
   ],
   "argyll": [
    "restbe_2",
    "dunoon_5",
-   "argyll_5"
+   "r-argyll-forest-rest-and-be-thankful_9"
   ],
   "dunkeld": [
    "dunkeld_1",
-   "dunkeld_7",
+   "r-dunkeld_20",
    "dunkeld_5"
   ],
   "ni": [
    "causeway_6",
-   "causeway_1",
+   "belfast_2",
    "belfast_3"
   ],
   "inverness": [
    "wick_4",
    "culloden_1",
-   "wick_7"
+   "r-inverness-wick_29"
   ],
   "wales": [
    "snowdonia_5",
@@ -123,39 +123,44 @@
  },
  "strip": [
   {
-   "file": "glenfinnan_6",
-   "y": 0.62,
-   "cap": "Glenfinnan Viaduct, 21 September"
-  },
-  {
-   "file": "queensferry_3",
+   "file": "r-york_60",
    "y": 0.5,
-   "cap": "Forth Bridge, 27 September"
+   "cap": "York"
   },
   {
-   "file": "skye-storr_4",
-   "y": 0.62,
-   "cap": "Old Man of Storr, Skye, October"
+   "file": "r-falkirk_32",
+   "y": 0.5,
+   "cap": "Falkirk"
   },
   {
-   "file": "lomond_5",
-   "y": 0.62,
-   "cap": "Loch Lomond, 24 October"
+   "file": "r-arbroath-docks_30",
+   "y": 0.5,
+   "cap": "Docks, Arbroath"
   },
   {
-   "file": "dunnottar_8",
-   "y": 0.62,
-   "cap": "Dunnottar Castle, 11 October"
+   "file": "r-stirling_39",
+   "y": 0.5,
+   "cap": "Stirling"
   },
   {
-   "file": "standrews_3",
-   "y": 0.62,
-   "cap": "St Andrews Castle, 12 October"
+   "file": "r-culross_23",
+   "y": 0.5,
+   "cap": "Culross"
   },
   {
-   "file": "wallace_3",
-   "y": 0.74,
-   "cap": "River Forth from the Wallace Monument, 2 October"
+   "file": "r-st-andrews-city_10",
+   "y": 0.5,
+   "cap": "City, St Andrews"
+  },
+  {
+   "file": "arran_4",
+   "y": 0.5,
+   "cap": "Isle of Arran"
+  },
+  {
+   "file": "x-clyde_12",
+   "y": 0.5,
+   "cap": "River Clyde, New Lanark"
   }
  ],
  "verbs": {
@@ -165,24 +170,24 @@
   "settle": "gla-city_1"
  },
  "intro": {
-  "campus": "gla-cathedral_7",
-  "ferry": "inchcolm-boat_4",
-  "skye": "storr2_4",
+  "campus": "r-glasgow-cathedral_24",
+  "ferry": "r-inchcolm-boat_26",
+  "skye": "skye-storr_2",
   "street": "gla-city_5",
   "haggis": "gla-city_8"
  },
  "prints": [
   {
-   "file": "skye-storr_2",
-   "cap": "Old Man of Storr"
+   "file": "r-york_68",
+   "cap": "York"
   },
   {
-   "file": "oldcourse_3",
-   "cap": "The Old Course, St Andrews"
+   "file": "r-falkirk_51",
+   "cap": "Falkirk"
   },
   {
-   "file": "edinburgh_7",
-   "cap": "Edinburgh"
+   "file": "r-arbroath-docks_35",
+   "cap": "Docks, Arbroath"
   }
  ],
  "food": [
@@ -201,10 +206,6 @@
   {
    "file": "oban_1",
    "caption": "Fried seafood, Oban"
-  },
-  {
-   "file": "portree_0",
-   "caption": "Fish and chips, Portree"
   },
   {
    "file": "arbroath-docks_6",
@@ -270,50 +271,50 @@
  "hero": "glenfinnan-view_1",
  "gstrip": [
   {
-   "file": "gla-strath_2",
-   "y": 0.7,
+   "file": "gla-strath_5",
+   "y": 0.5,
    "cap": "University of Strathclyde"
   },
   {
-   "file": "gla-uog_2",
-   "y": 0.55,
+   "file": "r-glasgow-riverside-museum_7",
+   "y": 0.5,
+   "cap": "Riverside Museum"
+  },
+  {
+   "file": "r-glasgow-uog_7",
+   "y": 0.5,
    "cap": "University of Glasgow"
   },
   {
-   "file": "gla-city_1",
-   "y": 0.7,
-   "cap": "Glasgow city centre"
+   "file": "r-glasgow-kelvingrove_1",
+   "y": 0.5,
+   "cap": "Kelvingrove"
   },
   {
-   "file": "gla-cathedral_7",
-   "y": 0.55,
-   "cap": "Glasgow Cathedral, next to campus"
+   "file": "r-glasgow-pollock_5",
+   "y": 0.5,
+   "cap": "Pollok Country Park"
   },
   {
-   "file": "gla-kelvingrove_5",
-   "y": 0.4,
-   "cap": "Kelvingrove Art Gallery"
+   "file": "r-glasgow-barras_0",
+   "y": 0.5,
+   "cap": "The Barras"
   },
   {
-   "file": "gla-pollok_5",
-   "y": 0.7,
-   "cap": "Highland cows, Pollok Park"
+   "file": "r-glasgow-necropolis_9",
+   "y": 0.5,
+   "cap": "Necropolis"
   },
   {
-   "file": "gla-strath_5",
-   "y": 0.7,
-   "cap": "Strathclyde campus"
-  },
-  {
-   "file": "gla-necropolis_1",
-   "y": 0.7,
-   "cap": "Glasgow Necropolis"
+   "file": "r-glasgow-cathedral_17",
+   "y": 0.5,
+   "cap": "Glasgow Cathedral"
   }
  ],
  "fstrip": [
   {
    "file": "arran_3",
-   "y": 0.7,
+   "y": 0.5,
    "cap": "Fish and chips with mushy peas, Arran"
   },
   {
@@ -322,31 +323,31 @@
    "cap": "Sticky toffee pudding"
   },
   {
-   "file": "oban_1",
-   "y": 0.5,
-   "cap": "Fried seafood, Oban"
-  },
-  {
    "file": "arbroath-docks_6",
    "y": 0.5,
    "cap": "Roast with Yorkshire pudding, Arbroath"
   },
   {
    "file": "aviemore_0",
-   "y": 0.7,
+   "y": 0.5,
    "cap": "Burgers and onion rings, Aviemore"
   }
  ],
  "sstrip": [
   {
-   "file": "gla-city_1",
-   "y": 0.7,
-   "cap": "Glasgow city centre"
+   "file": "gla-city_5",
+   "y": 0.5,
+   "cap": "City centre, Glasgow"
   },
   {
-   "file": "gla-city_5",
-   "y": 0.6,
-   "cap": "Glasgow city centre"
+   "file": "r-glasgow-barras_0",
+   "y": 0.5,
+   "cap": "The Barras market"
+  },
+  {
+   "file": "r-glasgow-city_18",
+   "y": 0.5,
+   "cap": "City centre, Glasgow"
   }
  ]
 }

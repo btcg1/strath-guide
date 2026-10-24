@@ -112,7 +112,8 @@ def strip(name, items):
     return "\n          ".join(out), f"photos/hero/{name}-0.jpg", esc(items[0]["cap"])
 R["F_STRIP_IMGS"], R["F_STRIP0"], R["F_STRIP_CAPTION0"] = strip("fstrip", picks["fstrip"])
 R["S_STRIP_IMGS"], R["S_STRIP0"], R["S_STRIP_CAPTION0"] = strip("sstrip", picks["sstrip"])
-for k, key in {"APPLY": "gla-strath_2", "MATCH": "gla-uog_2", "FLY": "glenfinnan_0", "SETTLE": "gla-city_1"}.items():
+R["P_STRIP_IMGS"], R["P_STRIP0"], R["P_STRIP_CAPTION0"] = strip("pstrip", json.load(open(J("data", "roll.json"), encoding="utf-8"))["hero"])
+for k, key in {"APPLY": "gla-strath_2", "MATCH": "r-glasgow-uog_10", "FLY": "r-glenfinnan-viaduct_1", "SETTLE": "r-glasgow-city_18"}.items():
     R["GI_" + k] = export(key, f"intro/g-{k.lower()}.jpg", 4 / 3, (300, 225))[0]
 
 # Intro thumbs
@@ -187,42 +188,42 @@ P = [
  ("Weekend tours", "ESN Strathclyde's weekend tours cost about £45 and pick you up from campus. Last year's code was ESN25.", [
   ("Isle of Skye", "ESN or Rabbies weekend tour", "Year-round. Eilean Donan is shut all January", "Hostels up to £70 a bed", "skye-sligachan_5"),
   ("Glencoe", "Ember coach from Buchanan", "Year-round", "Free to walk", "glencoe_2"),
-  ("Glenfinnan", "ESN day tour or ScotRail", "Viewpoint daily. Steam train April–October", "Viewpoint free. Steam train £76 return", "glenfinnan_6"),
-  ("Loch Ness", "ESN day tour", "Urquhart Castle 9:30–16:30 in winter", "£1 with Young Scot or NEC. Book parking", "lochness_7")]),
+  ("Glenfinnan", "ESN day tour or ScotRail", "Viewpoint daily. Steam train June–October", "Viewpoint free. Steam train £76 return", "glenfinnan_6"),
+  ("Loch Ness", "ESN day tour", "Urquhart Castle 9:30–16:30 in winter", "£1 with Young Scot or NEC. Book parking", "r-loch-ness-fort-augustus_7")]),
  ("By train", "ScotRail has no peak fares. A Railcard takes a third off.", [
   ("Dunkeld & Birnam", "Queen Street", "The Hermitage, daily", "Free", "dunkeld_1"),
-  ("Aviemore & Rothiemurchus", "Queen Street", "Year-round", "Pay for activities separately", "aviemore_4"),
-  ("Oban", "Queen Street", "Staffa boats April–October", "", "oban_2"),
-  ("Loch Lomond & Hill House", "To Balloch, then Helensburgh", "Year-round", "Free to visit the loch", "lomond_5"),
-  ("Stirling", "Queen Street", "Castle 9:30–17:00 Oct–Mar, to 18:00 Apr–Sep", "Castle £1 with Young Scot or NEC", "wallace_3"),
-  ("Falkirk", "Queen Street", "Wheel 9:45–17:30 daily", "Boat from £14.63, students £13.20", "falkirk_4"),
+  ("Aviemore & Rothiemurchus", "Queen Street", "Year-round", "Pay for activities separately", "r-inverness-rothiemurcus_2"),
+  ("Oban", "Queen Street", "Staffa boats April–October", "", "r-oban-oban_1"),
+  ("Loch Lomond & Hill House", "To Balloch, then Helensburgh", "Year-round", "Free to visit the loch", "lomond_3"),
+  ("Stirling", "Queen Street", "Castle 9:30–17:00 Oct–Mar, to 18:00 Apr–Sep", "Castle £1 with Young Scot or NEC", "r-stirling-wallace-monument_5"),
+  ("Falkirk", "Queen Street", "Wheel 9:45–17:30 daily", "Boat from £14.63, students £13.20 (not June–September)", "r-falkirk_64"),
   ("Arbroath", "Queen Street", "Year-round", "Free", "arbroath_3"),
-  ("New Lanark", "Central to Lanark", "Year-round", "£15.50, concession £11.50", "newlanark_3"),
+  ("New Lanark", "Central to Lanark", "Year-round", "£15.50, concession £11.50", "r-new-lanark-river-clyde_19"),
   ("Aberdeen", "Queen Street", "Year-round", "Free to explore", "footdee_3"),
-  ("Dunnottar Castle", "Train to Stonehaven", "Shorter hours in winter", "£13.50, students £12", "dunnottar_8"),
+  ("Dunnottar Castle", "Train to Stonehaven", "Shorter hours in winter", "£13.50, students £12", "r-dunnottar-dunnottar-castle_4"),
   ("East Linton & Preston Mill", "Train to East Linton", "Mill shut 20 Dec – 28 Feb", "£11, concession £9", "prestonmill_1"),
   ("Linlithgow", "Queen Street", "Palace year-round", "£1 with Young Scot or NEC", None),
   ("Thurso & Wick", "Via Inverness", "Year-round", "", "wick_4")]),
  ("By ferry", "Most island boats run spring to autumn. Check the calendar first.", [
-  ("Isle of Arran", "Central to Ardrossan (55 min crossing) or Troon (80 min)", "Year-round", "", "arran_1"),
-  ("Inchcolm Island", "Train, then Maid of the Forth", "Abbey open April–October", "Boat £29.50 + abbey £8.50", "inchcolm_0"),
-  ("Puffins & North Berwick", "Scottish Seabird Centre boats", "Late March – early October", "Catamaran £32", "northberwick_3"),
+  ("Isle of Arran", "Central to Ardrossan (55 min crossing) or Troon (80 min)", "Year-round", "", "r-arran_20"),
+  ("Inchcolm Island", "Train, then Maid of the Forth", "Abbey open April–October", "Boat £29.50 + abbey £8.50", "r-inchcolm-inchcolm-island_19"),
+  ("Puffins & North Berwick", "Scottish Seabird Centre boats", "Late March – early October", "Catamaran £32", "r-preston-mill-north-berwick_1"),
   ("Isle of May", "May Princess from Anstruther", "Seasonal", "£40, students £35", None),
-  ("Shetland", "NorthLink overnight from Aberdeen", "Year-round", "From £29.50 one way", None)]),
+  ("Shetland", "NorthLink overnight from Aberdeen", "Year-round", "From £29.50 one way, November–March", None)]),
  ("By bus", "The Stagecoach East Scotland DayRider is £12.80 for a day.", [
   ("St Andrews", "Direct bus from Buchanan", "Sundays: Old Course open to walkers", "Castle £1 with Young Scot or NEC", "standrews_3"),
-  ("Culross", "Stagecoach", "Palace shut Nov–Mar", "Palace £14, concession £11", "culross_5"),
+  ("Culross", "Stagecoach", "Palace shut Nov–Mar", "Palace £14, concession £11", "r-culross_76"),
   ("Anstruther & Fife Coastal Path", "Stagecoach, one change", "Year-round", "DayRider £12.80", None),
-  ("Hamilton Park", "Train from Central", "Race days", "", "hamilton_1")]),
+  ("Hamilton Park", "Train from Central", "Race days", "", "r-hamilton_17")]),
  ("By coach", "Flixbus is usually the cheapest. Student Beans gets you 20% off.", [
-  ("Edinburgh", "Flixbus or train", "Castle 9:30–18:00 Apr–Sep", "Castle £23.50 online", "edinburgh_0"),
+  ("Edinburgh", "Flixbus or train", "Castle 9:30–18:00 Apr–Sep", "Castle £23.50 online", "r-edinburgh-city_11"),
   ("Giant's Causeway & Belfast", "Citylink/Ulsterbus 923 via Cairnryan", "Year-round", "From £37 advance single", "causeway_6"),
-  ("York", "Train from Central", "Year-round", "", "york_1"),
+  ("York", "Train from Central", "Year-round", "", "r-york_78"),
   ("Chester & North Wales", "Train from Central", "Year-round", "", "snowdonia_5")]),
  ("In Glasgow", "Most of the big museums are free.", [
-  ("West End & Kelvingrove", "Subway from Buchanan Street", "Organ recital 1pm Mon–Sat, 3pm Sun", "Free", "gla-uog_1"),
-  ("Cathedral & Necropolis", "Walk from campus", "Necropolis 7:00–16:30 daily", "Free. Book a cathedral slot", "gla-necropolis_4"),
-  ("Pollok Park & the Burrell", "Train or bus", "Museum opens at 10:00 or 11:00", "Free", "gla-pollok_5"),
+  ("West End & Kelvingrove", "Subway from Buchanan Street", "Organ recital 1pm Mon–Sat, 3pm Sun", "Free", "r-glasgow-uog_17"),
+  ("Cathedral & Necropolis", "Walk from campus", "Necropolis 7:00–16:30 daily", "Free. Book a cathedral slot", "r-glasgow-necropolis_1"),
+  ("Pollok Park & the Burrell", "Train or bus", "Museum opens at 10:00 or 11:00", "Free", "r-glasgow-pollock_3"),
   ("Hunterian Museum", "Subway to Hillhead", "Tue–Sun 10:00–17:00", "Free", None),
   ("City Chambers", "Walk", "Tours Mon–Fri 10:30 and 14:30", "Free", None),
   ("Tennent's Brewery", "Walk", "1.5-hour tours", "From £17, 18+", None)]),
@@ -251,7 +252,7 @@ R["PLACES"] = "\n    ".join(groups)
 first = P[0][2][0]
 R["PLACE0"] = export(first[4], f"places/{first[4]}.jpg", 4 / 5, (600, 750), 0.62)[0]
 R["PLACE0_NAME"] = esc(first[0])
-for k, key, y in [("TRIPS", "skye-storr_4", 0.62), ("YEAR", "inchcolm_0", 0.62), ("PLACES", "glenfinnan_0", 0.74)]:
+for k, key, y in [("TRIPS", "skye-storr_4", 0.62), ("YEAR", "r-inchcolm-inchcolm-island_19", 0.62), ("PLACES", "r-glenfinnan-viaduct_1", 0.74)]:
     R["HS_" + k] = export(key, f"hstrip/{k.lower()}.jpg", 3.0, (600, 200), y)[0]
 
 # Prints over the "Camera roll" headline
@@ -261,51 +262,39 @@ for i, p in enumerate(picks["prints"]):
     prints.append(f'<figure class="print print--{"abc"[i]}" data-large="{large(p["file"])}">{img(src, w, h, p["cap"], lazy=False)}</figure>')
 R["PRINTS"] = "\n    ".join(prints)
 
-# Album: the photo wall grouped by trip, in date order, Glasgow first (data/album.json holds the curated keys)
-album = json.load(open(J("data", "album.json"), encoding="utf-8"))
-trip_by_id = {t["id"]: t for t in trips}
-group_order = ["glasgow"] + [t["id"] for t in trips if t["id"] in album]
-blocks, order = [], []
-for gid in group_order:
-    keys = [k for k in album.get(gid, []) if k not in {p["file"] for p in picks["prints"]}]
-    if not keys: continue
-    if gid == "glasgow":
-        title, when = "Glasgow", "all semester"
-    else:
-        t = trip_by_id[gid]; title = t["name"]
-        when = nice_date(t["date"]) + (f" – {nice_date(t['end'])}" if t["end"] else "")
-    figs = []
-    for key in keys:
-        order.append(key)
-        src, w, h = export(key, f"wall/{key}.jpg", None, (700, 1050))
-        name = caption(key).split(",")[0]
-        figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, caption(key))}<figcaption>{esc(name)}</figcaption></figure>')
-    blocks.append(f'<div class="album__group"><div class="album__head"><h3 class="album__title">{esc(title)}</h3><p class="album__when">{esc(when)}</p></div><div class="album__grid">{"".join(figs)}</div></div>')
-R["WALL"] = "\n    ".join(blocks)
-# Extra: Chester and North Wales (data/extra.json). Same album layout; the group title names the place, so no per-photo captions
-xb = []
-for g in json.load(open(J("data", "extra.json"), encoding="utf-8")):
-    figs = []
-    for key in g["keys"]:
-        src, w, h = export(key, f"wall/{key}.jpg", None, (700, 1050))
-        figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, g["title"])}</figure>')
-    xb.append(f'<div class="album__group"><div class="album__head"><h3 class="album__title">{esc(g["title"])}</h3></div><div class="album__grid">{"".join(figs)}</div></div>')
-R["EXTRA"] = "\n    ".join(xb)
-R["WALL_COUNT"] = str(len(order))
+# Photos tab: every trip in date order, split by place (data/roll.json, built from the Codex composition audit)
+roll = json.load(open(J("data", "roll.json"), encoding="utf-8"))
+rb, ri, nroll = [], [], 0
+for tr in roll["trips"]:
+    secs = []
+    for sec in tr["sections"]:
+        figs = []
+        for key, alt in sec["keys"]:
+            src, w, h = export(key, f"roll/{key}.jpg", None, (560, 840), q=78)
+            figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, f"{sec['title']}: {alt}")}</figure>')
+            nroll += 1
+        head = f'<h4 class="album__place">{esc(sec["title"])}</h4>' if len(tr["sections"]) > 1 else ""
+        secs.append(f'<div class="album__sec">{head}<div class="album__grid">{"".join(figs)}</div></div>')
+    rb.append(f'<div class="album__group" id="t-{tr["id"]}"><div class="album__head"><h3 class="album__title">{esc(tr["title"])}</h3>'
+              f'<p class="album__when">{esc(tr["when"])}</p></div><div class="album__secs">{"".join(secs)}</div></div>')
+    ri.append(f'<li><a href="#t-{tr["id"]}">{esc(tr["title"])}</a><span>{esc(tr["when"])}</span></li>')
+R["ROLL"] = "\n    ".join(rb)
+R["ROLL_INDEX"] = "\n    ".join(ri)
+R["ROLL_COUNT"], R["ROLL_TRIPS"], R["ROLL_ALL"] = str(nroll), str(len(roll["trips"])), f"{roll['all']:,}"
 
 # Food photos: three by the "where we ate" tables, four on the Scottish menu (no repeats)
 food = {f["file"]: f["caption"] for f in picks["food"]}
 fp = []
-for i, key in enumerate(["aviemore_0", "oban_1", "arran_3"]):
+for i, key in enumerate(["oban_1", "aviemore_0"]):
     src, w, h = export(key, f"food/eat-{i}.jpg", 4 / 5, (700, 875))
     fp.append(f'<figure data-large="{large(key)}">{img(src, w, h, food[key], lazy=False)}<figcaption>{esc(food[key])}</figcaption></figure>')
 R["FOOD_PICS"] = "".join(fp)
-for k, key in {"HAGGIS": "gla-city_8", "FISH": "portree_0", "STP": "food_4", "ROAST": "arbroath-docks_6"}.items():
+for k, key in {"HAGGIS": "gla-city_8", "FISH": "arran_3", "STP": "food_4", "ROAST": "arbroath-docks_6"}.items():
     R["SCOT_" + k] = export(key, f"food/scot-{k.lower()}.jpg", 4 / 5, (640, 800))[0]
     R["SCOT_" + k + "_L"] = large(key)
 
 # Shopping tab section photos (album shots reused: every vendored photo is already placed somewhere)
-for k, key in {"HALLS": "gla-cathedral_4", "GEAR": "glencoe_1"}.items():
+for k, key in {"HALLS": "r-glasgow-strath_3", "GEAR": "glencoe_2"}.items():
     R["SHOP_PIC_" + k] = export(key, f"shop/{k.lower()}.jpg", 4 / 5, (640, 800))[0]
     R["SHOP_PIC_" + k + "_L"] = large(key)
 
@@ -378,7 +367,7 @@ S = [
 ]
 R["SOURCES"] = "".join(f'<div><b>{esc(g)}</b>{"".join(f"<a href=\"{u}\">{esc(t)}</a>" for t, u in links)}</div>' for g, links in S)
 
-for src_name, out_name in (("guide.html", "index.html"), ("food.html", "food.html"), ("shopping.html", "shopping.html"), ("travel.html", "travel.html")):
+for src_name, out_name in (("guide.html", "index.html"), ("food.html", "food.html"), ("shopping.html", "shopping.html"), ("travel.html", "travel.html"), ("photos.html", "photos.html")):
     page = open(J("src", src_name), encoding="utf-8").read()
     for k, v in R.items():
         page = page.replace("{{" + k + "}}", v)
@@ -393,4 +382,4 @@ for src_name, out_name in (("guide.html", "index.html"), ("food.html", "food.htm
     open(J(out_name), "w", encoding="utf-8").write(page)
 n = sum(len(fs) for _, _, fs in os.walk(PH))
 mb = sum(os.path.getsize(os.path.join(d, f)) for d, _, fs in os.walk(PH) for f in fs) / 1e6
-print(f"index.html + travel.html written. {count} places, {len(order)} wall photos, {n} image files, {mb:.1f} MB")
+print(f"5 pages written. {count} places, {nroll} photos on the Photos tab, {n} image files, {mb:.1f} MB")

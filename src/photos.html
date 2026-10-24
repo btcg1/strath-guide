@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Photos – Strath Field Guide</title>
+<meta name="description" content="Our camera roll from a semester at Strathclyde: the best photos from every trip, in date order.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Strath Field Guide">
+<meta property="og:title" content="Photos – Strath Field Guide">
+<meta property="og:description" content="Our camera roll from a semester at Strathclyde: the best photos from every trip, in date order.">
+<meta property="og:url" content="https://btcg1.github.io/strath-guide/photos.html">
+<meta property="og:image" content="https://btcg1.github.io/strath-guide/photos/og/pstrip.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#17312c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="preload" as="image" href="{{P_STRIP0}}" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<nav class="topnav" aria-label="Main">
+  <a class="wordmark" href="index.html">Strath Field Guide</a>
+  <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html">Travel</a><a href="photos.html" aria-current="page">Photos</a></div>
+  <div class="topnav__links"><a href="#trips">Trips</a><a href="#roll">Album</a></div>
+</nav>
+<header class="hero" id="top">
+  <div class="hero__body">
+    <h1 class="hero__title">
+      <span class="hero__line"><span class="hero__word">Camera</span></span>
+      <span class="hero__line hero__line--2"><span class="hero__word">roll</span></span>
+    </h1>
+    <div class="hero__pitch">
+      <p class="hero__lead">{{ROLL_COUNT}} photos from {{ROLL_TRIPS}} trips, picked for composition from the {{ROLL_ALL}} we took. In date order, Glasgow first.</p>
+      <div class="hero__actions"><a class="button" href="#trips">Pick a trip</a><a class="hero__alt" href="travel.html">Trips and places</a></div>
+    </div>
+    <figure class="hero__frame"><span class="strip shutter" data-strip>
+          {{P_STRIP_IMGS}}
+        </span><figcaption class="hero__photo">In the photo: <span data-strip-caption>{{P_STRIP_CAPTION0}}</span></figcaption></figure>
+  </div>
+</header>
+
+<main>
+<section class="tripjump" id="trips" aria-label="Trips">
+  <ol class="tripjump__list">
+    {{ROLL_INDEX}}
+  </ol>
+</section>
+
+<section class="roll" id="roll">
+  <div class="roll__field">
+    <h2 class="roll__title"><span>Camera</span><span>roll</span></h2>
+    {{PRINTS}}
+    <p class="roll__note">Every photo here is ours, shot on a Ricoh GR between September and December 2025.</p>
+  </div>
+  <div class="album">
+    {{ROLL}}
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <div>
+      <p class="foot__invite">See you in&nbsp;Glasgow</p>
+      <a class="button button--light" href="index.html#apply">How to apply</a>
+    </div>
+    <ul class="foot__links">
+      <li><a href="https://www.ntu.edu.sg/education/student-exchanges/exchange-programmes/gem-explorer">NTU GEM Explorer</a></li>
+      <li><a href="https://www.strath.ac.uk/studywithus/studyabroad/comingtostrathclyde/">Strathclyde exchange</a></li>
+      <li><a href="https://www.gov.uk/eta/apply">UK ETA</a></li>
+      <li><a href="index.html#sources">All sources</a></li>
+    </ul>
+  </div>
+  <p class="foot__legal"><span>Written by NTU students after a semester at Strathclyde. Photos are our own.</span></p>
+  <p class="foot__mark" aria-hidden="true">Strathclyde</p>
+</footer>
+
+<dialog class="lightbox" data-lightbox aria-label="Photo">
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="lightbox__close" data-lb-close>Close</button>
+  <button type="button" class="lightbox__prev" data-lb-prev>Previous</button>
+  <button type="button" class="lightbox__next" data-lb-next>Next</button>
+</dialog>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>

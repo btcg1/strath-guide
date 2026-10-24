@@ -1,0 +1,1950 @@
+{
+ "all": 3714,
+ "trips": [
+  {
+   "id": "glasgow",
+   "title": "Glasgow",
+   "when": "all semester",
+   "sections": [
+    {
+     "title": "Riverside Museum",
+     "keys": [
+      [
+       "r-glasgow-riverside-museum_7",
+       "Double decker tram from the front"
+      ],
+      [
+       "r-glasgow-riverside-museum_3",
+       "Vintage car on recreated street"
+      ],
+      [
+       "r-glasgow-riverside-museum_26",
+       "Antique bicycle against pale wall"
+      ],
+      [
+       "r-glasgow-riverside-museum_31",
+       "Tall ship beside the museum"
+      ]
+     ]
+    },
+    {
+     "title": "University of Glasgow",
+     "keys": [
+      [
+       "r-glasgow-uog_7",
+       "Gothic arch framing the courtyard"
+      ],
+      [
+       "r-glasgow-uog_17",
+       "University tower above stone facades"
+      ],
+      [
+       "r-glasgow-uog_10",
+       "Empty vaulted cloister with deep perspective"
+      ],
+      [
+       "r-glasgow-uog_27",
+       "Palm beneath the glasshouse roof"
+      ]
+     ]
+    },
+    {
+     "title": "Kelvingrove",
+     "keys": [
+      [
+       "r-glasgow-kelvingrove_1",
+       "Grand hall and organ in symmetry"
+      ],
+      [
+       "r-glasgow-kelvingrove_9",
+       "Aircraft beneath ornate museum roof"
+      ],
+      [
+       "r-glasgow-kelvingrove_12",
+       "Sculpture above the museum entrance"
+      ]
+     ]
+    },
+    {
+     "title": "Pollok Country Park",
+     "keys": [
+      [
+       "r-glasgow-pollock_5",
+       "Highland cow facing the camera"
+      ],
+      [
+       "r-glasgow-pollock_3",
+       "Highland calf grazing by the trees"
+      ],
+      [
+       "r-glasgow-pollock_7",
+       "Cattle scattered across green pasture"
+      ],
+      [
+       "r-glasgow-pollock-art-museum_0",
+       "Bright atrium with patterned floor"
+      ],
+      [
+       "r-glasgow-pollock-art-museum_4",
+       "Rich blue gallery of artworks"
+      ],
+      [
+       "pollok-art_2",
+       "Sculpture framed by gallery doorway"
+      ]
+     ]
+    },
+    {
+     "title": "The Barras",
+     "keys": [
+      [
+       "r-glasgow-barras_0",
+       "Green market frontage and street"
+      ],
+      [
+       "r-glasgow-barras_3",
+       "Market aisle beneath timber roof"
+      ]
+     ]
+    },
+    {
+     "title": "Strathclyde campus",
+     "keys": [
+      [
+       "gla-strath_5",
+       "Brick arch framing wet campus walkway"
+      ],
+      [
+       "gla-strath_2",
+       "Modern campus building against blue sky"
+      ],
+      [
+       "r-glasgow-strath_3",
+       "City view above campus rooftops"
+      ]
+     ]
+    },
+    {
+     "title": "Necropolis",
+     "keys": [
+      [
+       "r-glasgow-necropolis_9",
+       "Tall memorial against blue sky"
+      ],
+      [
+       "r-glasgow-necropolis_14",
+       "Seated statue above cemetery skyline"
+      ],
+      [
+       "r-glasgow-necropolis_1",
+       "Path leading toward stone mausoleum"
+      ],
+      [
+       "r-glasgow-necropolis_30",
+       "Tree lined path between memorials"
+      ]
+     ]
+    },
+    {
+     "title": "Glasgow Cathedral",
+     "keys": [
+      [
+       "r-glasgow-cathedral_17",
+       "Small chapel with stained glass"
+      ],
+      [
+       "r-glasgow-cathedral_4",
+       "Cathedral nave leading toward altar"
+      ],
+      [
+       "r-glasgow-cathedral_24",
+       "Cathedral exterior beyond green lawn"
+      ]
+     ]
+    },
+    {
+     "title": "City centre",
+     "keys": [
+      [
+       "r-glasgow-city_18",
+       "White church beneath blue sky"
+      ],
+      [
+       "gla-city_5",
+       "Broad street receding toward city towers"
+      ],
+      [
+       "r-glasgow-city_21",
+       "Pedestrians along a wet city street"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oban",
+   "title": "Oban & Kilchurn",
+   "when": "14 September",
+   "sections": [
+    {
+     "title": "Inveraray",
+     "keys": [
+      [
+       "r-oban-inveraray_1",
+       "Tree-lined path leading to castle"
+      ],
+      [
+       "inveraray_1",
+       "Castle tower and ornate balcony"
+      ],
+      [
+       "r-oban-inveraray_15",
+       "Stone arch framing the loch"
+      ]
+     ]
+    },
+    {
+     "title": "Oban",
+     "keys": [
+      [
+       "r-oban-oban_1",
+       "Sailboats beneath a bright sky"
+      ],
+      [
+       "r-oban-oban_17",
+       "Curving stone arcade and lawn"
+      ],
+      [
+       "r-oban-oban_7",
+       "Plated seafood in warm light"
+      ],
+      [
+       "r-oban-oban_38",
+       "Oban Distillery stone facade"
+      ]
+     ]
+    },
+    {
+     "title": "St Conan's Kirk and Kilchurn Castle",
+     "keys": [
+      [
+       "r-oban-st-conan-s-kirk-kilchurn_19",
+       "Symmetrical nave and rose window"
+      ],
+      [
+       "r-oban-st-conan-s-kirk-kilchurn_5",
+       "Castle ruin beneath broad hills"
+      ],
+      [
+       "r-oban-st-conan-s-kirk-kilchurn_9",
+       "Kirk tower and patterned stonework"
+      ]
+     ]
+    },
+    {
+     "title": "Rest and Be Thankful and Tarbet",
+     "keys": [
+      [
+       "r-oban-rest-and-be-thankful-tarbet_2",
+       "Loch and boats beyond green lawn"
+      ],
+      [
+       "r-oban-rest-and-be-thankful-tarbet_4",
+       "Red boat beside mountain loch"
+      ],
+      [
+       "r-oban-rest-and-be-thankful-tarbet_11",
+       "Winding road above the loch"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "york",
+   "title": "York",
+   "when": "18 September – 21 September",
+   "sections": [
+    {
+     "title": "York",
+     "keys": [
+      [
+       "r-york_60",
+       "Colourful umbrellas above a narrow street"
+      ],
+      [
+       "r-york_68",
+       "Sunlit York Minster towers and facade"
+      ],
+      [
+       "r-york_78",
+       "Timbered buildings framing the Shambles"
+      ],
+      [
+       "r-york_1",
+       "Narrow street leading to the Minster"
+      ],
+      [
+       "r-york_31",
+       "Steps climbing to Clifford's Tower"
+      ],
+      [
+       "r-york_49",
+       "Grand facade reflected in a puddle"
+      ],
+      [
+       "r-york_153",
+       "Vaulted cathedral nave receding to altar"
+      ],
+      [
+       "r-york_248",
+       "Abbey ruins framed by autumn trees"
+      ]
+     ]
+    },
+    {
+     "title": "National Railway Museum",
+     "keys": [
+      [
+       "r-york-rail-museum_21",
+       "Streamlined blue locomotive at three-quarter angle"
+      ],
+      [
+       "r-york-rail-museum_1",
+       "Green locomotive in a spacious hall"
+      ],
+      [
+       "r-york-rail-museum_38",
+       "Long green engine under blue trusses"
+      ],
+      [
+       "r-york-rail-museum_43",
+       "Early locomotive with bright yellow wheels"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "glenfinnan",
+   "title": "Glenfinnan",
+   "when": "21 September",
+   "sections": [
+    {
+     "title": "Luss",
+     "keys": [
+      [
+       "luss_1",
+       "Curving shore toward lakeside village"
+      ],
+      [
+       "r-glenfinnan-luss_4",
+       "Pier overlooking boats and hills"
+      ],
+      [
+       "r-glenfinnan-luss_5",
+       "Wooded shore across blue water"
+      ]
+     ]
+    },
+    {
+     "title": "Viewpoints",
+     "keys": [
+      [
+       "r-glenfinnan-viewpoints_2",
+       "Layered mountains above winding loch"
+      ],
+      [
+       "r-glenfinnan-viewpoints_12",
+       "Road winding through dramatic valley"
+      ],
+      [
+       "r-glenfinnan-viewpoints_17",
+       "Open moorland beside curving road"
+      ]
+     ]
+    },
+    {
+     "title": "Glenfinnan Viaduct",
+     "keys": [
+      [
+       "r-glenfinnan-viaduct_1",
+       "Monument framed by loch and mountains"
+      ],
+      [
+       "r-glenfinnan-viaduct_3",
+       "Distant viaduct across green valley"
+      ],
+      [
+       "r-glenfinnan-viaduct_23",
+       "Viaduct beyond tree-framed rocky stream"
+      ],
+      [
+       "glenfinnan_6",
+       "Viaduct arches receding across hillside"
+      ]
+     ]
+    },
+    {
+     "title": "Fort William",
+     "keys": [
+      [
+       "r-glenfinnan-fort-william_2",
+       "Stone church beneath cloudy sky"
+      ],
+      [
+       "r-glenfinnan-fort-william_3",
+       "Horse cart sculpture on town street"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "falkirk",
+   "title": "Falkirk",
+   "when": "25 September",
+   "sections": [
+    {
+     "title": "Falkirk",
+     "keys": [
+      [
+       "r-falkirk_32",
+       "Canal path beneath a cloud filled sky"
+      ],
+      [
+       "r-falkirk_51",
+       "Close view of a Kelpies sculpture"
+      ],
+      [
+       "r-falkirk_64",
+       "Rainbow arches framing a distant walker"
+      ],
+      [
+       "r-falkirk_14",
+       "Falkirk Wheel framed against the sky"
+      ],
+      [
+       "r-falkirk_83",
+       "Tree lined path beside the canal"
+      ],
+      [
+       "r-falkirk_91",
+       "Ornate clock face in warm light"
+      ],
+      [
+       "r-falkirk_102",
+       "Historic house at the end of a path"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inchcolm",
+   "title": "Inchcolm Island",
+   "when": "27 September",
+   "sections": [
+    {
+     "title": "Queensferry",
+     "keys": [
+      [
+       "r-inchcolm-queensferry_9",
+       "Ferry beside quay and red bridge"
+      ],
+      [
+       "r-inchcolm-queensferry_17",
+       "Stone clock tower above street"
+      ],
+      [
+       "r-inchcolm-queensferry_21",
+       "Narrow lane framing distant bridge"
+      ],
+      [
+       "r-inchcolm-queensferry_26",
+       "Harbor boats beneath red bridge"
+      ]
+     ]
+    },
+    {
+     "title": "Inchcolm Island",
+     "keys": [
+      [
+       "r-inchcolm-inchcolm-island_19",
+       "Sunlit stone vaulted chamber"
+      ],
+      [
+       "r-inchcolm-inchcolm-island_41",
+       "Stone wall leading toward grassy hill"
+      ],
+      [
+       "r-inchcolm-inchcolm-island_21",
+       "Seated figure framed by ruined arch"
+      ],
+      [
+       "r-inchcolm-inchcolm-island_27",
+       "Stone gateway into abbey courtyard"
+      ],
+      [
+       "inchcolm_3",
+       "Elevated view over island shore"
+      ],
+      [
+       "r-inchcolm-inchcolm-island_68",
+       "Wildflowers against soft green background"
+      ],
+      [
+       "inchcolm_6",
+       "Path leading toward abbey ruins"
+      ]
+     ]
+    },
+    {
+     "title": "Boat",
+     "keys": [
+      [
+       "r-inchcolm-boat_26",
+       "Red bridge spanning blue water"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lochness",
+   "title": "Loch Ness",
+   "when": "28 September",
+   "sections": [
+    {
+     "title": "Inverness",
+     "keys": [
+      [
+       "r-loch-ness-inverness_1",
+       "Ornate stone church doorway"
+      ],
+      [
+       "r-loch-ness-inverness_10",
+       "Repeating arches inside shopping arcade"
+      ],
+      [
+       "r-loch-ness-inverness_12",
+       "Autumn trees framing a path"
+      ]
+     ]
+    },
+    {
+     "title": "Commando Memorial",
+     "keys": [
+      [
+       "r-loch-ness-commando_3",
+       "Commando memorial against cloudy sky"
+      ]
+     ]
+    },
+    {
+     "title": "Glencoe",
+     "keys": [
+      [
+       "glencoe_2",
+       "Winding trail beneath Highland slope"
+      ],
+      [
+       "r-loch-ness-glencoe_3",
+       "Rocky foreground and sweeping valley"
+      ]
+     ]
+    },
+    {
+     "title": "Fort Augustus",
+     "keys": [
+      [
+       "r-loch-ness-fort-augustus_7",
+       "Canal lock receding toward village"
+      ],
+      [
+       "r-loch-ness-fort-augustus_12",
+       "Waterfall framed by wooded banks"
+      ],
+      [
+       "fortaugustus_5",
+       "Stone bridge above rocky stream"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arbroath",
+   "title": "Arbroath",
+   "when": "29 September",
+   "sections": [
+    {
+     "title": "Docks",
+     "keys": [
+      [
+       "r-arbroath-docks_30",
+       "Sunlit abbey ruins against blue sky"
+      ],
+      [
+       "r-arbroath-docks_35",
+       "Stone arch framing abbey interior"
+      ],
+      [
+       "r-arbroath-docks_16",
+       "White lighthouse framed by harbour buildings"
+      ],
+      [
+       "r-arbroath-docks_18",
+       "Orange café chairs beneath timber awning"
+      ],
+      [
+       "r-arbroath-docks_53",
+       "Seafood soup and bread at table"
+      ]
+     ]
+    },
+    {
+     "title": "Coastal Walk",
+     "keys": [
+      [
+       "arbroath_3",
+       "Isolated red sea stack above surf"
+      ],
+      [
+       "r-arbroath-coastal-walk_78",
+       "Waves entering narrow red rock gorge"
+      ],
+      [
+       "r-arbroath-coastal-walk_55",
+       "Natural arch in red coastal rock"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hamilton",
+   "title": "Hamilton Park",
+   "when": "30 September",
+   "sections": [
+    {
+     "title": "Hamilton",
+     "keys": [
+      [
+       "r-hamilton_17",
+       "Race pack along curving rail"
+      ],
+      [
+       "hamilton_2",
+       "Chestnut horse galloping past rail"
+      ],
+      [
+       "hamilton_4",
+       "Blue-clad jockey on gray horse"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stirling",
+   "title": "Stirling",
+   "when": "2 October",
+   "sections": [
+    {
+     "title": "Stirling",
+     "keys": [
+      [
+       "r-stirling_39",
+       "Timbered ceiling of castle hall"
+      ],
+      [
+       "r-stirling_67",
+       "Stone bridge spanning the river"
+      ],
+      [
+       "r-stirling_20",
+       "Winding path through old cemetery"
+      ],
+      [
+       "r-stirling_24",
+       "Archer statue against pale sky"
+      ],
+      [
+       "r-stirling_26",
+       "Stirling Castle rising above garden"
+      ],
+      [
+       "r-stirling_43",
+       "Wide view across Stirling"
+      ]
+     ]
+    },
+    {
+     "title": "Wallace Monument",
+     "keys": [
+      [
+       "r-stirling-wallace-monument_5",
+       "River winding through green fields"
+      ],
+      [
+       "r-stirling-wallace-monument_15",
+       "Stone doorway framing a passage"
+      ],
+      [
+       "r-stirling-wallace-monument_20",
+       "Full tower framed by trees"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skye",
+   "title": "Isle of Skye",
+   "when": "4 October – 5 October",
+   "sections": [
+    {
+     "title": "Eilean Donan",
+     "keys": [
+      [
+       "skye-eileandonan_1",
+       "Castle above rocky shoreline"
+      ]
+     ]
+    },
+    {
+     "title": "Portree",
+     "keys": [
+      [
+       "portree_5",
+       "Colorful harbor buildings below wooded hill"
+      ],
+      [
+       "r-skye-portree_2",
+       "Pastel shopfronts along village street"
+      ]
+     ]
+    },
+    {
+     "title": "Creag an Fhèilidh",
+     "keys": [
+      [
+       "creag_6",
+       "Waterfall plunging beside coastal cliffs"
+      ],
+      [
+       "r-skye-creag-an-fh-ilidh_3",
+       "Grassy headland curving into sea"
+      ],
+      [
+       "r-skye-creag-an-fh-ilidh_7",
+       "Cliff path with distant walkers"
+      ]
+     ]
+    },
+    {
+     "title": "Storr",
+     "keys": [
+      [
+       "storr2_4",
+       "Rock pinnacles above distant lochs"
+      ],
+      [
+       "skye-storr_2",
+       "Towering rock formations with hikers"
+      ],
+      [
+       "skye-storr_4",
+       "Winding path between stone pinnacles"
+      ],
+      [
+       "skye-storr_1",
+       "Sunlit trail across rolling moorland"
+      ]
+     ]
+    },
+    {
+     "title": "Sligachan",
+     "keys": [
+      [
+       "r-skye-sligachan_5",
+       "Highland cow against mountain slope"
+      ],
+      [
+       "skye-sligachan_5",
+       "Rocky stream beneath mountain peaks"
+      ],
+      [
+       "r-skye-sligachan_12",
+       "Stone bridge beneath pointed mountain"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "culross",
+   "title": "Culross",
+   "when": "10 October",
+   "sections": [
+    {
+     "title": "Culross",
+     "keys": [
+      [
+       "r-culross_23",
+       "Wooden pier leading into estuary"
+      ],
+      [
+       "r-culross_76",
+       "Cobbled street lined with historic houses"
+      ],
+      [
+       "r-culross_11",
+       "Stone fountain before grand house"
+      ],
+      [
+       "r-culross_39",
+       "Leafy tunnel framing a path"
+      ],
+      [
+       "r-culross_50",
+       "Ochre house beneath clear blue sky"
+      ],
+      [
+       "r-culross_65",
+       "Village rooftops overlooking the water"
+      ],
+      [
+       "r-culross_105",
+       "Abbey ruins against blue sky"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dunnottar",
+   "title": "Dunnottar & Stonehaven",
+   "when": "11 October",
+   "sections": [
+    {
+     "title": "Stonehaven",
+     "keys": [
+      [
+       "stonehaven_3",
+       "harbour and boats from above"
+      ],
+      [
+       "r-dunnottar-stonehaven_11",
+       "stone memorial framed by steps"
+      ],
+      [
+       "r-dunnottar-stonehaven_15",
+       "coastal path leading toward bay"
+      ]
+     ]
+    },
+    {
+     "title": "Dunnottar Castle",
+     "keys": [
+      [
+       "r-dunnottar-dunnottar-castle_4",
+       "castle above rugged coastal cliffs"
+      ],
+      [
+       "r-dunnottar-dunnottar-castle_22",
+       "rocky cove and turquoise water"
+      ],
+      [
+       "r-dunnottar-dunnottar-castle_25",
+       "ruined stone building across lawn"
+      ],
+      [
+       "r-dunnottar-dunnottar-castle_38",
+       "sea framed by stone window"
+      ]
+     ]
+    },
+    {
+     "title": "Dundee",
+     "keys": [
+      [
+       "r-dunnottar-dundee-toilet_5",
+       "angular museum walls framing walkway"
+      ],
+      [
+       "r-dunnottar-dundee-toilet_4",
+       "V&A sign beneath layered facade"
+      ],
+      [
+       "r-dunnottar-dundee-toilet_8",
+       "steps alongside sculptural museum facade"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "standrews",
+   "title": "St Andrews",
+   "when": "12 October",
+   "sections": [
+    {
+     "title": "City",
+     "keys": [
+      [
+       "r-st-andrews-city_10",
+       "Colourful ice cream cups indoors"
+      ],
+      [
+       "r-st-andrews-city_15",
+       "Sunlit corner building against blue sky"
+      ],
+      [
+       "r-st-andrews-city_3",
+       "Cyclist on a narrow stone street"
+      ]
+     ]
+    },
+    {
+     "title": "Beach",
+     "keys": [
+      [
+       "aberdeen-beach_0",
+       "Curving shoreline from the grassy bank"
+      ],
+      [
+       "r-st-andrews-beach_23",
+       "Rock-lined inlet beneath a clear sky"
+      ]
+     ]
+    },
+    {
+     "title": "Old Course",
+     "keys": [
+      [
+       "oldcourse_4",
+       "Stone bridge leading toward town"
+      ],
+      [
+       "r-st-andrews-old-course_1",
+       "Golfer statue against open green"
+      ],
+      [
+       "r-st-andrews-old-course_5",
+       "Wide fairway with distant clubhouse"
+      ]
+     ]
+    },
+    {
+     "title": "Uni",
+     "keys": [
+      [
+       "r-st-andrews-uni_1",
+       "Clock tower above the college courtyard"
+      ],
+      [
+       "r-st-andrews-uni_4",
+       "Ornate university frontage along the street"
+      ],
+      [
+       "r-st-andrews-uni_9",
+       "Stone archway drawing the eye inward"
+      ]
+     ]
+    },
+    {
+     "title": "Cathedral and Castle",
+     "keys": [
+      [
+       "r-st-andrews-cathedral-castle_5",
+       "Castle gateway framed against blue sky"
+      ],
+      [
+       "r-st-andrews-cathedral-castle_17",
+       "Cathedral facade and tower beyond graves"
+      ],
+      [
+       "standrews_3",
+       "Coastal castle ruin above green lawn"
+      ],
+      [
+       "r-st-andrews-cathedral-castle_26",
+       "Ruined tower framed by stone arch"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "arran",
+   "title": "Isle of Arran",
+   "when": "15 October",
+   "sections": [
+    {
+     "title": "Arran",
+     "keys": [
+      [
+       "arran_4",
+       "Ornate mirror above castle fireplace"
+      ],
+      [
+       "r-arran_20",
+       "Boardwalk leading through coastal grass"
+      ],
+      [
+       "r-arran_21",
+       "Orange mushrooms across forest floor"
+      ],
+      [
+       "r-arran_68",
+       "Stone castle above garden path"
+      ],
+      [
+       "x-shrewsbury_54",
+       "Curving road beneath autumn trees"
+      ],
+      [
+       "r-arran_99",
+       "Two swans on dark water"
+      ],
+      [
+       "r-arran_103",
+       "Burger held over outdoor table"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "newlanark",
+   "title": "New Lanark",
+   "when": "17 October",
+   "sections": [
+    {
+     "title": "River Clyde",
+     "keys": [
+      [
+       "x-clyde_12",
+       "Waterfall framed by autumn trees"
+      ],
+      [
+       "r-new-lanark-river-clyde_19",
+       "Leaf-covered steps beneath arching branches"
+      ],
+      [
+       "r-new-lanark-river-clyde_9",
+       "Pipes leading into the woodland"
+      ],
+      [
+       "r-new-lanark-river-clyde_34",
+       "Rocky river below autumn woods"
+      ]
+     ]
+    },
+    {
+     "title": "Lanark",
+     "keys": [
+      [
+       "r-new-lanark-lanark_15",
+       "Long textile room with receding machinery"
+      ],
+      [
+       "lanark_8",
+       "Illuminated clock tower at dusk"
+      ],
+      [
+       "x-lanark_41",
+       "Mill buildings beyond the rocky river"
+      ],
+      [
+       "x-lanark_46",
+       "Stone mill facade and arched entrance"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "edinburgh",
+   "title": "Edinburgh",
+   "when": "18 October",
+   "sections": [
+    {
+     "title": "City",
+     "keys": [
+      [
+       "r-edinburgh-city_11",
+       "Silhouettes framed by stone close"
+      ],
+      [
+       "r-edinburgh-city_10",
+       "St Giles Cathedral and statue"
+      ],
+      [
+       "r-edinburgh-city_21",
+       "Autumn tree framing historic building"
+      ],
+      [
+       "edinburgh_7",
+       "Orange sports car on cobbled street"
+      ]
+     ]
+    },
+    {
+     "title": "Museum",
+     "keys": [
+      [
+       "r-edinburgh-museum_8",
+       "Museum hall with locomotive and vaulted roof"
+      ],
+      [
+       "r-edinburgh-museum_9",
+       "Close view of mounted stag"
+      ],
+      [
+       "r-edinburgh-museum_7",
+       "Tiered museum galleries and exhibits"
+      ]
+     ]
+    },
+    {
+     "title": "Arthur's Seat",
+     "keys": [
+      [
+       "r-edinburgh-arthur-s-seat_20",
+       "Winding path climbing rocky hill"
+      ],
+      [
+       "r-edinburgh-arthur-s-seat_23",
+       "Walker and dog silhouetted on ridge"
+      ],
+      [
+       "r-edinburgh-arthur-s-seat_9",
+       "Hiker overlooking Edinburgh from hillside"
+      ],
+      [
+       "r-edinburgh-arthur-s-seat_24",
+       "Rocky slope above distant city"
+      ]
+     ]
+    },
+    {
+     "title": "Market",
+     "keys": [
+      [
+       "r-edinburgh-market_18",
+       "Market stalls beneath castle and autumn leaves"
+      ],
+      [
+       "r-edinburgh-market_7",
+       "Bread display beneath striped market canopy"
+      ],
+      [
+       "r-edinburgh-market_22",
+       "Hand holding a golden pastry"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lomond",
+   "title": "Loch Lomond & Hill House",
+   "when": "24 October",
+   "sections": [
+    {
+     "title": "Hill House",
+     "keys": [
+      [
+       "r-lomund-hill-house-hill-house_5",
+       "Warm sitting room and fireplace"
+      ],
+      [
+       "r-lomund-hill-house-hill-house_13",
+       "Weathered house beneath protective structure"
+      ],
+      [
+       "r-lomund-hill-house-hill-house_22",
+       "Curving walkway toward garden building"
+      ]
+     ]
+    },
+    {
+     "title": "Loch Lomond",
+     "keys": [
+      [
+       "lomond_3",
+       "Autumn canopy framing woodland path"
+      ],
+      [
+       "x-shrewsbury_54",
+       "Tree tunnel with distant walker"
+      ],
+      [
+       "r-lomund-hill-house-loch-lomund_26",
+       "Bright orange boat paddlewheel detail"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aberdeen",
+   "title": "Aberdeen",
+   "when": "25 October – 29 October",
+   "sections": [
+    {
+     "title": "Crathes Castle",
+     "keys": [
+      [
+       "r-aberdeen-crathes-castle_76",
+       "Path between vivid red autumn trees"
+      ],
+      [
+       "r-aberdeen-crathes-castle_77",
+       "Castle facade beneath a blue sky"
+      ],
+      [
+       "r-aberdeen-crathes-castle_89",
+       "Garden arches with castle beyond"
+      ],
+      [
+       "r-aberdeen-crathes-castle_19",
+       "Autumn trees reflected in still water"
+      ],
+      [
+       "r-aberdeen-crathes-castle_52",
+       "Timbered castle room and patterned floor"
+      ],
+      [
+       "r-aberdeen-crathes-castle_80",
+       "Garden path framed by sculpted hedges"
+      ],
+      [
+       "crathes_7",
+       "Highland cow grazing beside woodland"
+      ]
+     ]
+    },
+    {
+     "title": "Gordon Highlanders Museum",
+     "keys": [
+      [
+       "r-aberdeen-gordon-highlanders-museum_7",
+       "Museum entrance framed by trees"
+      ],
+      [
+       "r-aberdeen-gordon-highlanders-museum_12",
+       "Highlander uniform in museum display"
+      ],
+      [
+       "r-aberdeen-gordon-highlanders-museum_17",
+       "Historic machine gun in trench"
+      ]
+     ]
+    },
+    {
+     "title": "City Centre",
+     "keys": [
+      [
+       "r-aberdeen-city-centre_25",
+       "Grand Gothic facade across the square"
+      ],
+      [
+       "r-aberdeen-city-centre_18",
+       "Granite civic building along broad street"
+      ],
+      [
+       "r-aberdeen-city-centre_24",
+       "Rainbow wall beside modern buildings"
+      ],
+      [
+       "r-aberdeen-city-centre_35",
+       "Mercat Cross against historic buildings"
+      ]
+     ]
+    },
+    {
+     "title": "Maritime Museum",
+     "keys": [
+      [
+       "r-aberdeen-maritime-museum_0",
+       "Yellow diving equipment in industrial display"
+      ],
+      [
+       "r-aberdeen-maritime-museum_5",
+       "Detailed offshore platform model"
+      ]
+     ]
+    },
+    {
+     "title": "Beach",
+     "keys": [
+      [
+       "aberdeen-beach_0",
+       "Curving seawall beside breaking waves"
+      ],
+      [
+       "r-aberdeen-beach_7",
+       "Seafront Ferris wheel under blue sky"
+      ],
+      [
+       "r-aberdeen-beach_14",
+       "Stone bridge reflected in dark water"
+      ]
+     ]
+    },
+    {
+     "title": "University of Aberdeen",
+     "keys": [
+      [
+       "r-aberdeen-university-of-aberdeen_1",
+       "Twin turreted gateway in sunlight"
+      ],
+      [
+       "r-aberdeen-university-of-aberdeen_20",
+       "Tall stained glass chapel windows"
+      ],
+      [
+       "r-aberdeen-university-of-aberdeen_25",
+       "Historic tower catching warm sunlight"
+      ],
+      [
+       "r-aberdeen-university-of-aberdeen_29",
+       "Curving path through landscaped grounds"
+      ]
+     ]
+    },
+    {
+     "title": "Footdee",
+     "keys": [
+      [
+       "r-aberdeen-footdee_8",
+       "Bunting above a cottage lane"
+      ],
+      [
+       "r-aberdeen-footdee_9",
+       "Bicycle and flowerpots beneath window"
+      ],
+      [
+       "footdee_3",
+       "Narrow stone passage with bunting"
+      ],
+      [
+       "footdee_7",
+       "Bright orange door with nautical decorations"
+      ]
+     ]
+    },
+    {
+     "title": "Grampian Transport Museum, Alford",
+     "keys": [
+      [
+       "r-aberdeen-alford-grampian_10",
+       "Vintage motorcycle from low angle"
+      ],
+      [
+       "r-aberdeen-alford-grampian_1",
+       "Brass lamps on vintage green car"
+      ],
+      [
+       "r-aberdeen-alford-grampian_30",
+       "Blue classic sports car in profile"
+      ],
+      [
+       "r-aberdeen-alford-grampian_50",
+       "Early bicycle against plain wall"
+      ],
+      [
+       "r-aberdeen-alford-grampian_94",
+       "Polished historic steam engine"
+      ]
+     ]
+    },
+    {
+     "title": "Alford Heritage Museum",
+     "keys": [
+      [
+       "r-aberdeen-alford-heritage-museum_1",
+       "Orderly shelves of vintage goods"
+      ],
+      [
+       "r-aberdeen-alford-heritage-museum_9",
+       "Antique organ in period room"
+      ],
+      [
+       "r-aberdeen-alford-heritage-museum_23",
+       "Old classroom with wooden desks"
+      ],
+      [
+       "r-aberdeen-alford-heritage-museum_30",
+       "Detailed miniature railway layout"
+      ],
+      [
+       "r-aberdeen-alford-heritage-museum_49",
+       "Green steam roller outdoors"
+      ],
+      [
+       "r-aberdeen-alford-heritage-museum_51",
+       "Small polished steam engine outdoors"
+      ]
+     ]
+    },
+    {
+     "title": "Alford",
+     "keys": [
+      [
+       "r-aberdeen-alford-alford_0",
+       "Ornate street monument in town"
+      ],
+      [
+       "r-aberdeen-alford-alford_3",
+       "Granite high street and blue shopfront"
+      ],
+      [
+       "r-aberdeen-alford-alford_17",
+       "Woodland path beneath autumn trees"
+      ],
+      [
+       "r-aberdeen-alford-alford_21",
+       "River winding through open countryside"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prestonmill",
+   "title": "East Linton & North Berwick",
+   "when": "31 October",
+   "sections": [
+    {
+     "title": "Preston Mill",
+     "keys": [
+      [
+       "r-preston-mill-preston-mill_1",
+       "Path leading toward conical mill"
+      ],
+      [
+       "prestonmill_1",
+       "Waterwheel beside stone mill wall"
+      ],
+      [
+       "r-preston-mill-preston-mill_8",
+       "Large wheel inside timber mill"
+      ]
+     ]
+    },
+    {
+     "title": "East Linton",
+     "keys": [
+      [
+       "r-preston-mill-east-linton_21",
+       "Path leading to stone monument"
+      ],
+      [
+       "r-preston-mill-east-linton_9",
+       "Tree lined path receding into distance"
+      ],
+      [
+       "r-preston-mill-east-linton_11",
+       "Pastries arranged in bakery display"
+      ]
+     ]
+    },
+    {
+     "title": "Tantallon Castle",
+     "keys": [
+      [
+       "r-preston-mill-tantallon-castle_4",
+       "Castle gateway above green courtyard"
+      ],
+      [
+       "tantallon_2",
+       "Coastal ruins overlooking Bass Rock"
+      ],
+      [
+       "r-preston-mill-tantallon-castle_11",
+       "Spiral staircase within stone tower"
+      ],
+      [
+       "r-preston-mill-tantallon-castle_24",
+       "Tall castle wall and courtyard"
+      ]
+     ]
+    },
+    {
+     "title": "North Berwick",
+     "keys": [
+      [
+       "r-preston-mill-north-berwick_1",
+       "Flowering garden with red wagon wheel"
+      ],
+      [
+       "r-preston-mill-north-berwick_2",
+       "Stone monument in town square"
+      ],
+      [
+       "r-preston-mill-north-berwick_12",
+       "Curving beach beneath overcast sky"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "argyll",
+   "title": "Argyll Forest",
+   "when": "1 November",
+   "sections": [
+    {
+     "title": "Dunoon",
+     "keys": [
+      [
+       "r-argyll-forest-dunoon_1",
+       "Dunoon arch framing the park"
+      ],
+      [
+       "r-argyll-forest-dunoon_6",
+       "Plated roast with green vegetables"
+      ],
+      [
+       "dunoon_5",
+       "Sailboat against hills across the loch"
+      ]
+     ]
+    },
+    {
+     "title": "Rest and Be Thankful",
+     "keys": [
+      [
+       "r-argyll-forest-rest-and-be-thankful_9",
+       "Stone bridge spanning a rushing stream"
+      ]
+     ]
+    },
+    {
+     "title": "Glenbranter",
+     "keys": [
+      [
+       "r-argyll-forest-glenbranter_12",
+       "Sunbeams crossing a mossy forest"
+      ],
+      [
+       "r-argyll-forest-glenbranter_24",
+       "Autumn tree beside a winding trail"
+      ],
+      [
+       "r-argyll-forest-glenbranter_14",
+       "Green path through tall conifers"
+      ],
+      [
+       "r-argyll-forest-glenbranter_25",
+       "Woodland trees reflected in still water"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dunkeld",
+   "title": "Dunkeld & Birnam",
+   "when": "2 November",
+   "sections": [
+    {
+     "title": "Dunkeld",
+     "keys": [
+      [
+       "r-dunkeld_20",
+       "Leaf-covered path beneath golden canopy"
+      ],
+      [
+       "r-dunkeld_57",
+       "Stone footbridge leading into woodland"
+      ],
+      [
+       "r-dunkeld_17",
+       "White corner building on village street"
+      ],
+      [
+       "dunkeld_1",
+       "Riverside village beneath autumn hills"
+      ],
+      [
+       "dunkeld_5",
+       "Rapids winding through wooded gorge"
+      ],
+      [
+       "r-dunkeld_77",
+       "Arched sculpture framing autumn hillside"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ni",
+   "title": "Northern Ireland",
+   "when": "20 November – 24 November",
+   "sections": [
+    {
+     "title": "Belfast",
+     "keys": [
+      [
+       "belfast_2",
+       "Illuminated City Hall above market"
+      ],
+      [
+       "belfast_3",
+       "Titanic Belfast facade from below"
+      ],
+      [
+       "r-northern-ireland-belfast_1",
+       "Solidarity mural on brick wall"
+      ],
+      [
+       "r-northern-ireland-belfast_19",
+       "Glowing Dutch pancake market stall"
+      ],
+      [
+       "r-northern-ireland-belfast_24",
+       "Pastry plate against warm lights"
+      ],
+      [
+       "r-northern-ireland-belfast_40",
+       "Waterfront skyline reflected in river"
+      ],
+      [
+       "r-northern-ireland-belfast_68",
+       "Historic ship beneath blue sky"
+      ]
+     ]
+    },
+    {
+     "title": "Giant's Causeway and the Dark Hedges",
+     "keys": [
+      [
+       "r-northern-ireland-giant-s-causeway-dark-hedges_59",
+       "Tree tunnel along empty road"
+      ],
+      [
+       "r-northern-ireland-giant-s-causeway-dark-hedges_2",
+       "Castle ruins above rugged coast"
+      ],
+      [
+       "r-northern-ireland-giant-s-causeway-dark-hedges_17",
+       "Curving cliffs above the sea"
+      ],
+      [
+       "r-northern-ireland-giant-s-causeway-dark-hedges_21",
+       "Coast framed by ruined stone"
+      ],
+      [
+       "causeway_6",
+       "Basalt columns leading toward sea"
+      ],
+      [
+       "r-northern-ireland-giant-s-causeway-dark-hedges_52",
+       "Close view of stacked basalt"
+      ]
+     ]
+    },
+    {
+     "title": "Derry",
+     "keys": [
+      [
+       "r-northern-ireland-derry_7",
+       "Guildhall facade and clock tower"
+      ],
+      [
+       "r-northern-ireland-derry_17",
+       "Stone church beside green lawn"
+      ],
+      [
+       "r-northern-ireland-derry_26",
+       "Free Derry Corner and flag"
+      ],
+      [
+       "r-northern-ireland-derry_41",
+       "Civil rights mural on gable"
+      ],
+      [
+       "r-northern-ireland-derry_71",
+       "Christmas tree beside illuminated Guildhall"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inverness",
+   "title": "Inverness, Aviemore & Wick",
+   "when": "28 November – 30 November",
+   "sections": [
+    {
+     "title": "Rothiemurchus",
+     "keys": [
+      [
+       "r-inverness-rothiemurcus_2",
+       "Woodland path leading to red sign"
+      ],
+      [
+       "r-inverness-rothiemurcus_7",
+       "Highland cow in green field"
+      ],
+      [
+       "aviemore_8",
+       "Illuminated station platform at dusk"
+      ]
+     ]
+    },
+    {
+     "title": "Wick",
+     "keys": [
+      [
+       "r-inverness-wick_29",
+       "Statue and birds against blue sky"
+      ],
+      [
+       "wick_4",
+       "Walker above dramatic coastal arch"
+      ],
+      [
+       "r-inverness-wick_17",
+       "Sailboat framed against quiet marina"
+      ],
+      [
+       "r-inverness-wick_58",
+       "Narrow rocky inlet opening to sea"
+      ],
+      [
+       "r-inverness-wick_65",
+       "Grassy fenced path toward horizon"
+      ],
+      [
+       "wick_7",
+       "Sunset reflected across calm river"
+      ]
+     ]
+    },
+    {
+     "title": "Culloden and Fort George",
+     "keys": [
+      [
+       "culloden_1",
+       "Bridge leading straight to fort gate"
+      ],
+      [
+       "r-inverness-culloden-fort-george_0",
+       "Stone shelter beneath open sky"
+      ],
+      [
+       "r-inverness-culloden-fort-george_15",
+       "Fort doorways framing receding corridor"
+      ],
+      [
+       "r-inverness-culloden-fort-george_26",
+       "Fort cannon overlooking blue water"
+      ],
+      [
+       "r-inverness-culloden-fort-george_34",
+       "Long brick barracks across courtyard"
+      ],
+      [
+       "r-inverness-culloden-fort-george_46",
+       "Fort chapel against pale sky"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wales",
+   "title": "Chester & North Wales",
+   "when": "16 December – 23 December",
+   "sections": [
+    {
+     "title": "Chester",
+     "keys": [
+      [
+       "x-chester_43",
+       "Vaulted cathedral aisle with patterned floor"
+      ],
+      [
+       "x-chester_82",
+       "Illuminated half timbered buildings at dusk"
+      ],
+      [
+       "x-chester_10",
+       "Colorful meal in a white bowl"
+      ],
+      [
+       "r-chester-chester_27",
+       "Christmas stalls beneath warm string lights"
+      ],
+      [
+       "x-chester_38",
+       "Chester Cathedral entrance framed from street"
+      ],
+      [
+       "x-chester_58",
+       "Clock tower framed by street arch"
+      ]
+     ]
+    },
+    {
+     "title": "Conwy and Llandudno",
+     "keys": [
+      [
+       "r-chester-conwy-llandudno_42",
+       "Castle courtyard and walls from above"
+      ],
+      [
+       "llandudno_4",
+       "Suspension bridge framed through stone arch"
+      ],
+      [
+       "x-conwy_75",
+       "Llandudno pier extending into the sea"
+      ],
+      [
+       "x-conwy_26",
+       "Conwy Castle rising above the road"
+      ],
+      [
+       "r-chester-conwy-llandudno_63",
+       "Curving shore beneath a blue sky"
+      ],
+      [
+       "x-conwy_65",
+       "Blue Victorian balcony on seaside facade"
+      ]
+     ]
+    },
+    {
+     "title": "Snowdonia and Llanfairpwll",
+     "keys": [
+      [
+       "r-chester-snowdonia-llanfairpwll_1",
+       "Lakeside boathouse against distant mountains"
+      ],
+      [
+       "x-snowdonia_9",
+       "Hiker on bridge beneath mountain ridge"
+      ],
+      [
+       "snowdonia_5",
+       "Winding stream through a broad valley"
+      ],
+      [
+       "x-snowdonia_23",
+       "Red jacket beside the mountain lake"
+      ],
+      [
+       "x-snowdonia_33",
+       "Waterfall tumbling over dark rocks"
+      ],
+      [
+       "x-snowdonia_62",
+       "Orange clock tower on town street"
+      ]
+     ]
+    },
+    {
+     "title": "Shrewsbury and Church Stretton",
+     "keys": [
+      [
+       "x-shrewsbury_54",
+       "Waterfall winding through misty hills"
+      ],
+      [
+       "x-shrewsbury_59",
+       "Winding path between red hills"
+      ],
+      [
+       "x-shrewsbury_8",
+       "Rainy timbered street beneath holiday lights"
+      ],
+      [
+       "x-shrewsbury_16",
+       "Shrewsbury station facade in soft light"
+      ],
+      [
+       "r-chester-shrewsbury-church-stretton_22",
+       "Cafe lunch arranged on patterned table"
+      ],
+      [
+       "r-chester-shrewsbury-church-stretton_27",
+       "Two timbered houses above a wall"
+      ]
+     ]
+    },
+    {
+     "title": "Manchester",
+     "keys": [
+      [
+       "x-manchester_24",
+       "Repeating spinning machinery receding into distance"
+      ],
+      [
+       "x-manchester_36",
+       "Long brick mill beside the canal"
+      ],
+      [
+       "x-manchester_4",
+       "Mill chimney rising above brick facade"
+      ],
+      [
+       "r-chester-manchester-mill_14",
+       "Wooden loom framed inside the mill"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "hero": [
+  {
+   "file": "r-glasgow-riverside-museum_7",
+   "y": 0.5,
+   "cap": "Riverside Museum, Glasgow"
+  },
+  {
+   "file": "r-oban-inveraray_1",
+   "y": 0.5,
+   "cap": "Inveraray, Oban & Kilchurn"
+  },
+  {
+   "file": "r-york_60",
+   "y": 0.5,
+   "cap": "York"
+  },
+  {
+   "file": "luss_1",
+   "y": 0.5,
+   "cap": "Luss, Glenfinnan"
+  },
+  {
+   "file": "r-falkirk_32",
+   "y": 0.5,
+   "cap": "Falkirk"
+  },
+  {
+   "file": "r-inchcolm-queensferry_9",
+   "y": 0.5,
+   "cap": "Queensferry, Inchcolm Island"
+  },
+  {
+   "file": "r-loch-ness-inverness_1",
+   "y": 0.5,
+   "cap": "Inverness, Loch Ness"
+  },
+  {
+   "file": "r-arbroath-docks_30",
+   "y": 0.5,
+   "cap": "Docks, Arbroath"
+  }
+ ]
+}

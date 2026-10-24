@@ -27,8 +27,8 @@
 <body>
 <nav class="topnav" aria-label="Main">
   <a class="wordmark" href="index.html">Strath Field Guide</a>
-  <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html" aria-current="page">Travel</a></div>
-  <div class="topnav__links"><a href="#around">Transport</a><a href="#trips">Map</a><a href="#places">Places</a><a href="#photos">Photos</a><a href="#extra">Wales</a></div>
+  <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html" aria-current="page">Travel</a><a href="photos.html">Photos</a></div>
+  <div class="topnav__links"><a href="#around">Transport</a><a href="#trips">Map</a><a href="#places">Places</a><a href="#questions">FAQ</a></div>
 </nav>
 <header class="hero" id="top">
   <div class="hero__body">
@@ -37,7 +37,7 @@
       <span class="hero__line hero__line--2"><span class="hero__word">Glasgow</span></span>
     </h1>
     <div class="hero__pitch">
-      <p class="hero__lead">We used free days to explore beyond Glasgow. Here's our map of 24 trips, plus 36 places with prices and opening times, and photos from along the way.</p>
+      <p class="hero__lead">We used free days to explore beyond Glasgow. Here's our map of 24 trips, plus 36 places with prices and opening times. The photos have their own tab.</p>
       <div class="hero__actions"><a class="button" href="#trips">See the trips</a><a class="hero__alt" href="index.html#apply">How to apply</a></div>
     </div>
     <figure class="hero__frame"><span class="strip shutter" data-strip>
@@ -82,7 +82,7 @@
       <p class="tablename">Beyond Glasgow</p>
       <table class="rows">
         <tr><td>Coach</td><td><a href="https://www.flixbus.co.uk/">Flixbus</a></td><td><a href="https://www.studentbeans.com/student-discount/uk/flixbus">20% off with Student Beans</a></td></tr>
-        <tr><td>Coach</td><td><a href="https://www.ember.to/">Ember</a> to Fort William</td><td>Via Glencoe, 7 a day</td></tr>
+        <tr><td>Coach</td><td><a href="https://www.ember.to/">Ember</a> to Fort William</td><td>Via Glencoe, a few a day</td></tr>
         <tr><td>Coach + ferry</td><td><a href="https://www.stenaline.co.uk/coach-and-sail/to-ireland-ulsterbus">Citylink/Ulsterbus 923</a> to Belfast</td><td>From £37</td></tr>
       </table>
       <p class="around__note"><a href="https://www.scotrail.co.uk/">ScotRail</a> dropped peak fares for good on 1 September 2025, so trains cost the same at any time of day.</p>
@@ -143,28 +143,11 @@
     <details><summary>How do buses work?</summary><div><p>Every company does it differently, but they all take contactless cards like YouTrip or Wise. We ran into four systems:</p><ul><li>Tap on and tap off, like in Singapore.</li><li>Tap on for one flat fare, however far you go.</li><li>Tell the driver your stop and tap the fare they key in.</li><li>Book online in advance, mostly for long routes.</li></ul><p>In Glasgow, First Bus singles cost at most £2 since 7 September 2026, and the Subway takes contactless: £1.80 a ride, never more than £3.40 a day if you use the same card or phone.</p><p>Under 22 and living in Scotland? Buses are free with a <a href="https://www.transport.gov.scot/concessionary-travel/under-22s-free-bus-travel">National Entitlement Card</a>. Traffic lights work differently from Singapore's. Give yourself a few days to get used to them.</p></div></details>
     <details><summary>Is National Trust for Scotland worth it?</summary><div><p><a href="https://www.nts.org.uk/join">Membership</a> is £6.60 a month, or £3.80 on the Young rate, and gets you into every NTS castle, house and garden. Entry is usually £15–20, so a few visits can cover the cost.</p><p>You cannot cancel during the first year, so the minimum cost is £79.20 (£45.60 Young). Under 22 with a National Entitlement Card? <a href="https://www.historicenvironment.scot/visit/visitor-faqs/">Historic Environment Scotland</a> castles cost just £1.</p></div></details>
     <details><summary>Best hikes?</summary><div><ul><li><b>Old Man of Storr</b> (Skye): the most scenic, if the wind lets you up.</li><li><b>Goatfell</b> (Arran): take the first ferry over and the last one back.</li><li><b>Arthur's Seat</b> (Edinburgh): easy and scenic, but the final section is exposed bare rock, so take care.</li><li><b>Ben Nevis</b>: we did not hike it; friends recommended it.</li></ul></div></details>
-    <details><summary>Where can I see the northern lights?</summary><div><p>Glasgow's light pollution makes sightings difficult. One of us tried at the Necropolis on a high-activity night, and it was 90% cloudy. Calton Hill in Edinburgh sometimes works.</p><p>Shetland is the best bet in Scotland: <a href="https://www.northlinkferries.co.uk/book/routes-times-and-prices/2027-fares/">NorthLink</a>'s overnight ferry from Aberdeen, from £29.50 one way (2027 low season). Go early in the semester, while the nights are long. Iceland, Norway and Finland work too, but they're expensive.</p></div></details>
+    <details><summary>Where can I see the northern lights?</summary><div><p>Glasgow's light pollution makes sightings difficult. One of us tried at the Necropolis on a high-activity night, and it was 90% cloudy. Calton Hill in Edinburgh sometimes works.</p><p>Shetland is the best bet in Scotland: <a href="https://www.northlinkferries.co.uk/book/routes-times-and-prices/2027-fares/">NorthLink</a>'s overnight ferry from Aberdeen, from £29.50 one way in low season (November to mid-December and January to March), which is also when the nights are longest. Iceland, Norway and Finland work too, but they're expensive.</p></div></details>
   </div>
 </section>
 
-<section class="roll" id="photos">
-  <div class="roll__field">
-    <h2 class="roll__title"><span>Camera</span><span>roll</span></h2>
-    {{PRINTS}}
-    <p class="roll__note">Every photo here is ours, shot on a Ricoh GR between September and December 2025.</p>
-  </div>
-  <div class="album">
-    {{WALL}}
-  </div>
-</section>
 
-<section class="extra" id="extra">
-  <h2 class="h2 extra__title">Chester and North Wales</h2>
-  <p class="extra__lead">One more week, in December 2025: Chester, the North Wales coast at Conwy and Llandudno, Snowdonia and Anglesey, then Shrewsbury and a Manchester mill on the way back.</p>
-  <div class="album">
-    {{EXTRA}}
-  </div>
-</section>
 
 <section class="travel-note" aria-label="About these facts">
   <p>We checked prices, ferry seasons and opening times on the official sites on 24–25 October 2026. They change every year, so check again before you book. All the sources are listed on the <a href="index.html#sources">Guide tab</a>.</p>
