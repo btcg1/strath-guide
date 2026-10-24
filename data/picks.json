@@ -1,0 +1,276 @@
+{
+ "trips": {
+  "oban": [
+   "kilchurn_1",
+   "oban_2",
+   "inveraray_1"
+  ],
+  "york": [
+   "york_1",
+   "york_2",
+   "york_8"
+  ],
+  "glenfinnan": [
+   "glenfinnan_6",
+   "glenfinnan_0",
+   "luss_1"
+  ],
+  "falkirk": [
+   "falkirk_3",
+   "falkirk_4",
+   "falkirk_1"
+  ],
+  "inchcolm": [
+   "inchcolm_6",
+   "queensferry_3",
+   "inchcolm-boat_0"
+  ],
+  "lochness": [
+   "lochness_8",
+   "glencoe_1",
+   "fortaugustus_5"
+  ],
+  "arbroath": [
+   "arbroath_3",
+   "arbroath_2",
+   "arbroath-docks_4"
+  ],
+  "hamilton": [
+   "hamilton_1",
+   "hamilton_4",
+   "hamilton_2"
+  ],
+  "stirling": [
+   "wallace_0",
+   "wallace_3",
+   "stirling_3"
+  ],
+  "skye": [
+   "skye-storr_4",
+   "skye-sligachan_5",
+   "skye-eileandonan_1"
+  ],
+  "culross": [
+   "culross_4",
+   "culross_2",
+   "culross_5"
+  ],
+  "dunnottar": [
+   "dunnottar_2",
+   "dunnottar_8",
+   "stonehaven_3"
+  ],
+  "standrews": [
+   "standrews_5",
+   "oldcourse_4",
+   "standrews_3"
+  ],
+  "arran": [
+   "arran_1",
+   "arran_0",
+   "arran_4"
+  ],
+  "newlanark": [
+   "newlanark_3",
+   "lanark_8",
+   "newlanark_7"
+  ],
+  "edinburgh": [
+   "edinburgh_0",
+   "edinburgh_2",
+   "edinburgh_5"
+  ],
+  "lomond": [
+   "lomond_5",
+   "lomond_3",
+   "hillhouse_5"
+  ],
+  "aberdeen": [
+   "footdee_3",
+   "crathes_7",
+   "aber-city_3"
+  ],
+  "prestonmill": [
+   "prestonmill_1",
+   "tantallon_2",
+   "northberwick_7"
+  ],
+  "argyll": [
+   "restbe_2",
+   "dunoon_5",
+   "argyll_5"
+  ],
+  "dunkeld": [
+   "dunkeld_1",
+   "dunkeld_7",
+   "dunkeld_5"
+  ],
+  "ni": [
+   "causeway_6",
+   "causeway_1",
+   "belfast_3"
+  ],
+  "inverness": [
+   "wick_4",
+   "culloden_1",
+   "wick_7"
+  ],
+  "wales": [
+   "snowdonia_5",
+   "llandudno_4",
+   "conwy_4"
+  ]
+ },
+ "strip": [
+  {
+   "file": "glenfinnan_6",
+   "y": 0.62,
+   "cap": "Glenfinnan Viaduct, 21 September"
+  },
+  {
+   "file": "queensferry_3",
+   "y": 0.5,
+   "cap": "Forth Bridge, 27 September"
+  },
+  {
+   "file": "skye-storr_4",
+   "y": 0.62,
+   "cap": "Old Man of Storr, Skye, October"
+  },
+  {
+   "file": "lomond_5",
+   "y": 0.62,
+   "cap": "Loch Lomond, 24 October"
+  },
+  {
+   "file": "dunnottar_8",
+   "y": 0.62,
+   "cap": "Dunnottar Castle, 11 October"
+  },
+  {
+   "file": "skye-eileandonan_1",
+   "y": 0.62,
+   "cap": "Eilean Donan, October"
+  },
+  {
+   "file": "standrews_3",
+   "y": 0.62,
+   "cap": "St Andrews Castle, 12 October"
+  },
+  {
+   "file": "wallace_3",
+   "y": 0.74,
+   "cap": "River Forth from the Wallace Monument, 2 October"
+  }
+ ],
+ "verbs": {
+  "apply": "gla-strath_2",
+  "match": "gla-uog_2",
+  "fly": "glenfinnan_0",
+  "settle": "gla-city_1"
+ },
+ "intro": {
+  "campus": "gla-cathedral_7",
+  "ferry": "inchcolm-boat_4",
+  "skye": "storr2_4",
+  "street": "gla-city_5",
+  "haggis": "gla-city_8"
+ },
+ "prints": [
+  {
+   "file": "skye-storr_2",
+   "cap": "Old Man of Storr"
+  },
+  {
+   "file": "oldcourse_3",
+   "cap": "The Old Course, St Andrews"
+  },
+  {
+   "file": "edinburgh_7",
+   "cap": "Edinburgh"
+  }
+ ],
+ "food": [
+  {
+   "file": "gla-city_8",
+   "caption": "Haggis, neeps and tatties, Glasgow"
+  },
+  {
+   "file": "arran_3",
+   "caption": "Fish and chips with mushy peas, Arran"
+  },
+  {
+   "file": "food_4",
+   "caption": "Sticky toffee pudding"
+  },
+  {
+   "file": "oban_1",
+   "caption": "Fried seafood, Oban"
+  },
+  {
+   "file": "portree_0",
+   "caption": "Fish and chips, Portree"
+  },
+  {
+   "file": "arbroath-docks_6",
+   "caption": "Roast with Yorkshire pudding, Arbroath"
+  },
+  {
+   "file": "aviemore_0",
+   "caption": "Burgers and onion rings, Aviemore"
+  }
+ ],
+ "wall": [
+  "glenfinnan-view_3",
+  "inchcolm_3",
+  "inveraray_4",
+  "restbe_1",
+  "glencoe_0",
+  "lochness_7",
+  "arbroath_6",
+  "arbroath_1",
+  "arbroath_7",
+  "wallace_7",
+  "skye-storr_0",
+  "skye-storr_1",
+  "skye-sligachan_3",
+  "skye-sligachan_2",
+  "portree_5",
+  "creag_6",
+  "dunnottar_0",
+  "stonehaven_6",
+  "standrews_7",
+  "standrews-beach_1",
+  "oldcourse_7",
+  "lanark_2",
+  "newlanark_6",
+  "edinburgh_4",
+  "arthurseat_6",
+  "lomond_4",
+  "footdee_7",
+  "aberdeen-beach_0",
+  "crathes_5",
+  "prestonmill_0",
+  "tantallon_5",
+  "dunoon_6",
+  "causeway_4",
+  "derry_0",
+  "belfast_2",
+  "aviemore_8",
+  "chester_4",
+  "snowdonia_2",
+  "shrewsbury_4",
+  "gla-necropolis_4",
+  "gla-necropolis_1",
+  "gla-cathedral_4",
+  "gla-strath_5",
+  "gla-pollok_4",
+  "gla-pollok_2",
+  "pollok-art_2",
+  "gla-kelvingrove_5",
+  "york-rail_7",
+  "falkirk_2",
+  "luss_4"
+ ],
+ "hero": "glenfinnan-view_1"
+}

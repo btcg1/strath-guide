@@ -1,0 +1,399 @@
+[
+ {
+  "id": "oban",
+  "name": "Oban & Kilchurn",
+  "date": "2025-09-14",
+  "end": null,
+  "how": "ESN day tour",
+  "pins": [
+   "oban",
+   "kilchurn"
+  ],
+  "line": "Seaside town under McCaig's Tower, with stops at Inveraray and Kilchurn Castle.",
+  "folders": [
+   "oban",
+   "kilchurn",
+   "inveraray"
+  ]
+ },
+ {
+  "id": "york",
+  "name": "York",
+  "date": "2025-09-18",
+  "end": "2025-09-21",
+  "how": "Train from Glasgow Central",
+  "pins": [
+   "york"
+  ],
+  "line": "Medieval walls, Clifford's Tower and the National Railway Museum.",
+  "folders": [
+   "york",
+   "york-rail"
+  ]
+ },
+ {
+  "id": "glenfinnan",
+  "name": "Glenfinnan",
+  "date": "2025-09-21",
+  "end": null,
+  "how": "ESN day tour",
+  "pins": [
+   "glenfinnan",
+   "fortwilliam"
+  ],
+  "line": "The Harry Potter viaduct, via Loch Lomond at Luss and Fort William.",
+  "folders": [
+   "glenfinnan",
+   "glenfinnan-view",
+   "luss"
+  ]
+ },
+ {
+  "id": "falkirk",
+  "name": "Falkirk",
+  "date": "2025-09-25",
+  "end": null,
+  "how": "Train from Queen Street",
+  "pins": [
+   "falkirk"
+  ],
+  "line": "Canal walk from the Falkirk Wheel to the Kelpies.",
+  "folders": [
+   "falkirk"
+  ]
+ },
+ {
+  "id": "inchcolm",
+  "name": "Inchcolm Island",
+  "date": "2025-09-27",
+  "end": null,
+  "how": "Train, then Maid of the Forth ferry",
+  "pins": [
+   "inchcolm"
+  ],
+  "line": "Abbey on an uninhabited island, from South Queensferry under the Forth Bridge.",
+  "folders": [
+   "inchcolm",
+   "queensferry",
+   "inchcolm-boat"
+  ]
+ },
+ {
+  "id": "lochness",
+  "name": "Loch Ness",
+  "date": "2025-09-28",
+  "end": null,
+  "how": "ESN day tour",
+  "pins": [
+   "lochness",
+   "glencoe"
+  ],
+  "line": "Glencoe, the Commando Memorial, Fort Augustus and Urquhart Castle in one long day.",
+  "folders": [
+   "lochness",
+   "glencoe",
+   "fortaugustus",
+   "inverness"
+  ]
+ },
+ {
+  "id": "arbroath",
+  "name": "Arbroath",
+  "date": "2025-09-29",
+  "end": null,
+  "how": "Train from Queen Street",
+  "pins": [
+   "arbroath"
+  ],
+  "line": "Red sandstone cliffs, sea stacks and the coastal walk.",
+  "folders": [
+   "arbroath",
+   "arbroath-docks"
+  ]
+ },
+ {
+  "id": "hamilton",
+  "name": "Hamilton Park",
+  "date": "2025-09-30",
+  "end": null,
+  "how": "Train from Central",
+  "pins": [
+   "hamilton"
+  ],
+  "line": "The nearest racecourse to Glasgow.",
+  "folders": [
+   "hamilton"
+  ]
+ },
+ {
+  "id": "stirling",
+  "name": "Stirling",
+  "date": "2025-10-02",
+  "end": null,
+  "how": "Train from Queen Street",
+  "pins": [
+   "stirling"
+  ],
+  "line": "Castle and Wallace Monument, both up steep hills.",
+  "folders": [
+   "stirling",
+   "wallace"
+  ]
+ },
+ {
+  "id": "skye",
+  "name": "Isle of Skye",
+  "date": "2025-10-04",
+  "end": "2025-10-05",
+  "how": "ESN weekend tour",
+  "pins": [
+   "skye",
+   "storr",
+   "eileandonan"
+  ],
+  "line": "Eilean Donan, Portree, the Old Man of Storr and Sligachan.",
+  "folders": [
+   "skye-storr",
+   "storr2",
+   "skye-sligachan",
+   "skye-eileandonan",
+   "portree",
+   "creag"
+  ]
+ },
+ {
+  "id": "culross",
+  "name": "Culross",
+  "date": "2025-10-10",
+  "end": null,
+  "how": "Stagecoach bus",
+  "pins": [
+   "culross"
+  ],
+  "line": "A preserved 17th-century village of cobbles and white cottages.",
+  "folders": [
+   "culross"
+  ]
+ },
+ {
+  "id": "dunnottar",
+  "name": "Dunnottar & Stonehaven",
+  "date": "2025-10-11",
+  "end": null,
+  "how": "Train to Stonehaven",
+  "pins": [
+   "dunnottar"
+  ],
+  "line": "Clifftop castle ruin a coastal walk from Stonehaven.",
+  "folders": [
+   "dunnottar",
+   "stonehaven"
+  ]
+ },
+ {
+  "id": "standrews",
+  "name": "St Andrews",
+  "date": "2025-10-12",
+  "end": null,
+  "how": "Direct bus from Buchanan",
+  "pins": [
+   "standrews"
+  ],
+  "line": "Old Course on a Sunday, the castle, the cathedral ruins and the beach.",
+  "folders": [
+   "standrews",
+   "standrews-beach",
+   "oldcourse"
+  ]
+ },
+ {
+  "id": "arran",
+  "name": "Isle of Arran",
+  "date": "2025-10-15",
+  "end": null,
+  "how": "Train, then CalMac ferry",
+  "pins": [
+   "arran"
+  ],
+  "line": "First ferry over, last ferry back.",
+  "folders": [
+   "arran"
+  ]
+ },
+ {
+  "id": "newlanark",
+  "name": "New Lanark",
+  "date": "2025-10-17",
+  "end": null,
+  "how": "Train to Lanark",
+  "pins": [
+   "newlanark"
+  ],
+  "line": "Mill village and the Falls of Clyde.",
+  "folders": [
+   "newlanark",
+   "lanark"
+  ]
+ },
+ {
+  "id": "edinburgh",
+  "name": "Edinburgh",
+  "date": "2025-10-18",
+  "end": null,
+  "how": "Flixbus or train",
+  "pins": [
+   "edinburgh"
+  ],
+  "line": "The castle, Arthur's Seat, the museum and the Saturday market.",
+  "folders": [
+   "edinburgh",
+   "arthurseat",
+   "edi-market",
+   "edi-museum"
+  ]
+ },
+ {
+  "id": "lomond",
+  "name": "Loch Lomond & Hill House",
+  "date": "2025-10-24",
+  "end": null,
+  "how": "Train to Balloch and Helensburgh",
+  "pins": [
+   "lomond",
+   "hillhouse"
+  ],
+  "line": "Autumn on the loch, then Mackintosh's Hill House.",
+  "folders": [
+   "lomond",
+   "hillhouse"
+  ]
+ },
+ {
+  "id": "aberdeen",
+  "name": "Aberdeen",
+  "date": "2025-10-25",
+  "end": "2025-10-29",
+  "how": "Train from Queen Street",
+  "pins": [
+   "aberdeen",
+   "crathes"
+  ],
+  "line": "Footdee, the beach, the university and Crathes Castle.",
+  "folders": [
+   "footdee",
+   "aberdeen-beach",
+   "aber-uni",
+   "aber-city",
+   "crathes",
+   "alford"
+  ]
+ },
+ {
+  "id": "prestonmill",
+  "name": "East Linton & North Berwick",
+  "date": "2025-10-31",
+  "end": null,
+  "how": "Train to East Linton",
+  "pins": [
+   "prestonmill",
+   "tantallon",
+   "northberwick"
+  ],
+  "line": "Preston Mill, Tantallon Castle and the beach at North Berwick.",
+  "folders": [
+   "prestonmill",
+   "eastlinton",
+   "tantallon",
+   "northberwick"
+  ]
+ },
+ {
+  "id": "argyll",
+  "name": "Argyll Forest",
+  "date": "2025-11-01",
+  "end": null,
+  "how": "Day trip via Dunoon",
+  "pins": [
+   "argyll",
+   "dunoon"
+  ],
+  "line": "Dunoon, Glenbranter and the Rest and Be Thankful.",
+  "folders": [
+   "argyll",
+   "dunoon",
+   "restbe"
+  ]
+ },
+ {
+  "id": "dunkeld",
+  "name": "Dunkeld & Birnam",
+  "date": "2025-11-02",
+  "end": null,
+  "how": "Train from Queen Street",
+  "pins": [
+   "dunkeld"
+  ],
+  "line": "The Hermitage, the 600-year-old oak and the river.",
+  "folders": [
+   "dunkeld"
+  ]
+ },
+ {
+  "id": "ni",
+  "name": "Northern Ireland",
+  "date": "2025-11-20",
+  "end": "2025-11-24",
+  "how": "Coach and ferry from Buchanan",
+  "pins": [
+   "belfast",
+   "causeway",
+   "derry"
+  ],
+  "line": "Belfast, the Giant's Causeway, the Dark Hedges and Derry.",
+  "folders": [
+   "causeway",
+   "belfast",
+   "derry"
+  ]
+ },
+ {
+  "id": "inverness",
+  "name": "Inverness, Aviemore & Wick",
+  "date": "2025-11-28",
+  "end": "2025-11-30",
+  "how": "Train from Queen Street",
+  "pins": [
+   "inverness",
+   "aviemore",
+   "culloden",
+   "wick"
+  ],
+  "line": "Culloden, Fort George, Rothiemurchus and the far north coast.",
+  "folders": [
+   "aviemore",
+   "wick",
+   "culloden"
+  ]
+ },
+ {
+  "id": "wales",
+  "name": "Chester & North Wales",
+  "date": "2025-12-16",
+  "end": "2025-12-23",
+  "how": "Train from Central",
+  "pins": [
+   "chester",
+   "conwy",
+   "snowdonia"
+  ],
+  "line": "Chester, Conwy, Llandudno, Snowdonia and Shrewsbury.",
+  "folders": [
+   "chester",
+   "conwy",
+   "llandudno",
+   "snowdonia",
+   "shrewsbury",
+   "manchester"
+  ]
+ }
+]

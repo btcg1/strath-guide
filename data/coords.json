@@ -1,0 +1,262 @@
+{
+ "strath": {
+  "lat": 55.8619,
+  "lon": -4.242,
+  "osm": "University of Strathclyde, Cathedral Precinct, Calton, Glasgow, Glasgow City, Al"
+ },
+ "oban": {
+  "lat": 56.412,
+  "lon": -5.4724,
+  "osm": "Oban, Argyll and Bute, Alba / Scotland, PA34 4AT, United Kingdom"
+ },
+ "york": {
+  "lat": 53.9657,
+  "lon": -1.0743,
+  "osm": "York, York and North Yorkshire, England, United Kingdom"
+ },
+ "glenfinnan": {
+  "lat": 56.8758,
+  "lon": -5.4293,
+  "osm": "Glenfinnan Viaduct, Glenfinnan Viaduct Trail, Glenfinnan, Highland, Alba / Scotl"
+ },
+ "falkirk": {
+  "lat": 56.0191,
+  "lon": -3.7555,
+  "osm": "The Kelpies, Forth and Clyde Canal Towpath, Middlefield, Falkirk, Alba / Scotlan"
+ },
+ "inchcolm": {
+  "lat": 56.03,
+  "lon": -3.3019,
+  "osm": "Inchcolm Abbey, Old ammunition tunnel, Dalgety Bay, Fife, Alba / Scotland, Unite"
+ },
+ "lochness": {
+  "lat": 57.3241,
+  "lon": -4.442,
+  "osm": "Urquhart Castle, Urquhart Castle Drive, Strone, Lewiston, Highland, Alba / Scotl"
+ },
+ "arbroath": {
+  "lat": 56.5587,
+  "lon": -2.5816,
+  "osm": "Arbroath, Angus, Alba / Scotland, DD11 1HL, United Kingdom"
+ },
+ "stirling": {
+  "lat": 56.124,
+  "lon": -3.948,
+  "osm": "Stirling Castle, Lower Square, Top of the Town, Raploch, Stirling, Alba / Scotla"
+ },
+ "storr": {
+  "lat": 57.507,
+  "lon": -6.1746,
+  "osm": "Old Man of Storr, Highland, Alba / Scotland, United Kingdom"
+ },
+ "culross": {
+  "lat": 56.0557,
+  "lon": -3.6284,
+  "osm": "Culross, Fife, Alba / Scotland, KY12 8HT, United Kingdom"
+ },
+ "dunnottar": {
+  "lat": 56.946,
+  "lon": -2.1971,
+  "osm": "Dunnottar Castle, A92, Arduthie, Mains of Dunnottar, Stonehaven, Aberdeenshire, "
+ },
+ "standrews": {
+  "lat": 56.3404,
+  "lon": -2.795,
+  "osm": "St Andrews, Fife, Alba / Scotland, KY16 9NU, United Kingdom"
+ },
+ "arran": {
+  "lat": 55.5939,
+  "lon": -5.1507,
+  "osm": "Brodick Castle, North Ayrshire, Alba / Scotland, KA27 8HY, United Kingdom"
+ },
+ "newlanark": {
+  "lat": 55.6637,
+  "lon": -3.7817,
+  "osm": "New Lanark, South Lanarkshire, Alba / Scotland, ML11 9DH, United Kingdom"
+ },
+ "edinburgh": {
+  "lat": 55.9487,
+  "lon": -3.2004,
+  "osm": "Edinburgh Castle, Castlehill, Abbeyhill, Old Town, City of Edinburgh, Alba / Sco"
+ },
+ "lomond": {
+  "lat": 56.0024,
+  "lon": -4.5833,
+  "osm": "Balloch, Fisherwood Road, Balloch, West Dunbartonshire, Alba / Scotland, G83 8SS"
+ },
+ "aberdeen": {
+  "lat": 57.1437,
+  "lon": -2.0718,
+  "osm": "Footdee, Castlehill and Pittodrie, Aberdeen City, Alba / Scotland, AB11 5DX, Uni"
+ },
+ "crathes": {
+  "lat": 57.0615,
+  "lon": -2.4398,
+  "osm": "Crathes Castle, Castle Driveway Path, Crathes, Aberdeenshire, Alba / Scotland, A"
+ },
+ "prestonmill": {
+  "lat": 55.9923,
+  "lon": -2.651,
+  "osm": "Preston Mill, the White Bridge, East Linton, East Lothian, Alba / Scotland, EH40"
+ },
+ "tantallon": {
+  "lat": 56.0565,
+  "lon": -2.6502,
+  "osm": "Tantallon Castle, A198, New Mains, Whitekirk, East Lothian, Alba / Scotland, EH3"
+ },
+ "northberwick": {
+  "lat": 56.0581,
+  "lon": -2.7209,
+  "osm": "North Berwick, East Lothian, Alba / Scotland, EH39 4HE, United Kingdom"
+ },
+ "argyll": {
+  "lat": 56.1355,
+  "lon": -5.0403,
+  "osm": "Glenbranter, Argyll and Bute, Alba / Scotland, PA27 8DJ, United Kingdom"
+ },
+ "dunoon": {
+  "lat": 55.9481,
+  "lon": -4.9245,
+  "osm": "Dunoon, Argyll and Bute, Alba / Scotland, PA23 7HG, United Kingdom"
+ },
+ "dunkeld": {
+  "lat": 56.5656,
+  "lon": -3.5863,
+  "osm": "Dunkeld, Perth and Kinross, Alba / Scotland, PH8 0AJ, United Kingdom"
+ },
+ "belfast": {
+  "lat": 54.5964,
+  "lon": -5.9302,
+  "osm": "Belfast City District, County Antrim, Northern Ireland / Tuaisceart \u00c9ireann, Uni"
+ },
+ "causeway": {
+  "lat": 55.2407,
+  "lon": -6.5115,
+  "osm": "Giant's Causeway, Causeway Coast and Glens District, County Antrim, Northern Ire"
+ },
+ "derry": {
+  "lat": 54.9979,
+  "lon": -7.3213,
+  "osm": "Derry/Londonderry, Derry and Strabane District, County Londonderry, Northern Ire"
+ },
+ "inverness": {
+  "lat": 57.479,
+  "lon": -4.2257,
+  "osm": "Inverness, Highland, Alba / Scotland, IV1 1AN, United Kingdom"
+ },
+ "aviemore": {
+  "lat": 57.1937,
+  "lon": -3.8289,
+  "osm": "Aviemore, Highland, Alba / Scotland, PH22 1RN, United Kingdom"
+ },
+ "wick": {
+  "lat": 58.4426,
+  "lon": -3.0916,
+  "osm": "Wick, Highland, Alba / Scotland, KW1 4NB, United Kingdom"
+ },
+ "culloden": {
+  "lat": 57.4765,
+  "lon": -4.1001,
+  "osm": "Culloden Battlefield, Leanach, Newlands of Culloden, Highland, Alba / Scotland, "
+ },
+ "chester": {
+  "lat": 53.1909,
+  "lon": -2.8909,
+  "osm": "Chester, Cheshire West and Chester, England, CH1 2ET, United Kingdom"
+ },
+ "conwy": {
+  "lat": 53.28,
+  "lon": -3.8256,
+  "osm": "Conwy Castle, West Barbican, Llandudno Junction, Conwy, Cymru / Wales, LL32 8AT,"
+ },
+ "snowdonia": {
+  "lat": 53.0685,
+  "lon": -4.0762,
+  "osm": "Yr Wyddfa, Gwynedd, Cymru / Wales, United Kingdom"
+ },
+ "glencoe": {
+  "lat": 56.6828,
+  "lon": -5.1015,
+  "osm": "Glencoe, Highland, Alba / Scotland, PH49 4HS, United Kingdom"
+ },
+ "eileandonan": {
+  "lat": 57.2741,
+  "lon": -5.5159,
+  "osm": "Eilean Donan, Lagg, Dornie, Highland, Alba / Scotland, United Kingdom"
+ },
+ "kilchurn": {
+  "lat": 56.4038,
+  "lon": -5.0272,
+  "osm": "Kilchurn Castle, A819, Lochawe, Argyll and Bute, Alba / Scotland, PA33 1AQ, Unit"
+ },
+ "linlithgow": {
+  "lat": 55.9787,
+  "lon": -3.6006,
+  "osm": "Linlithgow Palace, Kirkgate, Linlithgow, West Lothian, Alba / Scotland, EH49 7AH"
+ },
+ "pitlochry": {
+  "lat": 56.7036,
+  "lon": -3.7355,
+  "osm": "Pitlochry, Perth and Kinross, Alba / Scotland, PH16 5AB, United Kingdom"
+ },
+ "corrour": {
+  "lat": 56.7603,
+  "lon": -4.6908,
+  "osm": "Corrour, The Road to the Isles, Highland, Alba / Scotland, United Kingdom"
+ },
+ "isleofmay": {
+  "lat": 56.1869,
+  "lon": -2.5579,
+  "osm": "Isle of May, Fife, Alba / Scotland, United Kingdom"
+ },
+ "anstruther": {
+  "lat": 56.2228,
+  "lon": -2.7005,
+  "osm": "Anstruther, Fife, Alba / Scotland, KY10 3EA, United Kingdom"
+ },
+ "lerwick": {
+  "lat": 60.1531,
+  "lon": -1.1427,
+  "osm": "Lerwick, Shetland Islands, Alba / Scotland, United Kingdom"
+ },
+ "fortwilliam": {
+  "lat": 56.8178,
+  "lon": -5.111,
+  "osm": "Fort William, Highland, Alba / Scotland, PH33 6AJ, United Kingdom"
+ },
+ "pollok": {
+  "lat": 55.8309,
+  "lon": -4.3076,
+  "osm": "The Burrell Collection, 2060, Pollokshaws Road, Wellmeadow, Pollokshaws, Glasgow"
+ },
+ "kelvingrove": {
+  "lat": 55.8686,
+  "lon": -4.2906,
+  "osm": "Kelvingrove Art Gallery and Museum, Argyle Street, Kelvinhaugh, Finnieston, Glas"
+ },
+ "necropolis": {
+  "lat": 55.8627,
+  "lon": -4.2308,
+  "osm": "Glasgow Necropolis, 70, Garngad, Glasgow, Glasgow City, Alba / Scotland, G4 0UZ,"
+ },
+ "barras": {
+  "lat": 55.8549,
+  "lon": -4.2377,
+  "osm": "The Barras Market, Moncur Street, The Barras, Glasgow Cross, Calton, Glasgow, Gl"
+ },
+ "skye": {
+  "lat": 57.4131,
+  "lon": -6.1944,
+  "osm": "Portree, Highland, Alba / Scotland, IV51 9EH, United Kingdom"
+ },
+ "hillhouse": {
+  "lat": 56.017,
+  "lon": -4.7281,
+  "osm": "Hill House, Upper Colquhoun Street, Helensburgh, Argyll and Bute, Alba / Scotlan"
+ },
+ "hamilton": {
+  "lat": 55.7759,
+  "lon": -4.0334,
+  "osm": "Hamilton, South Lanarkshire, Alba / Scotland, ML3 7AW, United Kingdom"
+ }
+}

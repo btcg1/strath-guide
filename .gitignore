@@ -1,0 +1,5 @@
+_source/
+.taste-skill/
+__pycache__/
+data/countries-10m.json
+tools/fix_*.py
