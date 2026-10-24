@@ -3,7 +3,7 @@
 Run from the project root:  python tools/build.py
 Source photos (resized, EXIF and GPS stripped) live in _source/.
 """
-import html, json, os, re
+import hashlib, html, json, os, re
 from datetime import date
 from PIL import Image, ImageEnhance
 
@@ -17,6 +17,7 @@ coords = json.load(open(J("data", "coords.json"), encoding="utf-8"))
 esc = lambda s: html.escape(s, quote=True)
 
 PLACE = {
+ "x-lanark": "New Lanark", "x-clyde": "River Clyde, New Lanark",
  "skye-storr": "Old Man of Storr, Skye", "storr2": "Old Man of Storr, Skye", "skye-sligachan": "Sligachan, Skye",
  "skye-eileandonan": "Eilean Donan", "portree": "Portree, Skye", "creag": "Isle of Skye", "glenfinnan": "Glenfinnan Viaduct",
  "glenfinnan-view": "On the road to Glenfinnan", "luss": "Luss, Loch Lomond", "oban": "Oban", "kilchurn": "Kilchurn Castle, Loch Awe",
@@ -245,7 +246,7 @@ for title, note, rows in P:
         ti = '' if name in PLACE_LINK else ' tabindex="0"'
         nt = f'<span class="index__note">{esc(PLACE_NOTE[name])}</span>' if name in PLACE_NOTE else ''
         lis.append(f'<li class="index__row"{ti}{prev}>{thumb}{nm}<span class="index__info">{info}</span>{nt}</li>')
-    groups.append(f'<div class="index__group"><h3>{esc(title)}</h3><p>{NOTE.get(title, lambda t: t)(esc(note))}</p><ul class="index__list">{"".join(lis)}</ul></div>')
+    groups.append(f'<div class="index__group"><h3>{esc(title)}</h3><p>{NOTE.get(title, lambda t: t)(esc(note))}</p><ul class="index__list"><li class="index__head" aria-hidden="true"><span></span><span class="index__info"><span>Getting there</span><span>Open</span><span>Price</span></span></li>{"".join(lis)}</ul></div>')
 R["PLACES"] = "\n    ".join(groups)
 first = P[0][2][0]
 R["PLACE0"] = export(first[4], f"places/{first[4]}.jpg", 4 / 5, (600, 750), 0.62)[0]
@@ -281,6 +282,15 @@ for gid in group_order:
         figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, caption(key))}<figcaption>{esc(name)}</figcaption></figure>')
     blocks.append(f'<div class="album__group"><div class="album__head"><h3 class="album__title">{esc(title)}</h3><p class="album__when">{esc(when)}</p></div><div class="album__grid">{"".join(figs)}</div></div>')
 R["WALL"] = "\n    ".join(blocks)
+# Extra: Chester and North Wales (data/extra.json). Same album layout; the group title names the place, so no per-photo captions
+xb = []
+for g in json.load(open(J("data", "extra.json"), encoding="utf-8")):
+    figs = []
+    for key in g["keys"]:
+        src, w, h = export(key, f"wall/{key}.jpg", None, (700, 1050))
+        figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, g["title"])}</figure>')
+    xb.append(f'<div class="album__group"><div class="album__head"><h3 class="album__title">{esc(g["title"])}</h3></div><div class="album__grid">{"".join(figs)}</div></div>')
+R["EXTRA"] = "\n    ".join(xb)
 R["WALL_COUNT"] = str(len(order))
 
 # Food photos: three by the "where we ate" tables, four on the Scottish menu (no repeats)
@@ -372,6 +382,10 @@ for src_name, out_name in (("guide.html", "index.html"), ("food.html", "food.htm
     page = open(J("src", src_name), encoding="utf-8").read()
     for k, v in R.items():
         page = page.replace("{{" + k + "}}", v)
+    # Version tags on the stylesheet and script, so a new page never pairs with a cached old stylesheet
+    for asset in ("css/site.css", "js/site.js"):
+        v = hashlib.md5(open(J(asset), "rb").read()).hexdigest()[:8]
+        page = page.replace(f'"{asset}"', f'"{asset}?v={v}"')
     # Links that leave the site open in a new tab (user request); links between our own pages stay in the same tab
     page = re.sub(r'<a\b(?![^>]*\btarget=)([^>]*\bhref="https?://[^"]*"[^>]*)>', r'<a\1 target="_blank" rel="noopener">', page)
     left = re.findall(r"\{\{[A-Z0-9_]+\}\}", page)

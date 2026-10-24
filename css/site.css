@@ -648,3 +648,20 @@ table.rows--wide td:nth-child(2) { width: 30%; }
   .apps__cols { grid-template-columns: minmax(0, 1fr); gap: 40px; }
 }
 @media (max-width: 480px) { .menu__list { grid-template-columns: minmax(0, 1fr); } }
+
+/* Places index as a table: column labels, and every other place on a tone band */
+.index__head { display: none; }
+.index__list > .index__row { padding-inline: 16px; margin-inline: -16px; }
+.index__list > .index__row:nth-child(even) { background: var(--surface); }
+@media (min-width: 861px) {
+  .index__head { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.3fr); gap: 4px var(--gutter); padding: 0 0 8px; }
+  .index__head .index__info span { color: var(--muted); font-size: var(--step-small); }
+  .index__head .index__info span:first-child { color: var(--muted); }
+  .index__list > .index__row { padding-block: 16px; }
+}
+
+/* Extra: Chester and North Wales, an album section of its own after the main album */
+.extra { padding: var(--section) var(--m) 0; }
+.extra__title { max-width: 14ch; }
+.extra__lead { margin-top: 24px; max-width: 58ch; line-height: 1.6; }
+.extra .album { padding: 56px 0 0; }

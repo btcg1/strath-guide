@@ -55,9 +55,17 @@
   "standrews-beach_1"
  ],
  "newlanark": [
+  "x-lanark_5",
+  "x-lanark_8",
+  "x-lanark_20",
+  "x-lanark_41",
+  "x-lanark_46",
   "lanark_2",
   "lanark_8",
-  "newlanark_3"
+  "newlanark_3",
+  "x-clyde_12",
+  "x-clyde_18",
+  "x-clyde_30"
  ],
  "edinburgh": [
   "edinburgh_2",
@@ -86,15 +94,7 @@
  "inverness": [
   "culloden_1",
   "aviemore_8",
-  "wick_7",
-  "wick_4"
- ],
- "wales": [
-  "llandudno_4",
-  "chester_4",
-  "snowdonia_2",
-  "snowdonia_5",
-  "shrewsbury_4"
+  "wick_7"
  ],
  "glasgow": [
   "gla-cathedral_4",
