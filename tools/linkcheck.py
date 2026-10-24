@@ -3,7 +3,7 @@ import os, re, ssl, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 urls = set()
-for page in ("index.html", "travel.html"):
+for page in ("index.html", "food.html", "shopping.html", "travel.html"):
     urls |= set(re.findall(r'href="(https?://[^"]+)"', open(os.path.join(ROOT, page), encoding="utf-8").read()))
 urls = {u.replace("&amp;", "&") for u in urls if "fonts.g" not in u}
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"

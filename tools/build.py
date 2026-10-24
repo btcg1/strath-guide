@@ -100,6 +100,17 @@ R["G_STRIP0"] = "photos/gstrip/0-w.jpg"
 export(picks["gstrip"][0]["file"], "og/guide.jpg", 1200 / 630, (1200, 630), picks["gstrip"][0]["y"])
 export(picks["strip"][0]["file"], "og/travel.jpg", 1200 / 630, (1200, 630), picks["strip"][0]["y"])
 R["G_STRIP_CAPTION0"] = esc(picks["gstrip"][0]["cap"])
+def strip(name, items):
+    """Hero strip for the Food and Shopping tabs, plus that page's link-preview image."""
+    out = []
+    for i, s_ in enumerate(items):
+        wsrc, ww, wh = export(s_["file"], f"{name}/{i}-w.jpg", 5.0, (1600, 320), s_["y"])
+        msrc, mw, mh = export(s_["file"], f"{name}/{i}-m.jpg", 2.0, (1000, 500), s_["y"])
+        out.append(f'<img class="{"is-on" if i == 0 else ""}" src="{wsrc}" data-mobile="{msrc}" data-cap="{esc(s_["cap"])}" alt="{esc(s_["cap"])}" width="{ww}" height="{wh}"{"" if i == 0 else " loading=\"lazy\""}>')
+    export(items[0]["file"], f"og/{name}.jpg", 1200 / 630, (1200, 630), items[0]["y"])
+    return "\n          ".join(out), f"photos/{name}/0-w.jpg", esc(items[0]["cap"])
+R["F_STRIP_IMGS"], R["F_STRIP0"], R["F_STRIP_CAPTION0"] = strip("fstrip", picks["fstrip"])
+R["S_STRIP_IMGS"], R["S_STRIP0"], R["S_STRIP_CAPTION0"] = strip("sstrip", picks["sstrip"])
 for k, key in {"APPLY": "gla-strath_2", "MATCH": "gla-uog_2", "FLY": "glenfinnan_0", "SETTLE": "gla-city_1"}.items():
     R["GI_" + k] = export(key, f"intro/g-{k.lower()}.jpg", 4 / 3, (300, 225))[0]
 
@@ -154,7 +165,7 @@ R["MAP_SVG"] = (f'<svg class="map" id="map" viewBox="{vx:.1f} {vy:.1f} {vw:.1f} 
 # Verb panels
 VERBS = [
  ("apply", "Apply", f"<p>You apply through NTU's {A('gem_explorer', 'GEM Explorer')} on the {A('gem_portal', 'GEM Mobility Portal')}. You need to have finished two NTU semesters, have a CGPA of 3.3 or above, and not have been on an in-person exchange before. You rank three universities, and NTU allocates places by CGPA band, citizenship, your ranking and how many spots each school has.</p><ul><li>{A('strath_partners', 'Strathclyde takes nominations')} <span class='n'>1 March – 15 May</span> for a September start and <span class='n'>15 September – 15 October</span> for January. NTU sends your nomination. Then keep an eye out for Strath's email.</li><li>Then you apply to Strath online with your passport, NTU transcript and class choices.</li></ul>"),
- ("match", "Match courses", f"<p>Course matching is the part everyone panics about. Find past matches in {A('coursefinder', 'CourseFinder')}, then submit each one in NTU's {A('coursematching', 'online course matching system')} (both need your NTU login).</p><ul><li>Pick from Strath's {A('strath_classes', 'exchange class catalogue')} and check for timetable clashes yourself.</li><li>Officially Strath allows classes from at most two departments. Honestly, don't stress too much. Strath's coordinators know NTU course matching can be a headache, and they're flexible as long as most of your classes are in your primary department. One of us (MAE) had MAE, EEE and DMEM classes approved.</li><li>Exchange grades count towards your AUs, not your CGPA.</li></ul>"),
+ ("match", "Match courses", f"<p>Course matching is the part everyone panics about. Find past matches in {A('coursefinder', 'CourseFinder')}, then submit each one in NTU's {A('coursematching', 'online course matching system')} (both need your NTU login).</p><ul><li>Pick from Strath's {A('strath_classes', 'exchange class catalogue')} and check for timetable clashes yourself.</li><li>Officially Strath allows classes from at most two departments. Honestly, don't stress too much. Strath's coordinators know NTU course matching can be a headache, and they're flexible as long as most of your classes are in your primary department. One of us (MAE) had MAE, EEE and DMEM classes approved; <a href='#mae'>the full list is below</a>.</li><li>Exchange grades count towards your AUs, not your CGPA.</li></ul>"),
  ("fly", "Before you fly", f"<p>Get a {A('eta', 'UK ETA')} before you fly: £20 on GOV.UK or the UK ETA app. It usually comes through within a day, but give it 3 working days. It lasts 2 years.</p><ul><li>You enter as a {A('visit_study', 'Standard Visitor')}, which lets you study for up to 6 months but not work, not even an unpaid internship.</li><li>Before you leave, do NTU's briefing, indemnity letter, ISOS app and {A('ntu_predep', 'Travel Registry')} declaration, and {A('mfa_eregister', 'eRegister with MFA')} for the trip.</li><li>At the border, carry your acceptance letter, accommodation details and proof of funds. Keep your boarding pass afterwards too.</li></ul>"),
  ("settle", "Settle in", f"<p>From the airport, take the {A('airport500', 'Airport Express 500')}. It runs every 10 minutes, 24 hours a day, to Buchanan Bus Station, about a 15-minute walk from the halls. Collect your keys at Lord Todd. After you collect your keys, check the free market of cutlery, plates, decor and storage left by past students. Take what you need.</p><ul><li>Week one: a {A('lebara', 'UK SIM')}, a {A('railcard1625', 'Railcard')}, {A('monzo', 'Monzo')}, and the {A('esncard', 'ESNcard')} at the society fair. Get it early: it sold out last time and wasn't restocked until the end of the semester.</li><li>Then head to TJ Hughes in the St Enoch Centre for bedding, pans and a laundry basket. Split an Uber back four ways and it's cheap.</li><li>Go to every class in week 1. Every lecturer takes attendance differently: QR code, password or paper.</li></ul>"),
 ]
@@ -272,12 +283,33 @@ for gid in group_order:
 R["WALL"] = "\n    ".join(blocks)
 R["WALL_COUNT"] = str(len(order))
 
-# Food photos
+# Food photos: three by the "where we ate" tables, four on the Scottish menu (no repeats)
+food = {f["file"]: f["caption"] for f in picks["food"]}
 fp = []
-for i, f in enumerate(picks["food"][:5]):
-    src, w, h = export(f["file"], f"food/{i}.jpg", 4 / 5, (700, 875))
-    fp.append(f'<figure data-large="{large(f["file"])}">{img(src, w, h, f["caption"], lazy=False)}<figcaption>{esc(f["caption"])}</figcaption></figure>')
+for i, key in enumerate(["aviemore_0", "oban_1", "arran_3"]):
+    src, w, h = export(key, f"food/eat-{i}.jpg", 4 / 5, (700, 875))
+    fp.append(f'<figure data-large="{large(key)}">{img(src, w, h, food[key], lazy=False)}<figcaption>{esc(food[key])}</figcaption></figure>')
 R["FOOD_PICS"] = "".join(fp)
+for k, key in {"HAGGIS": "gla-city_8", "FISH": "portree_0", "STP": "food_4", "ROAST": "arbroath-docks_6"}.items():
+    R["SCOT_" + k] = export(key, f"food/scot-{k.lower()}.jpg", 4 / 5, (640, 800))[0]
+    R["SCOT_" + k + "_L"] = large(key)
+
+# Shopping tab section photos (album shots reused: every vendored photo is already placed somewhere)
+for k, key in {"HALLS": "gla-cathedral_4", "GEAR": "glencoe_1"}.items():
+    R["SHOP_PIC_" + k] = export(key, f"shop/{k.lower()}.jpg", 4 / 5, (640, 800))[0]
+    R["SHOP_PIC_" + k + "_L"] = large(key)
+
+# Meal deal dot plot (Student Beans, 11 August 2026): standard price, and loyalty-card price where there is one
+DEALS = [("Asda", 3.74, None, None), ("Sainsbury's", 3.95, None, None), ("Boots", 3.99, 3.60, "an Advantage Card"),
+         ("Morrisons", 4.00, 3.75, "My Morrisons"), ("Co-op", 4.10, 3.75, "Co-op membership"), ("Tesco", 4.25, 3.85, "a Clubcard")]
+x = lambda v: f"{(v - 3.5) / 1.0 * 100:.1f}%"
+rows = []
+for name, std, card, scheme in DEALS:
+    dots = f'<i class="dots__std" style="--x:{x(std)}"></i>' + (f'<i class="dots__card" style="--x:{x(card)}"></i>' if card else "")
+    text = f"£{std:.2f}" + (f", or £{card:.2f} with {scheme}" if card else "")
+    rows.append(f'<li class="dots__row"><span class="dots__name">{esc(name)}</span><span class="dots__track" aria-hidden="true">{dots}</span><span class="dots__text">{esc(text)}</span></li>')
+rows.append('<li class="dots__axis" aria-hidden="true"><span></span><span class="dots__track"><b style="--x:0%">£3.50</b><b style="--x:50%">£4.00</b><b style="--x:100%">£4.50</b></span><span></span></li>')
+R["MEALDEAL_ROWS"] = "\n    ".join(rows)
 
 # Sources
 S = [
@@ -308,6 +340,18 @@ S = [
           ("Tesco meal deals", "https://www.tesco.com/shop/en-GB/browse/groceries-and-essentials/fresh-food/chilled-soup-sandwiches-and-salad-pots/lunch-meal-deals"),
           ("Lebara SIM plans", "https://www.lebara.co.uk/en/best-sim-only-deals.html"), ("VOXI roaming", "https://www.voxi.co.uk/help/roaming-international/does-voxi-have-european-roaming"),
           ("Exchange rate (open.er-api.com)", "https://open.er-api.com/v6/latest/GBP")]),
+ ("Food and shopping", [("First Bus £2 fare cap", "https://www.firstbus.co.uk/greater-glasgow/tickets/ps2-fare-cap"),
+          ("Subway contactless fares", "https://www.spt.co.uk/tickets/subway-tickets/subway-contactless-help/"),
+          ("Meal deal prices (Student Beans, Aug 2026)", "https://www.studentbeans.com/blog/uk/best-supermarket-meal-deals-in-the-uk"),
+          ("Student Beans: Wagamama", "https://www.studentbeans.com/student-discount/uk/wagamama"),
+          ("Too Good To Go", "https://www.toogoodtogo.com/en-gb"), ("Co-op membership", "https://www.coop.co.uk/membership"),
+          ("Lidl Plus", "https://www.lidl.co.uk/c/lidl-plus/s10023095"), ("Nectar Prices", "https://www.nectar.com/nectar-prices"),
+          ("Carrier bag charge", "https://www.mygov.scot/carrier-bag-charge"), ("Minimum unit pricing", "https://www.mygov.scot/minimum-unit-price-alcohol"),
+          ("Sunday trading (GOV.UK)", "https://www.gov.uk/trading-hours-for-retailers-the-law"), ("The Barras opening times", "https://market.barrowland.co.uk/blogs/the-barras/opening-times"),
+          ("TJ Hughes, St Enoch", "https://st-enoch.com/directory/tj-hughes"), ("Uniqlo, St Enoch", "https://st-enoch.com/directory/uniqlo"),
+          ("StrathApp", "https://www.strath.ac.uk/studywithus/mobileapp/"), ("Strathclyde Sport for halls residents", "https://www.strath.ac.uk/studywithus/accommodation/strathclydesport/"),
+          ("Exchange class catalogue: Mechanical & Aerospace", "https://www.strath.ac.uk/studywithus/studyabroad/comingtostrathclyde/academicinformation/exchangeclasscatalogue/mechanicalaerospaceengineering/"),
+          ("Exchange class catalogue: Electronic & Electrical", "https://www.strath.ac.uk/studywithus/studyabroad/comingtostrathclyde/academicinformation/exchangeclasscatalogue/electronicelectricalengineering/")]),
  ("Places", [("Kelvingrove organ recital", "https://www.glasgowlife.org.uk/museums/venues/kelvingrove-art-gallery-and-museum/top-ten-must-see"),
           ("Hunterian", "https://www.gla.ac.uk/hunterian/visit/our-venues/"), ("Glasgow Necropolis", "https://www.glasgownecropolis.org/about-glasgow-necropolis/location-faqs/"),
           ("City Chambers tours", "https://www.glasgow.gov.uk/article/1066/City-Chambers-Tour"), ("Tennent's tours", "https://www.tennents.com/uk/experience/tours"),
@@ -324,7 +368,7 @@ S = [
 ]
 R["SOURCES"] = "".join(f'<div><b>{esc(g)}</b>{"".join(f"<a href=\"{u}\">{esc(t)}</a>" for t, u in links)}</div>' for g, links in S)
 
-for src_name, out_name in (("guide.html", "index.html"), ("travel.html", "travel.html")):
+for src_name, out_name in (("guide.html", "index.html"), ("food.html", "food.html"), ("shopping.html", "shopping.html"), ("travel.html", "travel.html")):
     page = open(J("src", src_name), encoding="utf-8").read()
     for k, v in R.items():
         page = page.replace("{{" + k + "}}", v)

@@ -314,5 +314,44 @@
    "y": 0.7,
    "cap": "Glasgow Necropolis"
   }
+ ],
+ "fstrip": [
+  {
+   "file": "arran_3",
+   "y": 0.7,
+   "cap": "Fish and chips with mushy peas, Arran"
+  },
+  {
+   "file": "food_4",
+   "y": 0.5,
+   "cap": "Sticky toffee pudding"
+  },
+  {
+   "file": "oban_1",
+   "y": 0.5,
+   "cap": "Fried seafood, Oban"
+  },
+  {
+   "file": "arbroath-docks_6",
+   "y": 0.5,
+   "cap": "Roast with Yorkshire pudding, Arbroath"
+  },
+  {
+   "file": "aviemore_0",
+   "y": 0.7,
+   "cap": "Burgers and onion rings, Aviemore"
+  }
+ ],
+ "sstrip": [
+  {
+   "file": "gla-city_1",
+   "y": 0.7,
+   "cap": "Glasgow city centre"
+  },
+  {
+   "file": "gla-city_5",
+   "y": 0.6,
+   "cap": "Glasgow city centre"
+  }
  ]
 }

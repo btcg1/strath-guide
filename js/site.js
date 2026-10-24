@@ -27,6 +27,9 @@
   const staggerGrid = (sel) => { const els = $$(sel); els.forEach((el, i) => el.style.setProperty('--d', `${(i % 4) * 70}ms`)); reveal(els); };
   staggerGrid('.wall figure');
   staggerGrid('.food__pics figure');
+  // Food and Shopping additions: dishes, section photos and the meal-deal rows (their dots slide to the price)
+  const enter = (sel, step = 80) => { const els = $$(sel); els.forEach((el, i) => { el.setAttribute('data-reveal', ''); el.style.setProperty('--d', `${(i % 6) * step}ms`); }); reveal(els); pending.push(...els); };
+  enter('.menu__pics li'); enter('.menu__list li'); enter('.tsec__pic'); enter('.dots__row', 90);
 
   /* Hero strip: the missing word cycles through photos. */
   const strip = $('[data-strip]');
@@ -198,7 +201,7 @@
       lbCap.textContent = `${im ? im.alt : ''}  (${at + 1} of ${list.length})`;
     };
     const step = (d) => { at = (at + d + list.length) % list.length; paint(); };
-    const groups = [() => $$('.album figure'), () => $$('.print'), () => $$('.food__pics figure'), () => $$('.trip-card.is-current img')];
+    const groups = [() => $$('.album figure'), () => $$('.print'), () => $$('.food__pics figure'), () => $$('.menu__pics figure'), () => $$('.tsec__pic'), () => $$('.trip-card.is-current img')];
     groups.forEach((get) => {
       document.addEventListener('click', (e) => {
         const items = get();

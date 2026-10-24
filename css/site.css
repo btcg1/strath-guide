@@ -237,8 +237,12 @@ table.rows tr.gap td { padding-top: 26px; }
   table.rows tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding-bottom: 16px; }
   table.rows td { padding: 0; }
   table.rows td:first-child { width: auto; grid-column: 1; }
+  table.rows td:first-child { grid-column: 1 / -1; grid-row: 1; font-size: var(--step-small); }
+  table.rows td:first-child:empty { display: none; }
   table.rows td:nth-child(2) { width: auto; grid-column: 1; grid-row: 2; font-weight: 500; }
-  table.rows td:last-child { grid-column: 2; grid-row: 1 / span 2; max-width: 16ch; }
+  table.rows td:last-child { grid-column: 2; grid-row: 2; max-width: 16ch; }
+  table.rows tr.gap td { padding-top: 0; }
+  table.rows tr.gap { padding-top: 22px; }
 }
 
 /* Year */
@@ -470,6 +474,7 @@ table.rows--notes td:nth-child(2) { width: 25%; }
 table.rows--notes td:last-child { text-align: left; }
 @media (max-width: 860px) {
   table.rows--notes tr { grid-template-columns: minmax(0, 1fr); }
+  table.rows--notes td:first-child, table.rows--notes td:nth-child(2) { width: auto; }
   table.rows--notes td:last-child { grid-column: 1; grid-row: 3; max-width: none; margin-top: 2px; }
 }
 
@@ -561,3 +566,83 @@ h1, h2, .hero__title, .roll__title, .foot__mark, .ledger__row, .statement, .intr
   .album__head { position: static; }
   .album__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 }
+
+
+/* Table sections (MAE matches, food and shopping lists): title above, tables in the right two thirds */
+.tsec { padding: var(--section) var(--m) 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 0 var(--gutter); align-items: start; }
+.tsec__title { grid-column: 1; }
+.tsec__pic { grid-column: 1; margin: 40px 0 0; max-width: 26rem; cursor: zoom-in; }
+.tsec__pic img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--surface); }
+.tsec__pic figcaption { font-size: var(--step-small); color: var(--muted); padding-top: 6px; }
+.tsec__body { grid-column: 2; grid-row: 1 / span 2; margin: 0; display: grid; gap: 14px; padding-top: 0.6em; }
+.tsec__lead { max-width: 62ch; margin-bottom: 18px; line-height: 1.6; }
+.tsec__note { max-width: 62ch; margin-top: 18px; color: var(--muted); line-height: 1.6; }
+table.rows--wide td:first-child { width: 30%; }
+table.rows--wide td:nth-child(2) { width: 30%; }
+
+/* Short facts: the term in the muted column, the answer beside it */
+.facts { margin: 0; display: grid; gap: 22px; }
+.facts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 6px var(--gutter); }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; max-width: 58ch; line-height: 1.6; }
+
+/* Scottish food: four photographed dishes, then the rest as text in the same columns */
+.menu { padding: var(--section) var(--m) 0; }
+.menu__title { max-width: 12ch; }
+.menu__pics, .menu__list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px var(--gutter); }
+.menu__pics { margin: 64px 0 0; }
+.menu__list { margin: 56px 0 0; }
+.menu__pics figure { margin: 0 0 16px; cursor: zoom-in; }
+.menu__pics img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--surface); }
+.menu__dish { font-size: var(--step-lead); line-height: 1.15; margin: 0 0 8px; }
+.menu li p { max-width: 36ch; line-height: 1.55; }
+
+/* Meal deals: a dot plot on one price scale. Black dot = standard price, blue ring = loyalty-card price */
+.mealdeal__lead { max-width: 62ch; line-height: 1.6; }
+.dots { list-style: none; padding: 0; margin-top: 32px; margin-bottom: 0; display: grid; }
+.dots__row, .dots__axis { display: grid; grid-template-columns: 8rem minmax(0, 1fr) 16rem; align-items: center; gap: var(--gutter); min-height: 46px; }
+.dots__text { font-size: var(--step-small); color: var(--muted); font-variant-numeric: tabular-nums; }
+.dots__track { position: relative; height: 24px; }
+.dots__row .dots__track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--surface); }
+.dots__row .dots__track { overflow: hidden; }
+.dots__std, .dots__card { position: absolute; inset: 0 auto 0 0; width: 100%; transform: translateX(var(--x)); pointer-events: none; }
+.dots__std::before, .dots__card::before { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%); box-sizing: border-box; }
+.dots__std::before { background: var(--ink); }
+.dots__card::before { background: var(--bg); border: 3px solid var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .dots__row[data-reveal] i { transform: translateX(0); transition: transform 1100ms var(--ease-expo) calc(var(--d, 0ms) + 150ms); }
+  .js .dots__row[data-reveal].is-in i { transform: translateX(var(--x)); }
+}
+.dots__axis b { position: absolute; top: 0; left: var(--x); transform: translateX(-50%); font-weight: 400; font-size: var(--step-small); color: var(--muted); }
+.dots__axis b:first-child { transform: none; }
+.dots__axis b:last-child { transform: translateX(-100%); }
+.mealdeal__notes { margin-top: 40px; margin-bottom: 0; max-width: 62ch; padding-left: 1.15em; display: grid; gap: 0.5em; line-height: 1.55; }
+.mealdeal__notes b { font-weight: 500; }
+.mealdeal__key { white-space: nowrap; }
+.mealdeal__key i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; vertical-align: 0; margin: 0 4px 0 2px; }
+.mealdeal__key .k-std { background: var(--ink); }
+.mealdeal__key .k-card { border: 2px solid var(--accent); }
+
+/* Apps: three columns in the order you need them */
+.apps { padding: var(--section) var(--m) 0; }
+.apps__title { max-width: 12ch; }
+.apps__lead { margin-top: 24px; max-width: 58ch; }
+.apps__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px var(--gutter); margin-top: 64px; }
+.apps__when { font-size: var(--step-lead); line-height: 1.15; margin: 0 0 20px; }
+.apps__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.apps__list a { font-weight: 500; }
+.apps__list span { display: block; margin-top: 2px; color: var(--muted); max-width: 40ch; line-height: 1.45; }
+
+@media (max-width: 860px) {
+  .tsec { grid-template-columns: minmax(0, 1fr); }
+  .tsec__body { grid-column: 1; grid-row: auto; margin-top: 40px; padding-top: 0; }
+  .tsec__pic { max-width: 14rem; margin-top: 28px; }
+  table.rows--wide td:first-child, table.rows--wide td:nth-child(2) { width: auto; }
+  .facts > div { grid-template-columns: minmax(0, 1fr); }
+  .menu__pics, .menu__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 12px; }
+  .dots__row, .dots__axis { grid-template-columns: 6.5rem minmax(0, 1fr); gap: 12px; }
+  .dots__row .dots__text { grid-column: 2; margin: -8px 0 8px; }
+  .dots__axis > span:last-child { display: none; }
+  .apps__cols { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+}
+@media (max-width: 480px) { .menu__list { grid-template-columns: minmax(0, 1fr); } }

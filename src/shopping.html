@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shopping – Strath Field Guide</title>
+<meta name="description" content="Supermarkets near Strathclyde and their apps, Asian groceries, meal deals, first-week shopping for halls, winter clothes and pharmacies.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Strath Field Guide">
+<meta property="og:title" content="Shopping – Strath Field Guide">
+<meta property="og:description" content="Supermarkets near Strathclyde and their apps, Asian groceries, meal deals, first-week shopping for halls, winter clothes and pharmacies.">
+<meta property="og:url" content="https://btcg1.github.io/strath-guide/shopping.html">
+<meta property="og:image" content="https://btcg1.github.io/strath-guide/photos/og/sstrip.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#17312c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="preload" as="image" href="{{S_STRIP0}}" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<body>
+<header class="hero" id="top">
+  <nav class="topnav" aria-label="Main">
+    <a class="wordmark" href="index.html">Strath Field Guide</a>
+    <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html" aria-current="page">Shopping</a><a href="travel.html">Travel</a></div>
+    <div class="topnav__links"><a href="#groceries">Groceries</a><a href="#firstweek">First week</a><a href="#clothes">Clothes</a></div>
+  </nav>
+  <div class="hero__body">
+    <h1 class="hero__title">
+      <span class="hero__line"><span class="hero__word">Shopping in</span>
+        <span class="stripwrap"><span class="strip shutter" data-strip>
+          {{S_STRIP_IMGS}}
+        </span></span></span>
+      <span class="hero__line hero__line--2"><span class="hero__word">Glasgow</span></span>
+    </h1>
+    <div class="hero__pitch">
+      <p class="hero__lead">Which supermarkets are close to campus, which loyalty apps are worth having, and where to buy everything else you need for a semester in halls.</p>
+      <div class="hero__actions"><a class="button" href="#groceries">Start with groceries</a><a class="hero__alt" href="food.html">Eating out</a></div>
+      <p class="hero__photo">In the photo: <span data-strip-caption>{{S_STRIP_CAPTION0}}</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="intro intro--who" aria-label="About this page">
+  <p class="intro__lead" data-reveal>Everything you need for a semester in halls is within walking distance of campus.</p>
+  <div class="intro__cols">
+    <p>Aldi on High Street is a short walk away, and the St Enoch Centre and Argyle Street have the rest. Get the loyalty apps on your first day: the lower price on many shelf labels is for members only.</p>
+    <p>Shops in Scotland have <a href="https://www.gov.uk/trading-hours-for-retailers-the-law">no Sunday trading limits</a>, so big stores open on Sundays too. Prices below were checked in October 2026.</p>
+  </div>
+</section>
+
+<section class="tsec" id="groceries">
+  <h2 class="h2 tsec__title">Supermarkets near campus</h2>
+  <div class="tsec__body">
+    <table class="rows rows--notes">
+      <tr><td>Cheapest</td><td>Aldi</td><td>High St, a short walk from campus. The cheapest for basics. Aldi has no loyalty card.</td></tr>
+      <tr><td>Better range</td><td>Lidl</td><td>Duke St, a longer walk east than Aldi, but better products. Get the <a href="https://www.lidl.co.uk/c/lidl-plus/s10023095">Lidl Plus</a> app for weekly coupons.</td></tr>
+      <tr><td>Everywhere</td><td>Tesco Express</td><td>Several in the centre. Prices with a <a href="https://www.tesco.com/clubcard/">Clubcard</a> are often lower than the shelf price.</td></tr>
+      <tr><td>Everywhere</td><td>Sainsbury's Local</td><td>Several in the centre. <a href="https://www.nectar.com/nectar-prices">Nectar Prices</a> are lower prices on selected items for Nectar members.</td></tr>
+      <tr><td>Everywhere</td><td>Co-op</td><td><a href="https://www.coop.co.uk/membership">Membership</a> costs £1, and you get the £1 back on your first shop.</td></tr>
+      <tr><td>Toiletries</td><td>Savers</td><td>Big brands like Pantene, Dove and TRESemmé for very little.</td></tr>
+      <tr><td>Cheapest of all</td><td>Poundland</td><td>Basics at the lowest prices.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="tsec mealdeal" id="mealdeals">
+  <h2 class="h2 tsec__title">Meal deals</h2>
+  <div class="tsec__body">
+  <p class="mealdeal__lead">A main, a snack and a drink for one price. <span class="mealdeal__key"><i class="k-std"></i>standard price</span>, <span class="mealdeal__key"><i class="k-card"></i>with the shop's loyalty card</span>. Prices from <a href="https://www.studentbeans.com/blog/uk/best-supermarket-meal-deals-in-the-uk">Student Beans</a>, 11 August 2026.</p>
+  <ol class="dots" aria-label="Meal deal prices, standard and with a loyalty card">
+    {{MEALDEAL_ROWS}}
+  </ol>
+  <ul class="mealdeal__notes">
+    <li><b>Tesco</b> had the best quality of the ones we tried.</li>
+    <li><b>Co-op</b>: take the Ginsters Cornish pasty as your snack. It is as filling as a main.</li>
+    <li><b>Boots</b> in Buchanan Galleries also has a clearance shelf.</li>
+    <li><b>Greggs</b> gives a free sausage roll with a cold Sandwich Deal if you show <a href="https://www.studentbeans.com/student-discount/uk/greggs">Student Beans</a>.</li>
+    <li><b>M&amp;S</b> is the more expensive option.</li>
+  </ul>
+  </div>
+</section>
+
+<section class="tsec" id="asian">
+  <h2 class="h2 tsec__title">Asian groceries</h2>
+  <div class="tsec__body">
+    <table class="rows rows--notes">
+      <tr><td>Chinese supermarket</td><td><a href="https://www.orientalstoredirectory.co.uk/stores/chung-ying">Chung Ying</a></td><td>254 Dobbie's Loan, near Glasgow Caledonian University. Pricier than the supermarkets, but it has the sauces, noodles, rice and snacks you will miss. For us it was worth it.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="tsec" id="firstweek">
+  <h2 class="h2 tsec__title">Your first week in halls</h2>
+  <figure class="tsec__pic" data-large="{{SHOP_PIC_HALLS_L}}"><img src="{{SHOP_PIC_HALLS}}" alt="Glasgow Cathedral, next to campus" width="640" height="800" loading="lazy"><figcaption>Glasgow Cathedral, next to campus</figcaption></figure>
+  <div class="tsec__body">
+    <table class="rows rows--notes">
+      <tr><td>Kitchen and bedding</td><td><a href="https://st-enoch.com/directory/tj-hughes">TJ Hughes</a></td><td>Ground floor of the St Enoch Centre. Cookware, bed sheets, blankets and laundry baskets. Share an Uber back to halls; split four ways it is cheap.</td></tr>
+      <tr><td>Towels and basics</td><td><a href="https://www.primark.com/en-gb/stores/glasgow/56-68-argyle-street">Primark</a></td><td>56–68 Argyle St. Cheap towels, bedding, clothes and shoes.</td></tr>
+      <tr><td>Free</td><td>Leftovers from the last residents</td><td>Halls usually have a pile or a market of things previous students left behind. Check it before you buy anything.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="tsec" id="clothes">
+  <h2 class="h2 tsec__title">Clothes and gear</h2>
+  <figure class="tsec__pic" data-large="{{SHOP_PIC_GEAR_L}}"><img src="{{SHOP_PIC_GEAR}}" alt="Glencoe" width="640" height="800" loading="lazy"><figcaption>Glencoe</figcaption></figure>
+  <div class="tsec__body">
+    <table class="rows rows--notes">
+      <tr><td>Thermals</td><td><a href="https://st-enoch.com/directory/uniqlo">Uniqlo</a></td><td>St Enoch Centre, open since October 2025. An Extra Warm Heattech inner layer got us through the winter.</td></tr>
+      <tr><td>Cheap layers</td><td>Primark</td><td>Argyle St. Thermals, gloves, hats and scarves.</td></tr>
+      <tr><td>Hiking gear</td><td>Mountain Warehouse</td><td>Waterproof jackets and walking boots for the Highlands.</td></tr>
+      <tr><td>Second-hand</td><td><a href="https://market.barrowland.co.uk/blogs/the-barras/opening-times">The Barras</a></td><td>Weekend market in the East End, Saturdays and Sundays from 10am to 4pm.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="tsec" id="saving">
+  <h2 class="h2 tsec__title">Saving money</h2>
+  <div class="tsec__body">
+    <dl class="facts">
+      <div><dt>Too Good To Go</dt><dd>Cafés, bakeries and supermarkets sell their unsold food at closing time in surprise bags, at <a href="https://www.toogoodtogo.com/en-gb">half price or less</a>. This saved us a lot of money.</dd></div>
+      <div><dt>Olio</dt><dd><a href="https://olioapp.com">A free app</a> where neighbours and shops give away food and household items.</dd></div>
+      <div><dt>Bags</dt><dd>Every shop in Scotland <a href="https://www.mygov.scot/carrier-bag-charge">charges at least 10p</a> for a carrier bag, so keep a tote bag with you.</dd></div>
+      <div><dt>Pharmacy</dt><dd>Boots and Superdrug both have several branches in the centre. Pharmacists can advise on minor illnesses without an appointment.</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <div>
+      <p class="foot__invite">Then go and see&nbsp;Scotland</p>
+      <a class="button button--light" href="travel.html">Trips and places</a>
+    </div>
+    <ul class="foot__links">
+      <li><a href="https://www.ntu.edu.sg/education/student-exchanges/exchange-programmes/gem-explorer">NTU GEM Explorer</a></li>
+      <li><a href="https://www.strath.ac.uk/studywithus/studyabroad/comingtostrathclyde/">Strathclyde exchange</a></li>
+      <li><a href="https://www.gov.uk/eta/apply">UK ETA</a></li>
+      <li><a href="index.html#sources">All sources</a></li>
+    </ul>
+  </div>
+  <p class="foot__legal"><span>Written by NTU students after a semester at Strathclyde. Photos are our own.</span></p>
+  <p class="foot__mark" aria-hidden="true">Strathclyde</p>
+</footer>
+
+<dialog class="lightbox" data-lightbox aria-label="Photo">
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="lightbox__close" data-lb-close>Close</button>
+  <button type="button" class="lightbox__prev" data-lb-prev>Previous</button>
+  <button type="button" class="lightbox__next" data-lb-next>Next</button>
+</dialog>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
