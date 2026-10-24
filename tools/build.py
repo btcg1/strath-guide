@@ -271,16 +271,17 @@ def short(when):
         when = when.replace(m, s)
     return re.sub(r"(\d+) (\w{3}) – (\d+) \2", r"\1–\3 \2", when)
 for tr in roll["trips"]:
-    cells = []
+    secs = []
     for sec in tr["sections"]:
-        if len(tr["sections"]) > 1:  # a place tile starts each place, so short places don't leave half-empty rows
-            cells.append(f'<div class="album__tile"><span>{esc(sec["title"])}</span></div>')
+        figs = []
         for key, alt in sec["keys"]:
             src, w, h = export(key, f"roll/{key}.jpg", None, (560, 840), q=78)
-            cells.append(f'<figure data-large="{large(key)}">{img(src, w, h, f"{sec['title']}: {alt}")}</figure>')
+            figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, f"{sec['title']}: {alt}")}</figure>')
             nroll += 1
+        head = f'<h4 class="album__place">{esc(sec["title"])}</h4>' if len(tr["sections"]) > 1 else ""
+        secs.append(f'<div class="album__sec">{head}<div class="album__grid">{"".join(figs)}</div></div>')
     rb.append(f'<div class="album__group" id="t-{tr["id"]}"><div class="album__head"><h3 class="album__title">{esc(tr["title"])}</h3>'
-              f'<p class="album__when">{esc(tr["when"])}</p><a class="album__back" href="#trips">All trips</a></div><div class="album__grid">{"".join(cells)}</div></div>')
+              f'<p class="album__when">{esc(tr["when"])}</p><a class="album__back" href="#trips">All trips</a></div><div class="album__secs">{"".join(secs)}</div></div>')
     ri.append(f'<li><a href="#t-{tr["id"]}">{esc(tr["title"])}</a><span>{esc(short(tr["when"]))}</span></li>')
 R["ROLL"] = "\n    ".join(rb)
 R["ROLL_INDEX"] = "\n    ".join(ri)

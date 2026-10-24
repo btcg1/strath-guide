@@ -779,3 +779,20 @@ table.rows--wide td:first-child { color: var(--ink); }
   .menu__tabs a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
   .menu__links a[aria-current="true"] { color: var(--accent); }
 }
+
+/* Camera roll band: title, then the three prints in a row, then the note. Normal flow, so nothing can cover the title */
+.roll__field { min-height: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: center; align-items: start; column-gap: clamp(20px, 4vw, 72px); row-gap: 56px; padding: var(--section) var(--m); }
+.roll__title { grid-column: 1 / -1; margin: 0; }
+.print, .print--a, .print--b, .print--c { position: relative; left: auto; right: auto; top: auto; bottom: auto; display: block; width: clamp(180px, 22vw, 340px); margin: 0; }
+.print--b { margin-top: 48px; }
+.print--c { width: clamp(160px, 18vw, 280px); margin-top: 16px; }
+.roll__note { grid-column: 1 / -1; justify-self: center; position: static; text-align: center; margin: 0; }
+/* Album: one block per place */
+.album__secs { display: grid; gap: 32px; }
+.album__place { margin: 0 0 10px; }
+@media (max-width: 720px) {
+  .roll__field { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; row-gap: 32px; padding-block: 56px; }
+  .print, .print--a, .print--b, .print--c { width: 100%; margin: 0; }
+  .print--b { margin-top: 28px; }
+  .print--c { grid-column: 1 / -1; justify-self: center; width: 64%; }
+}
