@@ -3,3 +3,4 @@ _source/
 __pycache__/
 data/countries-10m.json
 tools/fix_*.py
+HANDOFF.md
