@@ -485,13 +485,15 @@ h1, h2, .hero__title, .roll__title, .foot__mark, .ledger__row, .statement, .intr
 /* Hero v2: the strip is a word, the pitch fills the space beside line two */
 .hero { min-height: 0; padding: 22px var(--m) 72px; }
 .hero__body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1.15fr); align-content: start; padding-block: clamp(56px, 9vh, 120px) 0; justify-items: stretch; }
-.hero__title { grid-area: 1 / 1 / 2 / -1; font-size: clamp(4.25rem, 1rem + 8.4vw, 10.5rem); line-height: 0.94; }
+.hero__body { --hero-size: clamp(4.25rem, 1rem + 8.4vw, 10.5rem); }
+.hero__title { grid-area: 1 / 1 / 2 / -1; font-size: var(--hero-size); line-height: 0.94; }
 .hero__line { justify-content: flex-start; }
 .hero__line--2 { margin-top: 0.12em; }
 .stripwrap { flex: 0 0 clamp(300px, 34vw, 660px); height: 0.74em; }
 .strip { border-radius: 0.07em; }
 .strip__caption { top: calc(100% + 8px); right: auto; left: 0; text-align: left; }
-.hero__pitch { grid-area: 1 / 2; align-self: end; z-index: 1; display: grid; gap: 22px; padding-bottom: 0.4rem; }
+/* The pitch starts at the top of the headline's second line, so it never rises into the photo strip on line one */
+.hero__pitch { grid-area: 1 / 2; align-self: start; margin-top: calc(var(--hero-size) * 1.1); z-index: 1; display: grid; gap: 22px; padding-bottom: 0.4rem; }
 .hero__lead { margin: 0; max-width: 34ch; text-align: left; font-size: var(--step-body); line-height: 1.5; }
 .hero__actions { margin: 0; }
 @media (max-width: 1100px) {
