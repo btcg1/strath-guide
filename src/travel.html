@@ -25,25 +25,24 @@
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<nav class="topnav" aria-label="Main">
+  <a class="wordmark" href="index.html">Strath Field Guide</a>
+  <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html" aria-current="page">Travel</a></div>
+  <div class="topnav__links"><a href="#around">Transport</a><a href="#trips">Map</a><a href="#places">Places</a><a href="#photos">Photos</a><a href="#extra">Wales</a></div>
+</nav>
 <header class="hero" id="top">
-  <nav class="topnav" aria-label="Main">
-    <a class="wordmark" href="index.html">Strath Field Guide</a>
-    <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html" aria-current="page">Travel</a></div>
-    <div class="topnav__links"><a href="#around">Transport</a><a href="#trips">Map</a><a href="#places">Places</a><a href="#photos">Photos</a><a href="#extra">Wales</a></div>
-  </nav>
   <div class="hero__body">
     <h1 class="hero__title">
-      <span class="hero__line"><span class="hero__word">Trips from</span>
-        <span class="stripwrap"><span class="strip shutter" data-strip>
-          {{STRIP_IMGS}}
-        </span></span></span>
+      <span class="hero__line"><span class="hero__word">Trips from</span></span>
       <span class="hero__line hero__line--2"><span class="hero__word">Glasgow</span></span>
     </h1>
     <div class="hero__pitch">
       <p class="hero__lead">We used free days to explore beyond Glasgow. Here's our map of 24 trips, plus 36 places with prices and opening times, and photos from along the way.</p>
       <div class="hero__actions"><a class="button" href="#trips">See the trips</a><a class="hero__alt" href="index.html#apply">How to apply</a></div>
-      <p class="hero__photo">In the photo: <span data-strip-caption>{{STRIP_CAPTION0}}</span></p>
     </div>
+    <figure class="hero__frame"><span class="strip shutter" data-strip>
+          {{STRIP_IMGS}}
+        </span><figcaption class="hero__photo">In the photo: <span data-strip-caption>{{STRIP_CAPTION0}}</span></figcaption></figure>
   </div>
 </header>
 

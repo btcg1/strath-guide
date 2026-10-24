@@ -20,32 +20,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=d4713160">
-<link rel="preload" as="image" href="photos/sstrip/0-w.jpg" fetchpriority="high">
+<link rel="stylesheet" href="css/site.css?v=cdde94d1">
+<link rel="preload" as="image" href="photos/hero/sstrip-0.jpg" fetchpriority="high">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <body>
+<nav class="topnav" aria-label="Main">
+  <a class="wordmark" href="index.html">Strath Field Guide</a>
+  <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html" aria-current="page">Shopping</a><a href="travel.html">Travel</a></div>
+  <div class="topnav__links"><a href="#groceries">Groceries</a><a href="#firstweek">First week</a><a href="#clothes">Clothes</a></div>
+</nav>
 <header class="hero" id="top">
-  <nav class="topnav" aria-label="Main">
-    <a class="wordmark" href="index.html">Strath Field Guide</a>
-    <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html" aria-current="page">Shopping</a><a href="travel.html">Travel</a></div>
-    <div class="topnav__links"><a href="#groceries">Groceries</a><a href="#firstweek">First week</a><a href="#clothes">Clothes</a></div>
-  </nav>
   <div class="hero__body">
     <h1 class="hero__title">
-      <span class="hero__line"><span class="hero__word">Shopping in</span>
-        <span class="stripwrap"><span class="strip shutter" data-strip>
-          <img class="is-on" src="photos/sstrip/0-w.jpg" data-mobile="photos/sstrip/0-m.jpg" data-cap="Glasgow city centre" alt="Glasgow city centre" width="1333" height="266">
-          <img class="" src="photos/sstrip/1-w.jpg" data-mobile="photos/sstrip/1-m.jpg" data-cap="Glasgow city centre" alt="Glasgow city centre" width="1333" height="266" loading="lazy">
-        </span></span></span>
+      <span class="hero__line"><span class="hero__word">Shopping in</span></span>
       <span class="hero__line hero__line--2"><span class="hero__word">Glasgow</span></span>
     </h1>
     <div class="hero__pitch">
       <p class="hero__lead">Which supermarkets are close to campus, which loyalty apps are worth having, and where to buy everything else you need for a semester in halls.</p>
       <div class="hero__actions"><a class="button" href="#groceries">Start with groceries</a><a class="hero__alt" href="food.html">Eating out</a></div>
-      <p class="hero__photo">In the photo: <span data-strip-caption>Glasgow city centre</span></p>
     </div>
+    <figure class="hero__frame"><span class="strip shutter" data-strip>
+          <img class="is-on" src="photos/hero/sstrip-0.jpg" data-mobile="photos/hero/sstrip-0-m.jpg" data-cap="Glasgow city centre" alt="Glasgow city centre" width="900" height="1350">
+          <img class="" src="photos/hero/sstrip-1.jpg" data-mobile="photos/hero/sstrip-1-m.jpg" data-cap="Glasgow city centre" alt="Glasgow city centre" width="900" height="1350" loading="lazy">
+        </span><figcaption class="hero__photo">In the photo: <span data-strip-caption>Glasgow city centre</span></figcaption></figure>
   </div>
 </header>
 
@@ -168,6 +167,6 @@
   <button type="button" class="lightbox__next" data-lb-next>Next</button>
 </dialog>
 
-<script src="js/site.js?v=e851c844" defer></script>
+<script src="js/site.js?v=883fcfac" defer></script>
 </body>
 </html>

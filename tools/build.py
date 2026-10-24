@@ -82,22 +82,22 @@ R = {}
 # Hero strip
 strips = []
 for i, s in enumerate(picks["strip"]):
-    wsrc, ww, wh = export(s["file"], f"strip/{i}-w.jpg", 5.0, (1600, 320), s["y"])
-    msrc, mw, mh = export(s["file"], f"strip/{i}-m.jpg", 2.0, (1000, 500), s["y"])
+    wsrc, ww, wh = export(s["file"], f"hero/t-{i}.jpg", 2 / 3, (900, 1350))
+    msrc, mw, mh = export(s["file"], f"hero/t-{i}-m.jpg", 4 / 5, (720, 900))
     on = ' is-on' if i == 0 else ''
     strips.append(f'<img class="{on.strip()}" src="{wsrc}" data-mobile="{msrc}" data-cap="{esc(s["cap"])}" alt="{esc(s["cap"])}" width="{ww}" height="{wh}"{"" if i == 0 else " loading=\"lazy\""}>')
 R["STRIP_IMGS"] = "\n          ".join(strips)
-R["STRIP0"] = "photos/strip/0-w.jpg"
+R["STRIP0"] = "photos/hero/t-0.jpg"
 R["STRIP_CAPTION0"] = esc(picks["strip"][0]["cap"])
 L = json.load(open(J("data", "links.json"), encoding="utf-8"))
 A = lambda key, text: f'<a href="{L[key]}">{text}</a>'
 gstr = []
 for i, s_ in enumerate(picks["gstrip"]):
-    wsrc, ww, wh = export(s_["file"], f"gstrip/{i}-w.jpg", 5.0, (1600, 320), s_["y"])
-    msrc, mw, mh = export(s_["file"], f"gstrip/{i}-m.jpg", 2.0, (1000, 500), s_["y"])
+    wsrc, ww, wh = export(s_["file"], f"hero/g-{i}.jpg", 2 / 3, (900, 1350))
+    msrc, mw, mh = export(s_["file"], f"hero/g-{i}-m.jpg", 4 / 5, (720, 900))
     gstr.append(f'<img class="{"is-on" if i == 0 else ""}" src="{wsrc}" data-mobile="{msrc}" data-cap="{esc(s_["cap"])}" alt="{esc(s_["cap"])}" width="{ww}" height="{wh}"{"" if i == 0 else " loading=\"lazy\""}>')
 R["G_STRIP_IMGS"] = "\n          ".join(gstr)
-R["G_STRIP0"] = "photos/gstrip/0-w.jpg"
+R["G_STRIP0"] = "photos/hero/g-0.jpg"
 export(picks["gstrip"][0]["file"], "og/guide.jpg", 1200 / 630, (1200, 630), picks["gstrip"][0]["y"])
 export(picks["strip"][0]["file"], "og/travel.jpg", 1200 / 630, (1200, 630), picks["strip"][0]["y"])
 R["G_STRIP_CAPTION0"] = esc(picks["gstrip"][0]["cap"])
@@ -105,11 +105,11 @@ def strip(name, items):
     """Hero strip for the Food and Shopping tabs, plus that page's link-preview image."""
     out = []
     for i, s_ in enumerate(items):
-        wsrc, ww, wh = export(s_["file"], f"{name}/{i}-w.jpg", 5.0, (1600, 320), s_["y"])
-        msrc, mw, mh = export(s_["file"], f"{name}/{i}-m.jpg", 2.0, (1000, 500), s_["y"])
+        wsrc, ww, wh = export(s_["file"], f"hero/{name}-{i}.jpg", 2 / 3, (900, 1350))
+        msrc, mw, mh = export(s_["file"], f"hero/{name}-{i}-m.jpg", 4 / 5, (720, 900))
         out.append(f'<img class="{"is-on" if i == 0 else ""}" src="{wsrc}" data-mobile="{msrc}" data-cap="{esc(s_["cap"])}" alt="{esc(s_["cap"])}" width="{ww}" height="{wh}"{"" if i == 0 else " loading=\"lazy\""}>')
     export(items[0]["file"], f"og/{name}.jpg", 1200 / 630, (1200, 630), items[0]["y"])
-    return "\n          ".join(out), f"photos/{name}/0-w.jpg", esc(items[0]["cap"])
+    return "\n          ".join(out), f"photos/hero/{name}-0.jpg", esc(items[0]["cap"])
 R["F_STRIP_IMGS"], R["F_STRIP0"], R["F_STRIP_CAPTION0"] = strip("fstrip", picks["fstrip"])
 R["S_STRIP_IMGS"], R["S_STRIP0"], R["S_STRIP_CAPTION0"] = strip("sstrip", picks["sstrip"])
 for k, key in {"APPLY": "gla-strath_2", "MATCH": "gla-uog_2", "FLY": "glenfinnan_0", "SETTLE": "gla-city_1"}.items():

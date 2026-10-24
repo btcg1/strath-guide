@@ -25,25 +25,24 @@
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<nav class="topnav" aria-label="Main">
+  <a class="wordmark" href="index.html">Strath Field Guide</a>
+  <div class="tabs" aria-label="Pages"><a href="index.html" aria-current="page">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html">Travel</a></div>
+  <div class="topnav__links"><a href="#apply">Apply</a><a href="#mae">MAE</a><a href="#dates">Dates</a><a href="#costs">Costs</a><a href="#apps">Apps</a><a href="#faq">FAQ</a></div>
+</nav>
 <header class="hero" id="top">
-  <nav class="topnav" aria-label="Main">
-    <a class="wordmark" href="index.html">Strath Field Guide</a>
-    <div class="tabs" aria-label="Pages"><a href="index.html" aria-current="page">School</a><a href="food.html">Food</a><a href="shopping.html">Shopping</a><a href="travel.html">Travel</a></div>
-    <div class="topnav__links"><a href="#apply">Apply</a><a href="#mae">MAE</a><a href="#dates">Dates</a><a href="#costs">Costs</a><a href="#apps">Apps</a><a href="#faq">FAQ</a></div>
-  </nav>
   <div class="hero__body">
     <h1 class="hero__title">
-      <span class="hero__line"><span class="hero__word">Semester at</span>
-        <span class="stripwrap"><span class="strip shutter" data-strip>
-          {{G_STRIP_IMGS}}
-        </span></span></span>
+      <span class="hero__line"><span class="hero__word">Semester at</span></span>
       <span class="hero__line hero__line--2"><span class="hero__word">Strathclyde</span></span>
     </h1>
     <div class="hero__pitch">
       <p class="hero__lead">Going to Strathclyde? Here's what we learnt about applying, course matching, the ETA, money, halls and daily life in Glasgow.</p>
       <div class="hero__actions"><a class="button" href="#apply">Start with applying</a><a class="hero__alt" href="travel.html">Trips and places</a></div>
-      <p class="hero__photo">In the photo: <span data-strip-caption>{{G_STRIP_CAPTION0}}</span></p>
     </div>
+    <figure class="hero__frame"><span class="strip shutter" data-strip>
+          {{G_STRIP_IMGS}}
+        </span><figcaption class="hero__photo">In the photo: <span data-strip-caption>{{G_STRIP_CAPTION0}}</span></figcaption></figure>
   </div>
 </header>
 

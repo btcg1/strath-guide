@@ -3,17 +3,17 @@
    the accent taken from the Saltire. Each section is a short statement on the left with its proof on the right. */
 
 :root {
-  --bg: #eef1ee;          /* haar: a soft sea-mist grey, easier on the eyes than white */
-  --surface: #e2e7e3;     /* one tone step down, for chapter fields */
-  --paper: #f7f8f6;       /* lighter step, for maps and inputs */
-  --ink: #141816;
-  --muted: #56605b;
+  --bg: #e8e2d7;          /* bleached linen: muted, a step darker than the old grey haar */
+  --surface: #ddd5c7;
+  --paper: #f1ece3;
+  --ink: #1d1b17;
+  --muted: #5b5449;
   --field-2: #17312c;     /* deep loch green */
-  --field-2-ink: #eef1ee;
+  --field-2-ink: #ece6db;
   --field-2-soft: #9fb5ad;
   --field-2-link: #a8cdf0;
-  --accent: #0065bd;          /* Saltire blue */
-  --accent-strong: #004f94;
+  --accent: #00539c;
+  --accent-strong: #003f78;
   --accent-ink: #ffffff;
   --field-1: #111111;
   --field-1-ink: #ffffff;
@@ -50,7 +50,7 @@ a { color: var(--accent); text-decoration: underline; text-decoration-thickness:
 @media (hover: hover) and (pointer: fine) { a:hover { text-decoration-color: currentColor; } }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
-html { scrollbar-color: #b9bcc1 var(--bg); }
+html { scrollbar-color: #bdb4a5 var(--bg); }
 p { margin: 0; text-wrap: pretty; }
 h1, h2, h3 { margin: 0; font-family: var(--display-face); font-weight: 500; font-optical-sizing: auto; letter-spacing: -0.02em; line-height: 0.98; text-wrap: balance; }
 .h2 { font-size: var(--step-head); max-width: 14ch; }
@@ -88,7 +88,7 @@ button { font: inherit; color: inherit; }
 .hero__line { display: flex; align-items: baseline; gap: 0.18em; width: 100%; }
 .hero__word { white-space: nowrap; }
 .stripwrap { position: relative; flex: 1; align-self: baseline; display: inline-block; height: 0.8em; min-width: 2em; }
-.strip { position: absolute; inset: 0; display: block; border-radius: 14px; overflow: clip; background: #c9cfd6; }
+.strip { position: absolute; inset: 0; display: block; border-radius: 14px; overflow: clip; background: var(--surface); }
 .strip img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 900ms var(--ease-soft); }
 .strip img.is-on { opacity: 1; }
 .strip__caption--phone { display: none; }
@@ -665,3 +665,55 @@ table.rows--wide td:nth-child(2) { width: 30%; }
 .extra__title { max-width: 14ch; }
 .extra__lead { margin-top: 24px; max-width: 58ch; line-height: 1.6; }
 .extra .album { padding: 56px 0 0; }
+
+/* Hero v3: each photo whole, in a portrait frame beside the headline (the photos are 2:3) */
+.hero__body { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "title frame" "pitch frame"; column-gap: clamp(32px, 5vw, 96px); row-gap: 36px; align-items: start; --hero-size: clamp(3.5rem, 0.5rem + 10vw, 12.5rem); --frame-h: min(74svh, 800px); }
+.hero__title { grid-area: title; align-self: start; }
+.hero__title { container-type: inline-size; }
+.hero__line { display: block; font-size: min(var(--hero-size), 19cqi); } /* the longest line is about 5.1em, so it always fits its column */
+.hero__line--2 { margin-top: 0.04em; }
+.hero__pitch { grid-area: pitch; margin-top: 0; align-self: start; }
+.hero__frame { grid-area: frame; margin: 0; display: grid; gap: 10px; align-self: start; }
+.hero__lead { max-width: 40ch; }
+.hero__frame .strip { position: relative; inset: auto; height: var(--frame-h); width: calc(var(--frame-h) * 2 / 3); border-radius: 6px; }
+.hero__frame .hero__photo { font-size: var(--step-small); color: var(--muted); }
+@media (max-width: 900px) {
+  .hero__body { grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "frame" "pitch"; row-gap: 24px; }
+  .hero__frame .strip { width: min(100%, 30rem); height: auto; aspect-ratio: 4 / 5; }
+}
+
+/* Pinned top bar on every page; on phones the tabs and sections fold into a three-line menu */
+:root { --nav-h: 56px; }
+html { scroll-padding-top: calc(var(--nav-h) + 12px); }
+.topnav { position: sticky; top: 0; z-index: 40; min-height: var(--nav-h); align-items: center; padding: 10px var(--m); background: var(--bg); transition: background-color var(--t-ui) ease; }
+.topnav.is-scrolled { background: var(--surface); }
+.hero { padding-top: 0; }
+.index__frame { top: calc(var(--nav-h) + 16px); }
+.album__head { top: calc(var(--nav-h) + 16px); }
+.menu-btn, .menu { display: none; }
+@media (max-width: 720px) {
+  .js .topnav .tabs, .js .topnav .topnav__links { display: none; }
+  .js .topnav { justify-content: space-between; }
+  .js .menu-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px; padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer; }
+  .menu-btn__bars { position: relative; display: block; width: 24px; height: 16px; }
+  .menu-btn__bars i { position: absolute; left: 0; width: 100%; height: 2.5px; border-radius: 2px; background: currentColor; transition: transform 240ms var(--ease-out), opacity 160ms ease; }
+  .menu-btn__bars i:nth-child(1) { top: 0; }
+  .menu-btn__bars i:nth-child(2) { top: 7px; }
+  .menu-btn__bars i:nth-child(3) { top: 14px; }
+  .menu-btn[aria-expanded="true"] .menu-btn__bars i:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] .menu-btn__bars i:nth-child(2) { opacity: 0; }
+  .menu-btn[aria-expanded="true"] .menu-btn__bars i:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .js .menu { display: grid; align-content: start; position: absolute; top: 100%; left: 0; right: 0; height: calc(100svh - 100%); overflow-y: auto; overscroll-behavior: contain; gap: 10px; padding: 8px var(--m) 40px; background: var(--surface);
+    visibility: hidden; opacity: 0; transform: translateY(-6px); transition: opacity 180ms var(--ease-out), transform 240ms var(--ease-out), visibility 0s linear 240ms; }
+  .js .menu.is-open { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+  .menu__label { margin: 14px 0 0; font-size: var(--step-small); color: var(--muted); }
+  .menu__tabs, .menu__links { display: grid; gap: 2px; }
+  .menu__tabs a { font-family: var(--display-face); font-size: 2rem; line-height: 1.25; color: var(--ink); text-decoration: none; padding: 4px 0; }
+  .menu__tabs a[aria-current="page"] { color: var(--accent); }
+  .menu__links a { font-size: var(--step-body); color: var(--ink); text-decoration: none; min-height: 44px; display: flex; align-items: center; }
+}
+@media (max-width: 720px) { html.menu-open { overflow: hidden; } }
+@media (prefers-reduced-motion: reduce) { .menu, .menu-btn__bars i { transition: none; } }
+
+/* Stacked hero: say what this is and offer the button before the photo */
+@media (max-width: 900px) { .hero__body { grid-template-areas: "title" "pitch" "frame"; } }

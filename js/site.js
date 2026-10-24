@@ -31,6 +31,29 @@
   const enter = (sel, step = 80) => { const els = $$(sel); els.forEach((el, i) => { el.setAttribute('data-reveal', ''); el.style.setProperty('--d', `${(i % 6) * step}ms`); }); reveal(els); pending.push(...els); };
   enter('.menu__pics li'); enter('.menu__list li'); enter('.tsec__pic'); enter('.dots__row', 90);
 
+  /* Top bar: tinted once the page scrolls; on phones a three-line button opens the tabs and this page's sections. */
+  const nav = $('.topnav');
+  if (nav) {
+    const tint = () => nav.classList.toggle('is-scrolled', scrollY > 8);
+    tint(); addEventListener('scroll', tint, { passive: true });
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'menu-btn';
+    btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'menu'); btn.setAttribute('aria-label', 'Menu');
+    btn.innerHTML = '<span class="menu-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span>';
+    const panel = document.createElement('div');
+    panel.className = 'menu'; panel.id = 'menu';
+    const tabs = $('.tabs', nav), links = $('.topnav__links', nav);
+    panel.innerHTML = '<p class="menu__label">Pages</p>' + tabs.outerHTML.replace('class="tabs"', 'class="menu__tabs"')
+      + (links ? '<p class="menu__label">On this page</p>' + links.outerHTML.replace('class="topnav__links"', 'class="menu__links"') : '');
+    nav.append(btn, panel);
+    const set = (open) => { btn.setAttribute('aria-expanded', String(open)); panel.classList.toggle('is-open', open); panel.inert = !open; document.documentElement.classList.toggle('menu-open', open); };
+    set(false);
+    btn.addEventListener('click', () => set(!panel.classList.contains('is-open')));
+    panel.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
+    addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('is-open')) { set(false); btn.focus(); } });
+    document.addEventListener('click', (e) => { if (panel.classList.contains('is-open') && !nav.contains(e.target)) set(false); });
+  }
+
   /* Hero strip: the missing word cycles through photos. */
   const strip = $('[data-strip]');
   const caps = $$('[data-strip-caption]');
