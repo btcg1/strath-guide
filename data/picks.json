@@ -165,9 +165,9 @@
  ],
  "verbs": {
   "apply": "gla-strath_2",
-  "match": "gla-uog_2",
-  "fly": "glenfinnan_0",
-  "settle": "gla-city_1"
+  "match": "r-glasgow-strath_3",
+  "fly": "r-glenfinnan-viaduct_1",
+  "settle": "r-glasgow-cathedral_24"
  },
  "intro": {
   "campus": "r-glasgow-cathedral_24",

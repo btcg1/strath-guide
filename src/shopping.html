@@ -25,7 +25,6 @@
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<body>
 <nav class="topnav" aria-label="Main">
   <a class="wordmark" href="index.html">Strath Field Guide</a>
   <div class="tabs" aria-label="Pages"><a href="index.html">School</a><a href="food.html">Food</a><a href="shopping.html" aria-current="page">Shopping</a><a href="travel.html">Travel</a><a href="photos.html">Photos</a></div>
@@ -59,7 +58,7 @@
 <section class="tsec" id="groceries">
   <h2 class="h2 tsec__title">Supermarkets near campus</h2>
   <div class="tsec__body">
-    <table class="rows rows--notes">
+    <table class="rows rows--notes"><thead><tr><th scope="col">Type</th><th scope="col">Place</th><th scope="col">Our note</th></tr></thead>
       <tr><td>Cheapest</td><td>Aldi</td><td>High St, a short walk from campus. The cheapest for basics. Aldi has no loyalty card.</td></tr>
       <tr><td>Better range</td><td>Lidl</td><td>Duke St, a longer walk east than Aldi, and we preferred its range. Get the <a href="https://www.lidl.co.uk/c/lidl-plus/s10023095">Lidl Plus</a> app for weekly coupons.</td></tr>
       <tr><td>Everywhere</td><td>Tesco Express</td><td>Several in the centre. Prices with a <a href="https://www.tesco.com/clubcard/">Clubcard</a> are often lower than the shelf price.</td></tr>
@@ -67,6 +66,10 @@
       <tr><td>Everywhere</td><td>Co-op</td><td><a href="https://www.coop.co.uk/membership">Membership</a> costs £1, and you get the £1 back on your first shop.</td></tr>
       <tr><td>Toiletries</td><td>Savers</td><td>Brands such as Pantene, Dove and TRESemmé at low prices.</td></tr>
       <tr><td>Budget basics</td><td>Poundland</td><td>Low-priced basics.</td></tr>
+    </table>
+    <h3 class="tablename" id="asian">Asian groceries</h3>
+    <table class="rows rows--notes"><thead><tr><th scope="col">Type</th><th scope="col">Place</th><th scope="col">Our note</th></tr></thead>
+      <tr><td>Chinese supermarket</td><td><a href="https://www.orientalstoredirectory.co.uk/stores/chung-ying">Chung Ying</a></td><td>254 Dobbie's Loan, near Glasgow Caledonian University. Pricier than the supermarkets, With sauces, noodles, rice and snacks familiar from home, we found the selection worth the higher prices.</td></tr>
     </table>
   </div>
 </section>
@@ -88,20 +91,12 @@
   </div>
 </section>
 
-<section class="tsec" id="asian">
-  <h2 class="h2 tsec__title">Asian groceries</h2>
-  <div class="tsec__body">
-    <table class="rows rows--notes">
-      <tr><td>Chinese supermarket</td><td><a href="https://www.orientalstoredirectory.co.uk/stores/chung-ying">Chung Ying</a></td><td>254 Dobbie's Loan, near Glasgow Caledonian University. Pricier than the supermarkets, With sauces, noodles, rice and snacks familiar from home, we found the selection worth the higher prices.</td></tr>
-    </table>
-  </div>
-</section>
 
 <section class="tsec" id="firstweek">
   <h2 class="h2 tsec__title">Your first week in halls</h2>
   <figure class="tsec__pic" data-large="{{SHOP_PIC_HALLS_L}}"><img src="{{SHOP_PIC_HALLS}}" alt="Strathclyde campus rooftops" width="640" height="800" loading="lazy"><figcaption>Strathclyde campus</figcaption></figure>
   <div class="tsec__body">
-    <table class="rows rows--notes">
+    <table class="rows rows--notes"><thead><tr><th scope="col">Type</th><th scope="col">Place</th><th scope="col">Our note</th></tr></thead>
       <tr><td>Kitchen and bedding</td><td><a href="https://st-enoch.com/directory/tj-hughes">TJ Hughes</a></td><td>Ground floor of the St Enoch Centre. Cookware, bed sheets, blankets and laundry baskets. Share an Uber back to halls; splitting the fare four ways kept the cost down.</td></tr>
       <tr><td>Towels and basics</td><td><a href="https://www.primark.com/en-gb/stores/glasgow/56-68-argyle-street">Primark</a></td><td>56–68 Argyle St. Cheap towels, bedding, clothes and shoes.</td></tr>
       <tr><td>Free</td><td>Leftovers from the last residents</td><td>Halls usually have a pile or a market of things previous students left behind. Check it before you buy anything.</td></tr>
@@ -113,7 +108,7 @@
   <h2 class="h2 tsec__title">Clothes and gear</h2>
   <figure class="tsec__pic" data-large="{{SHOP_PIC_GEAR_L}}"><img src="{{SHOP_PIC_GEAR}}" alt="Glencoe" width="640" height="800" loading="lazy"><figcaption>Glencoe</figcaption></figure>
   <div class="tsec__body">
-    <table class="rows rows--notes">
+    <table class="rows rows--notes"><thead><tr><th scope="col">Type</th><th scope="col">Place</th><th scope="col">Our note</th></tr></thead>
       <tr><td>Thermals</td><td><a href="https://st-enoch.com/directory/uniqlo">Uniqlo</a></td><td>St Enoch Centre, open since October 2025. We wore Extra Warm Heattech under our clothes through winter.</td></tr>
       <tr><td>Cheap layers</td><td>Primark</td><td>Argyle St. Thermals, gloves, hats and scarves.</td></tr>
       <tr><td>Hiking gear</td><td>Mountain Warehouse</td><td>Waterproof jackets and walking boots for the Highlands.</td></tr>

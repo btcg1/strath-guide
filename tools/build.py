@@ -154,7 +154,7 @@ for i, t in enumerate(trips):
         if p in coords:
             x, y = pxy(p)
             pins.append(f'<circle class="mpin" data-i="{i}" cx="{x:.1f}" cy="{y:.1f}" r="4"><title>{esc(t["name"])}</title></circle>')
-TOWNS = [("Glasgow", "strath", -1), ("Edinburgh", "edinburgh", 1), ("Aberdeen", "aberdeen", 1), ("Inverness", "inverness", 1), ("Belfast", "belfast", 1)]
+TOWNS = [("Glasgow", "strath", -1), ("Edinburgh", "edinburgh", -1), ("Aberdeen", "aberdeen", 1), ("Inverness", "inverness", 1), ("Belfast", "belfast", 1)]
 towns = "".join(f'<text class="mtown" x="{pxy(k)[0] + 6 * d:.1f}" y="{pxy(k)[1] + 14:.1f}" text-anchor="{"end" if d < 0 else "start"}">{n}</text>' for n, k, d in TOWNS)
 hx, hy = pxy("strath")
 R["MAP_SVG"] = (f'<svg class="map" id="map" viewBox="{vx:.1f} {vy:.1f} {vw:.1f} {vh:.1f}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of the 24 trips from Glasgow">'
@@ -265,19 +265,23 @@ R["PRINTS"] = "\n    ".join(prints)
 # Photos tab: every trip in date order, split by place (data/roll.json, built from the Codex composition audit)
 roll = json.load(open(J("data", "roll.json"), encoding="utf-8"))
 rb, ri, nroll = [], [], 0
+SHORT = {m: m[:3] for m in MONTHS}
+def short(when):
+    for m, s in SHORT.items():
+        when = when.replace(m, s)
+    return re.sub(r"(\d+) (\w{3}) – (\d+) \2", r"\1–\3 \2", when)
 for tr in roll["trips"]:
-    secs = []
+    cells = []
     for sec in tr["sections"]:
-        figs = []
+        if len(tr["sections"]) > 1:  # a place tile starts each place, so short places don't leave half-empty rows
+            cells.append(f'<div class="album__tile"><span>{esc(sec["title"])}</span></div>')
         for key, alt in sec["keys"]:
             src, w, h = export(key, f"roll/{key}.jpg", None, (560, 840), q=78)
-            figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, f"{sec['title']}: {alt}")}</figure>')
+            cells.append(f'<figure data-large="{large(key)}">{img(src, w, h, f"{sec['title']}: {alt}")}</figure>')
             nroll += 1
-        head = f'<h4 class="album__place">{esc(sec["title"])}</h4>' if len(tr["sections"]) > 1 else ""
-        secs.append(f'<div class="album__sec">{head}<div class="album__grid">{"".join(figs)}</div></div>')
     rb.append(f'<div class="album__group" id="t-{tr["id"]}"><div class="album__head"><h3 class="album__title">{esc(tr["title"])}</h3>'
-              f'<p class="album__when">{esc(tr["when"])}</p></div><div class="album__secs">{"".join(secs)}</div></div>')
-    ri.append(f'<li><a href="#t-{tr["id"]}">{esc(tr["title"])}</a><span>{esc(tr["when"])}</span></li>')
+              f'<p class="album__when">{esc(tr["when"])}</p><a class="album__back" href="#trips">All trips</a></div><div class="album__grid">{"".join(cells)}</div></div>')
+    ri.append(f'<li><a href="#t-{tr["id"]}">{esc(tr["title"])}</a><span>{esc(short(tr["when"]))}</span></li>')
 R["ROLL"] = "\n    ".join(rb)
 R["ROLL_INDEX"] = "\n    ".join(ri)
 R["ROLL_COUNT"], R["ROLL_TRIPS"], R["ROLL_ALL"] = str(nroll), str(len(roll["trips"])), f"{roll['all']:,}"
@@ -377,6 +381,7 @@ for src_name, out_name in (("guide.html", "index.html"), ("food.html", "food.htm
         page = page.replace(f'"{asset}"', f'"{asset}?v={v}"')
     # Links that leave the site open in a new tab (user request); links between our own pages stay in the same tab
     page = re.sub(r'<a\b(?![^>]*\btarget=)([^>]*\bhref="https?://[^"]*"[^>]*)>', r'<a\1 target="_blank" rel="noopener">', page)
+    page = re.sub(r'(<a\b[^>]*target="_blank"[^>]*>)(.*?)</a>', r'\1\2<span class="sr"> (opens in a new tab)</span></a>', page, flags=re.S)
     left = re.findall(r"\{\{[A-Z0-9_]+\}\}", page)
     assert not left, (src_name, left)
     open(J(out_name), "w", encoding="utf-8").write(page)

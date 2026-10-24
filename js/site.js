@@ -38,20 +38,35 @@
     tint(); addEventListener('scroll', tint, { passive: true });
     const btn = document.createElement('button');
     btn.type = 'button'; btn.className = 'menu-btn';
-    btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'menu'); btn.setAttribute('aria-label', 'Menu');
-    btn.innerHTML = '<span class="menu-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span>';
+    btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'menu'); 
+    btn.innerHTML = '<span class="menu-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-btn__label">Menu</span>';
     const panel = document.createElement('div');
     panel.className = 'menu'; panel.id = 'menu';
     const tabs = $('.tabs', nav), links = $('.topnav__links', nav);
     panel.innerHTML = '<p class="menu__label">Pages</p>' + tabs.outerHTML.replace('class="tabs"', 'class="menu__tabs"')
       + (links ? '<p class="menu__label">On this page</p>' + links.outerHTML.replace('class="topnav__links"', 'class="menu__links"') : '');
-    nav.append(btn, panel);
+    nav.prepend(btn); nav.append(panel);
     const set = (open) => { btn.setAttribute('aria-expanded', String(open)); panel.classList.toggle('is-open', open); panel.inert = !open; document.documentElement.classList.toggle('menu-open', open); };
     set(false);
     btn.addEventListener('click', () => set(!panel.classList.contains('is-open')));
     panel.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('is-open')) { set(false); btn.focus(); } });
     document.addEventListener('click', (e) => { if (panel.classList.contains('is-open') && !nav.contains(e.target)) set(false); });
+  }
+
+  /* Where am I: the section in view is marked in the top bar and in the phone menu. */
+  const spy = $$('.topnav__links a[href^="#"]');
+  if (spy.length && 'IntersectionObserver' in window) {
+    const secs = spy.map((a) => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+    const mark = (id) => $$('.topnav__links a, .menu__links a').forEach((a) => { if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    const seen = new Map();
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => seen.set(e.target.id, e.isIntersecting ? e.intersectionRect.height : 0));
+      let best = null, h = 0;
+      seen.forEach((v, k) => { if (v > h) { h = v; best = k; } });
+      if (best) mark(best); else mark('');
+    }, { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-64px 0px 0px 0px' });
+    secs.forEach((s) => io.observe(s));
   }
 
   /* Hero strip: the missing word cycles through photos. */
@@ -61,17 +76,25 @@
     const imgs = $$('img', strip);
     const useMobile = () => imgs.forEach((im) => { if (phone.matches && im.dataset.mobile && !im.dataset.swapped) { im.src = im.dataset.mobile; im.dataset.swapped = '1'; } });
     useMobile(); phone.addEventListener('change', useMobile);
-    let i = 0, timer = null, paused = false;
+    let i = 0, timer = null, paused = false, held = false;
     const show = (n) => {
       imgs[i].classList.remove('is-on');
       i = (n + imgs.length) % imgs.length;
       imgs[i].classList.add('is-on');
       caps.forEach((c) => { c.textContent = imgs[i].dataset.cap; });
     };
-    const start = () => { if (!reduce && !timer) timer = setInterval(() => { if (!paused && !document.hidden) show(i + 1); }, 3400); };
+    const start = () => { if (!reduce && !timer) timer = setInterval(() => { if (!paused && !held && !document.hidden) show(i + 1); }, 3400); };
     strip.parentElement.addEventListener('pointerenter', () => { paused = true; });
     strip.parentElement.addEventListener('pointerleave', () => { paused = false; });
     setTimeout(start, 1600);
+    // WCAG 2.2.2: anything that moves on its own for more than 5 seconds can be paused
+    const cap = strip.parentElement.querySelector('.hero__photo');
+    if (cap && !reduce) {
+      const pb = document.createElement('button');
+      pb.type = 'button'; pb.className = 'hero__pause'; pb.textContent = 'Pause'; pb.setAttribute('aria-pressed', 'false');
+      pb.addEventListener('click', () => { held = !held; pb.textContent = held ? 'Play' : 'Pause'; pb.setAttribute('aria-pressed', String(held)); });
+      cap.append(pb);
+    }
   }
 
   /* Live exchange rate, with the checked rate as fallback. */

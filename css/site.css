@@ -259,13 +259,13 @@ table.rows tr.gap td { padding-top: 26px; }
 .track i { position: absolute; top: 0; bottom: 0; left: calc(var(--s) * 1%); width: calc(var(--w) * 1%); }
 .track .uni { background: var(--ink); }
 .track .exam { background: var(--accent); }
-.track .soft { background: #d5d9de; }
-.track .open { background: #7d858e; }
-.track .part { background: #b9bec6; }
+.track .soft { background: #7d725f; }
+.track .open { background: var(--field-2); }
+.track .part { background: #4f7a6c; }
 .track .pin { width: 14px; height: 14px; top: 6px; margin-left: -7px; border-radius: 50%; background: var(--accent); }
 .season__key { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, auto)); align-items: center; gap: 8px 10px; font-size: var(--step-small); color: var(--muted); margin-top: 10px; }
 .season__key .k { display: inline-block; width: 18px; height: 12px; margin-right: 8px; vertical-align: -1px; }
-.k.uni { background: var(--ink); } .k.exam { background: var(--accent); } .k.soft { background: #d5d9de; } .k.open { background: #7d858e; } .k.part { background: #b9bec6; }
+.k.uni { background: var(--ink); } .k.exam { background: var(--accent); } .k.soft { background: #7d725f; } .k.open { background: var(--field-2); } .k.part { background: #4f7a6c; }
 @media (max-width: 860px) {
   .year__head { grid-template-columns: minmax(0, 1fr); }
   .srow { grid-template-columns: minmax(0, 1fr); }
@@ -729,3 +729,53 @@ html { scroll-padding-top: calc(var(--nav-h) + 12px); }
 .album__place { margin: 0 0 12px; font-family: var(--text-face); font-size: var(--step-body); font-weight: 500; letter-spacing: 0.01em; }
 .album__group { scroll-margin-top: calc(var(--nav-h) + 16px); }
 @media (max-width: 720px) { .tripjump__list span, .album__when, .roll__note { font-size: var(--step-body); } .tripjump__list { columns: 1; } }
+
+/* ---------- Design panel fixes (2026-10-25) ---------- */
+:root { --rule: #cbc2b2; }
+.sr { position: absolute !important; clip-path: inset(50%); white-space: nowrap; overflow: hidden; }
+/* tables: real headings for groups, column labels, row separators, left-aligned notes */
+h3.tablename { font-family: var(--display-face); font-size: 1.5rem; line-height: 1.2; color: var(--ink); margin: 3rem 0 6px; }
+h3.tablename:first-child { margin-top: 0; }
+h3.tablename a { color: inherit; }
+table.rows { border-collapse: collapse; }
+table.rows tbody tr + tr td { border-top: 1px solid var(--rule); padding-top: 12px; }
+table.rows td:last-child { text-align: left; }
+table.rows thead th { text-align: left; font-weight: 400; font-size: var(--step-small); color: var(--muted); padding: 0 12px 10px 0; }
+table.rows--wide td:first-child { color: var(--ink); }
+.tsec__title { font-size: clamp(2rem, 1.2rem + 2.4vw, 3.25rem); line-height: 1.05; }
+.intro__lead, .menu__dish, .apps__when { line-height: 1.25; }
+/* steps are a sequence: number them */
+.verbs { counter-reset: step; }
+.panel { counter-increment: step; }
+.panel__verb::before { content: "Step " counter(step); display: block; margin-bottom: 0.35em; font-family: var(--text-face); font-size: var(--step-small); letter-spacing: 0.02em; color: var(--field-2-link); }
+/* overlaps */
+.trips { padding-top: var(--section); }
+/* hero pause control */
+.hero__photo { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.hero__pause { border: 0; background: none; padding: 10px 0 10px 12px; margin: -10px 0; font: inherit; font-size: var(--step-small); color: var(--ink); text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; }
+/* where am I: section in view, and the current tab in the phone sheet */
+.topnav__links a[aria-current="true"] { color: var(--accent); text-decoration: underline; text-underline-offset: 0.3em; text-decoration-thickness: 2px; }
+/* Photos tab: one grid per trip with place tiles; a way back to the trip list */
+.album__tile { display: flex; align-items: flex-end; aspect-ratio: 2 / 3; padding: 14px; background: var(--surface); font-weight: 500; font-size: var(--step-body); line-height: 1.3; }
+.album__back { display: inline-block; margin-top: 10px; font-size: var(--step-small); }
+@media (max-width: 720px) {
+  :root { --section: 64px; }
+  table.rows thead { display: none; }
+  table.rows tbody tr + tr { border-top: 1px solid var(--rule); padding-top: 14px; }
+  table.rows tbody tr + tr td { border-top: 0; padding-top: 0; }
+  .panel, .panel:nth-child(even) { grid-template-areas: "verb" "facts" "pic"; }
+  .panel__pic { aspect-ratio: 16 / 9; max-height: 30svh; }
+  .tsec__pic, .food__pics { display: none; }
+  .album__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .album__tile { font-size: 0.875rem; padding: 8px; }
+  .roll__field { padding-block: 56px 48px; }
+  .roll__title { margin-bottom: 28px; }
+  .print, .print--a, .print--b, .print--c { position: relative; display: block; left: auto; right: auto; top: auto; bottom: auto; width: 72%; margin: 0 auto 28px; }
+  .print--b { margin-left: auto; margin-right: 6%; }
+  .roll__note { position: static; margin-top: 8px; }
+  .js .menu-btn { width: auto; gap: 8px; margin: 0 4px 0 -8px; padding: 0 8px; }
+  .menu-btn__label { font-size: var(--step-small); font-weight: 500; }
+  .js .topnav { justify-content: flex-start; gap: 6px; }
+  .menu__tabs a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
+  .menu__links a[aria-current="true"] { color: var(--accent); }
+}
