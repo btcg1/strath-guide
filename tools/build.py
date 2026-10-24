@@ -97,6 +97,8 @@ for i, s_ in enumerate(picks["gstrip"]):
     gstr.append(f'<img class="{"is-on" if i == 0 else ""}" src="{wsrc}" data-mobile="{msrc}" data-cap="{esc(s_["cap"])}" alt="{esc(s_["cap"])}" width="{ww}" height="{wh}"{"" if i == 0 else " loading=\"lazy\""}>')
 R["G_STRIP_IMGS"] = "\n          ".join(gstr)
 R["G_STRIP0"] = "photos/gstrip/0-w.jpg"
+export(picks["gstrip"][0]["file"], "og/guide.jpg", 1200 / 630, (1200, 630), picks["gstrip"][0]["y"])
+export(picks["strip"][0]["file"], "og/travel.jpg", 1200 / 630, (1200, 630), picks["strip"][0]["y"])
 R["G_STRIP_CAPTION0"] = esc(picks["gstrip"][0]["cap"])
 for k, key in {"APPLY": "gla-strath_2", "MATCH": "gla-uog_2", "FLY": "glenfinnan_0", "SETTLE": "gla-city_1"}.items():
     R["GI_" + k] = export(key, f"intro/g-{k.lower()}.jpg", 4 / 3, (300, 225))[0]
@@ -151,18 +153,17 @@ R["MAP_SVG"] = (f'<svg class="map" id="map" viewBox="{vx:.1f} {vy:.1f} {vw:.1f} 
 
 # Verb panels
 VERBS = [
- ("apply", "Apply", f"<p>You apply through NTU's {A('gem_explorer', 'GEM Explorer')} on the {A('gem_portal', 'GEM Mobility Portal')}. You need two NTU semesters done, a CGPA of 3.3 or more, and no earlier in-person exchange. You rank three universities, and NTU allocates places by CGPA band, citizenship, your ranking and how many spots each school has.</p><ul><li>{A('strath_partners', 'Strathclyde takes nominations')} 1 March – 15 May for a September start and 15 September – 15 October for January. NTU does the nominating; you just wait for Strath's email.</li><li>Then you apply to Strath online with your passport, NTU transcript and class choices.</li></ul>"),
- ("match", "Match", f"<p>Course matching is the part everyone panics about. Find past matches in {A('coursefinder', 'CourseFinder')}, then submit each one in NTU's {A('coursematching', 'online course matching system')} (both need your NTU login).</p><ul><li>Pick from Strath's {A('strath_classes', 'exchange class catalogue')} and check for timetable clashes yourself.</li><li>Officially Strath allows classes from at most two departments. Honestly, don't stress: NTU is known at Strath for being a headache to course-match, so the coordinators are flexible as long as most of your classes are in your primary department. One of us (MAE) had MAE, EEE and DMEM classes approved.</li><li>Exchange grades count towards your AUs, not your CGPA.</li></ul>"),
- ("fly", "Fly", f"<p>Get a {A('eta', 'UK ETA')} before you fly: £20 on GOV.UK or the UK ETA app. It's usually decided within a day, but give it 3 working days. It lasts 2 years.</p><ul><li>You enter as a {A('visit_study', 'Standard Visitor')}, which lets you study for up to 6 months but not work, not even an unpaid internship.</li><li>Before you leave, do NTU's briefing, indemnity letter, ISOS app and {A('ntu_predep', 'Travel Registry')} declaration, and {A('mfa_eregister', 'eRegister with MFA')} for the trip.</li><li>At the border, carry your acceptance letter, accommodation details and proof of funds. Keep your boarding pass afterwards too.</li></ul>"),
- ("settle", "Settle", f"<p>From the airport, take the {A('airport500', 'Airport Express 500')}. It runs every 10 minutes, 24 hours a day, to Buchanan Bus Station, about a 15-minute walk from the halls. Collect your keys at Lord Todd. Right after, there's a free market of stuff past students left behind (cutlery, plates, decor, storage), so take what you need.</p><ul><li>Week one: a {A('lebara', 'UK SIM')}, a {A('railcard1625', 'Railcard')}, {A('monzo', 'Monzo')}, and the {A('esncard', 'ESNcard')} at the society fair. Get it early: it sold out last time and wasn't restocked until the end of the semester.</li><li>Then TJ Hughes in the St Enoch Centre for bedding, pans and a laundry basket. Split an Uber back four ways and it's cheap.</li><li>Go to every class in week 1. Every lecturer takes attendance differently: QR code, password or paper.</li></ul>"),
+ ("apply", "Apply", f"<p>You apply through NTU's {A('gem_explorer', 'GEM Explorer')} on the {A('gem_portal', 'GEM Mobility Portal')}. You need to have finished two NTU semesters, have a CGPA of 3.3 or above, and not have been on an in-person exchange before. You rank three universities, and NTU allocates places by CGPA band, citizenship, your ranking and how many spots each school has.</p><ul><li>{A('strath_partners', 'Strathclyde takes nominations')} <span class='n'>1 March – 15 May</span> for a September start and <span class='n'>15 September – 15 October</span> for January. NTU sends your nomination. Then keep an eye out for Strath's email.</li><li>Then you apply to Strath online with your passport, NTU transcript and class choices.</li></ul>"),
+ ("match", "Match courses", f"<p>Course matching is the part everyone panics about. Find past matches in {A('coursefinder', 'CourseFinder')}, then submit each one in NTU's {A('coursematching', 'online course matching system')} (both need your NTU login).</p><ul><li>Pick from Strath's {A('strath_classes', 'exchange class catalogue')} and check for timetable clashes yourself.</li><li>Officially Strath allows classes from at most two departments. Honestly, don't stress too much. Strath's coordinators know NTU course matching can be a headache, and they're flexible as long as most of your classes are in your primary department. One of us (MAE) had MAE, EEE and DMEM classes approved.</li><li>Exchange grades count towards your AUs, not your CGPA.</li></ul>"),
+ ("fly", "Before you fly", f"<p>Get a {A('eta', 'UK ETA')} before you fly: £20 on GOV.UK or the UK ETA app. It usually comes through within a day, but give it 3 working days. It lasts 2 years.</p><ul><li>You enter as a {A('visit_study', 'Standard Visitor')}, which lets you study for up to 6 months but not work, not even an unpaid internship.</li><li>Before you leave, do NTU's briefing, indemnity letter, ISOS app and {A('ntu_predep', 'Travel Registry')} declaration, and {A('mfa_eregister', 'eRegister with MFA')} for the trip.</li><li>At the border, carry your acceptance letter, accommodation details and proof of funds. Keep your boarding pass afterwards too.</li></ul>"),
+ ("settle", "Settle in", f"<p>From the airport, take the {A('airport500', 'Airport Express 500')}. It runs every 10 minutes, 24 hours a day, to Buchanan Bus Station, about a 15-minute walk from the halls. Collect your keys at Lord Todd. After you collect your keys, check the free market of cutlery, plates, decor and storage left by past students. Take what you need.</p><ul><li>Week one: a {A('lebara', 'UK SIM')}, a {A('railcard1625', 'Railcard')}, {A('monzo', 'Monzo')}, and the {A('esncard', 'ESNcard')} at the society fair. Get it early: it sold out last time and wasn't restocked until the end of the semester.</li><li>Then head to TJ Hughes in the St Enoch Centre for bedding, pans and a laundry basket. Split an Uber back four ways and it's cheap.</li><li>Go to every class in week 1. Every lecturer takes attendance differently: QR code, password or paper.</li></ul>"),
 ]
 panels = []
 for vid, word, facts in VERBS:
     key = picks["verbs"][vid]
-    d, dw, dh = export(key, f"verbs/{vid}-d.jpg", 16 / 9, (1600, 900), dark=0.64)
-    m, mw, mh = export(key, f"verbs/{vid}-m.jpg", 9 / 16, (900, 1600), dark=0.64)
-    panels.append(f'<article class="panel" id="step-{vid}" aria-label="{word}"><picture><source media="(max-width: 720px)" srcset="{m}">'
-                  f'{img(d, dw, dh, caption(key))}</picture><h2 class="panel__verb">{word}</h2><div class="panel__facts">{facts}</div></article>')
+    d, dw, dh = export(key, f"verbs/{vid}-p.jpg", 4 / 5, (1066, 1333))
+    panels.append(f'<article class="panel" id="step-{vid}" aria-label="{word}"><figure class="panel__pic">'
+                  f'{img(d, dw, dh, caption(key))}</figure><h2 class="panel__verb">{word}</h2><div class="panel__facts">{facts}</div></article>')
 R["VERB_PANELS"] = "\n  ".join(panels).replace("<picture>", "<picture>", 1)
 
 # Getting-around picture
@@ -171,21 +172,21 @@ R["AROUND_PIC"], R["AROUND_ALT"] = src, caption(picks["intro"]["street"])  # tem
 
 # Places index: name, how, when, cost, photo key
 P = [
- ("Weekend tours", "ESN Strathclyde runs weekend tours for about £45, picked up from campus. Last year's code was ESN25.", [
-  ("Isle of Skye", "ESN or Rabbies weekend tour", "Year-round. Eilean Donan shut all January", "Hostels up to £70 a bed", "skye-sligachan_5"),
+ ("Weekend tours", "ESN Strathclyde's weekend tours cost about £45 and pick you up from campus. Last year's code was ESN25.", [
+  ("Isle of Skye", "ESN or Rabbies weekend tour", "Year-round. Eilean Donan is shut all January", "Hostels up to £70 a bed", "skye-sligachan_5"),
   ("Glencoe", "Ember coach from Buchanan", "Year-round", "Free to walk", "glencoe_2"),
   ("Glenfinnan", "ESN day tour or ScotRail", "Viewpoint daily. Steam train April–October", "Viewpoint free. Steam train £76 return", "glenfinnan_6"),
   ("Loch Ness", "ESN day tour", "Urquhart Castle 9:30–16:30 in winter", "£1 with Young Scot or NEC. Book parking", "lochness_7")]),
  ("By train", "ScotRail has no peak fares. A Railcard takes a third off.", [
   ("Dunkeld & Birnam", "Queen Street", "The Hermitage, daily", "Free", "dunkeld_1"),
-  ("Aviemore & Rothiemurchus", "Queen Street", "Year-round", "Activities priced separately", "aviemore_4"),
+  ("Aviemore & Rothiemurchus", "Queen Street", "Year-round", "Pay for activities separately", "aviemore_4"),
   ("Oban", "Queen Street", "Staffa boats April–October", "", "oban_2"),
-  ("Loch Lomond & Hill House", "To Balloch, then Helensburgh", "Year-round", "Loch free", "lomond_5"),
+  ("Loch Lomond & Hill House", "To Balloch, then Helensburgh", "Year-round", "Free to visit the loch", "lomond_5"),
   ("Stirling", "Queen Street", "Castle 9:30–17:00 Oct–Mar, to 18:00 Apr–Sep", "Castle £1 with Young Scot or NEC", "wallace_3"),
   ("Falkirk", "Queen Street", "Wheel 9:45–17:30 daily", "Boat from £14.63, students £13.20", "falkirk_4"),
   ("Arbroath", "Queen Street", "Year-round", "Free", "arbroath_3"),
   ("New Lanark", "Central to Lanark", "Year-round", "£15.50, concession £11.50", "newlanark_3"),
-  ("Aberdeen", "Queen Street", "Year-round", "Free to wander", "footdee_3"),
+  ("Aberdeen", "Queen Street", "Year-round", "Free to explore", "footdee_3"),
   ("Dunnottar Castle", "Train to Stonehaven", "Shorter hours in winter", "£13.50, students £12", "dunnottar_8"),
   ("East Linton & Preston Mill", "Train to East Linton", "Mill shut 20 Dec – 28 Feb", "£11, concession £9", "prestonmill_1"),
   ("Linlithgow", "Queen Street", "Palace year-round", "£1 with Young Scot or NEC", None),
@@ -201,7 +202,7 @@ P = [
   ("Culross", "Stagecoach", "Palace shut Nov–Mar", "Palace £14, concession £11", "culross_5"),
   ("Anstruther & Fife Coastal Path", "Stagecoach, one change", "Year-round", "DayRider £12.80", None),
   ("Hamilton Park", "Train from Central", "Race days", "", "hamilton_1")]),
- ("By coach", "Flixbus is usually the cheapest, and 20% less with Student Beans.", [
+ ("By coach", "Flixbus is usually the cheapest. Student Beans gets you 20% off.", [
   ("Edinburgh", "Flixbus or train", "Castle 9:30–18:00 Apr–Sep", "Castle £23.50 online", "edinburgh_0"),
   ("Giant's Causeway & Belfast", "Citylink/Ulsterbus 923 via Cairnryan", "Year-round", "From £37 advance single", "causeway_6"),
   ("York", "Train from Central", "Year-round", "", "york_1"),
@@ -209,12 +210,12 @@ P = [
  ("In Glasgow", "Most of the big museums are free.", [
   ("West End & Kelvingrove", "Subway from Buchanan Street", "Organ recital 1pm Mon–Sat, 3pm Sun", "Free", "gla-uog_1"),
   ("Cathedral & Necropolis", "Walk from campus", "Necropolis 7:00–16:30 daily", "Free. Book a cathedral slot", "gla-necropolis_4"),
-  ("Pollok Park & the Burrell", "Train or bus", "Museum from 10:00 or 11:00", "Free", "gla-pollok_5"),
+  ("Pollok Park & the Burrell", "Train or bus", "Museum opens at 10:00 or 11:00", "Free", "gla-pollok_5"),
   ("Hunterian Museum", "Subway to Hillhead", "Tue–Sun 10:00–17:00", "Free", None),
   ("City Chambers", "Walk", "Tours Mon–Fri 10:30 and 14:30", "Free", None),
   ("Tennent's Brewery", "Walk", "1.5-hour tours", "From £17, 18+", None)]),
 ]
-PLACE_NOTE = {'Isle of Skye': "Easily the most scenic hike we did (Old Man of Storr), but you need luck with the weather or you'll get blown off the mountain.", 'Glencoe': "A must, even though it's annoying to get to.", 'Glenfinnan': "The Harry Potter viaduct. One of the ESN tours we'd recommend.", 'Dunkeld & Birnam': "One of my favourite places in Scotland. On a good weather day it's so scenic, very reconnect-with-nature vibes.", 'Aviemore & Rothiemurchus': 'Highly recommend. Outdoor heaven: trails, quad bikes, ziplining, horse riding.', 'Stirling': 'Very hilly, so give yourself time. If you pay for the castle, follow the free guided tour.', 'Falkirk': 'A very therapeutic walk along the canal from the Wheel to the Kelpies.', 'New Lanark': "A surreal place. It's a steep walk down from the station.", 'East Linton & Preston Mill': "Proper village vibes, farmers' markets and a very modern bakery.", 'Thurso & Wick': 'Only for the very adventurous: remote and peaceful, with a lovely coastal walk.', 'Isle of Arran': 'Absolutely beautiful, and close to school. I cannot recommend this island enough.', 'Inchcolm Island': 'An abandoned abbey on an uninhabited island. Queensferry, where the boat leaves, is a beautiful seaside town.', 'Puffins & North Berwick': 'Book fast when tickets drop: the cheap Puffin Express sold out in a day. We saw so many puffins, and seals too.', 'St Andrews': 'Go on a Sunday, when the Old Course opens to the public. Cheesy Toast Shack and Jannettas Gelateria are so good.', 'Culross': 'A small town that looks like the Italian countryside.', 'Edinburgh': "Calton Hill and its café are a nice chill spot. Bertie's might be the best fish and chips in Scotland.", 'Cathedral & Necropolis': 'Walkable from school, and great at golden hour.', 'Pollok Park & the Burrell': 'Highland cows up close, and a free art museum.'}
+PLACE_NOTE = {'Isle of Skye': "Easily the most scenic hike we did (Old Man of Storr), but you need luck with the weather or you'll get blown off the mountain.", 'Glencoe': "Getting to Glencoe is annoying, but honestly, go.", 'Glenfinnan': "The Harry Potter viaduct. One of the ESN tours we'd recommend.", 'Dunkeld & Birnam': "One of our favourite places in Scotland. On a good weather day it's so scenic, very reconnect-with-nature vibes.", 'Aviemore & Rothiemurchus': 'Highly recommend. Outdoor heaven: trails, quad bikes, ziplining, horse riding.', 'Stirling': 'Very hilly, so give yourself time. If you pay for the castle, follow the free guided tour.', 'Falkirk': 'A very therapeutic walk along the canal from the Wheel to the Kelpies.', 'New Lanark': "The mill village feels surreal, and the walk down from the station is steep.", 'East Linton & Preston Mill': "Farmers' markets, proper village vibes and a bakery that feels surprisingly modern.", 'Thurso & Wick': 'If you like remote, peaceful places, the coastal walk is lovely.', 'Isle of Arran': 'Absolutely beautiful, and close to school. We can’t recommend it enough.', 'Inchcolm Island': 'An abandoned abbey on an uninhabited island. Queensferry, where the boat leaves, is a beautiful seaside town.', 'Puffins & North Berwick': 'Book fast when tickets drop: the cheap Puffin Express sold out in a day. We saw so many puffins, and seals too.', 'St Andrews': 'Go on a Sunday, when the Old Course opens to the public. Cheesy Toast Shack and Jannettas Gelateria are so good.', 'Culross': 'A small town that looks like the Italian countryside.', 'Edinburgh': "Calton Hill is a nice place to chill, and there's a café. Bertie's might be the best fish and chips in Scotland.", 'Cathedral & Necropolis': 'Walkable from school, and great at golden hour.', 'Pollok Park & the Burrell': 'Highland cows up close, and a free art museum.'}
 PLACE_LINK = {'Glencoe': 'ember', 'Glenfinnan': 'glenfinnan', 'Loch Ness': 'urquhart', 'Dunkeld & Birnam': 'hermitage', 'Oban': 'staffa', 'Stirling': 'stirling_castle', 'Falkirk': 'falkirk_wheel', 'New Lanark': 'newlanark', 'Dunnottar Castle': 'dunnottar', 'East Linton & Preston Mill': 'prestonmill', 'Linlithgow': 'linlithgow', 'Isle of Arran': 'calmac_arran', 'Inchcolm Island': 'maidoftheforth', 'Puffins & North Berwick': 'seabird', 'Isle of May': 'isleofmay', 'Shetland': 'northlink', 'St Andrews': 'standrews_castle', 'Culross': 'culross', 'Anstruther & Fife Coastal Path': 'dayrider', 'Edinburgh': 'edinburgh_castle', "Giant's Causeway & Belfast": 'belfast923', 'West End & Kelvingrove': 'kelvingrove', 'Cathedral & Necropolis': 'necropolis', 'Pollok Park & the Burrell': 'burrell', 'Hunterian Museum': 'hunterian', 'City Chambers': 'citychambers', "Tennent's Brewery": 'tennents'}
 NOTE = {'Weekend tours': lambda t: t.replace('ESN Strathclyde', A('esn_strath', 'ESN Strathclyde')), 'By train': lambda t: t.replace('ScotRail', A('scotrail', 'ScotRail')).replace('A Railcard', 'A ' + A('railcard1625', 'Railcard')), 'By bus': lambda t: t.replace('Stagecoach East Scotland DayRider', A('dayrider', 'Stagecoach East Scotland DayRider')), 'By coach': lambda t: t.replace('Flixbus', A('flixbus', 'Flixbus')).replace('Student Beans', A('flix_sb', 'Student Beans'))}
 groups, count = [], 0
@@ -248,19 +249,27 @@ for i, p in enumerate(picks["prints"]):
     prints.append(f'<figure class="print print--{"abc"[i]}" data-large="{large(p["file"])}">{img(src, w, h, p["cap"], lazy=False)}</figure>')
 R["PRINTS"] = "\n    ".join(prints)
 
-# Wall: curated wall picks plus every trip photo, no duplicates, nothing already used as a print
-used = {p["file"] for p in picks["prints"]}
-order = []
-for key in picks["wall"] + [k for t in trips for k in picks["trips"][t["id"]]]:
-    if key not in used and key not in order:
+# Album: the photo wall grouped by trip, in date order, Glasgow first (data/album.json holds the curated keys)
+album = json.load(open(J("data", "album.json"), encoding="utf-8"))
+trip_by_id = {t["id"]: t for t in trips}
+group_order = ["glasgow"] + [t["id"] for t in trips if t["id"] in album]
+blocks, order = [], []
+for gid in group_order:
+    keys = [k for k in album.get(gid, []) if k not in {p["file"] for p in picks["prints"]}]
+    if not keys: continue
+    if gid == "glasgow":
+        title, when = "Glasgow", "all semester"
+    else:
+        t = trip_by_id[gid]; title = t["name"]
+        when = nice_date(t["date"]) + (f" – {nice_date(t['end'])}" if t["end"] else "")
+    figs = []
+    for key in keys:
         order.append(key)
-figs = []
-SHOW = 32
-for i, key in enumerate(order):
-    src, w, h = export(key, f"wall/{key}.jpg", None, (700, 1050))
-    hid = " hidden" if i >= SHOW else ""
-    figs.append(f'<figure data-large="{large(key)}"{hid}>{img(src, w, h, caption(key))}<figcaption>{esc(caption(key))}</figcaption></figure>')
-R["WALL"] = "\n    ".join(figs)
+        src, w, h = export(key, f"wall/{key}.jpg", None, (700, 1050))
+        name = caption(key).split(",")[0]
+        figs.append(f'<figure data-large="{large(key)}">{img(src, w, h, caption(key))}<figcaption>{esc(name)}</figcaption></figure>')
+    blocks.append(f'<div class="album__group"><div class="album__head"><h3 class="album__title">{esc(title)}</h3><p class="album__when">{esc(when)}</p></div><div class="album__grid">{"".join(figs)}</div></div>')
+R["WALL"] = "\n    ".join(blocks)
 R["WALL_COUNT"] = str(len(order))
 
 # Food photos

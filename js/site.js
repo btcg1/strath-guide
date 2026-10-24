@@ -198,7 +198,7 @@
       lbCap.textContent = `${im ? im.alt : ''}  (${at + 1} of ${list.length})`;
     };
     const step = (d) => { at = (at + d + list.length) % list.length; paint(); };
-    const groups = [() => $$('.wall figure:not([hidden])'), () => $$('.print'), () => $$('.food__pics figure'), () => $$('.trip-card.is-current img')];
+    const groups = [() => $$('.album figure'), () => $$('.print'), () => $$('.food__pics figure'), () => $$('.trip-card.is-current img')];
     groups.forEach((get) => {
       document.addEventListener('click', (e) => {
         const items = get();

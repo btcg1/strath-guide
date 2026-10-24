@@ -23,7 +23,7 @@
 
   --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
-  --step-lead: clamp(1.375rem, 1.05rem + 1.3vw, 2.25rem);
+  --step-lead: clamp(1.25rem, 0.8rem + 1.1vw, 1.875rem);
   --step-head: clamp(2.25rem, 1.25rem + 3.6vw, 4.5rem);
   --step-display: clamp(4.25rem, 0.6rem + 10.4vw, 11.5rem);
 
@@ -471,4 +471,93 @@ table.rows--notes td:last-child { text-align: left; }
 @media (max-width: 860px) {
   table.rows--notes tr { grid-template-columns: minmax(0, 1fr); }
   table.rows--notes td:last-child { grid-column: 1; grid-row: 3; max-width: none; margin-top: 2px; }
+}
+
+/* ---------- Round 5: critique fixes ---------- */
+/* Bodoni hairlines: a smaller optical size keeps the thin strokes visible at display sizes */
+h1, h2, .hero__title, .roll__title, .foot__mark, .ledger__row, .statement, .intro__lead, .intro__row figcaption, .index__name, .trip-card__name, .why, .foot__invite { font-optical-sizing: none; font-variation-settings: "opsz" 28; }
+
+/* Hero v2: the strip is a word, the pitch fills the space beside line two */
+.hero { min-height: 0; padding: 22px var(--m) 72px; }
+.hero__body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1.15fr); align-content: start; padding-block: clamp(56px, 9vh, 120px) 0; justify-items: stretch; }
+.hero__title { grid-area: 1 / 1 / 2 / -1; font-size: clamp(4.25rem, 1rem + 8.4vw, 10.5rem); line-height: 0.94; }
+.hero__line { justify-content: flex-start; }
+.hero__line--2 { margin-top: 0.12em; }
+.stripwrap { flex: 0 0 clamp(300px, 34vw, 660px); height: 0.74em; }
+.strip { border-radius: 0.07em; }
+.strip__caption { top: calc(100% + 8px); right: auto; left: 0; text-align: left; }
+.hero__pitch { grid-area: 1 / 2; align-self: end; z-index: 1; display: grid; gap: 22px; padding-bottom: 0.4rem; }
+.hero__lead { margin: 0; max-width: 34ch; text-align: left; font-size: var(--step-body); line-height: 1.5; }
+.hero__actions { margin: 0; }
+@media (max-width: 1100px) {
+  .hero__body { grid-template-columns: minmax(0, 1fr); }
+  .hero__pitch { grid-area: auto; margin-top: 40px; }
+}
+@media (max-width: 720px) {
+  .hero { padding: 16px var(--m) 40px; }
+  .hero__body { padding-block: 32px 0; }
+  .hero__title { font-size: 15vw; }
+  .stripwrap { flex: 0 0 100%; height: auto; aspect-ratio: 3 / 1; margin-block: 0.12em 0.3em; }
+  .stripwrap .strip__caption { display: none; }
+  .hero__pitch { margin-top: 28px; gap: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero__word { animation: none; }
+  .js .hero__pitch { animation: up 600ms var(--ease-out) 300ms both; }
+  .js .hero__actions { animation: none; }
+}
+
+/* Step panels v2: portrait photo beside the text, on the loch-green field */
+.panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "pic verb" "pic facts"; grid-template-rows: 1fr auto; height: auto; min-height: min(88svh, 960px); background: var(--field-2); color: var(--field-2-ink); }
+.panel:nth-child(even) { grid-template-areas: "verb pic" "facts pic"; }
+.panel__pic { grid-area: pic; position: relative; margin: 0; min-height: 520px; }
+.panel__pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.panel__verb { grid-area: verb; position: static; inset: auto; display: block; align-self: end; padding: 64px clamp(24px, 5vw, 88px) 20px; text-align: left; font-size: var(--step-head); line-height: 1; }
+.panel__facts { grid-area: facts; position: static; max-width: 60ch; background: none; padding: 0 clamp(24px, 5vw, 88px) 72px; }
+.panel__facts a { color: var(--field-2-link); }
+.panel + .panel { border-top: 0; }
+@media (max-width: 720px) {
+  .panel, .panel:nth-child(even) { grid-template-columns: minmax(0, 1fr); grid-template-areas: "pic" "verb" "facts"; grid-template-rows: auto; min-height: 0; background: var(--field-2); }
+  .panel__pic { min-height: 0; aspect-ratio: 4 / 5; height: auto; }
+  .panel__verb { padding: 28px var(--m) 12px; font-size: 13vw; place-items: initial; }
+  .panel__facts { padding: 0 var(--m) 56px; }
+}
+
+/* Spacing and grids (Codex audit) */
+.intro { padding-block: 96px clamp(96px, 9vw, 140px); }
+@media (max-width: 860px) { .intro { padding: 48px var(--m) 80px; } }
+.dates { margin-top: 0; padding-block: 104px; }
+.dates__grid { margin-top: 48px; }
+.around__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 28px calc(var(--gutter) * 2); margin-top: 48px; }
+.around__pic { grid-column: 1; max-width: 520px; }
+.around__tables { grid-column: 2; }
+.food__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 28px calc(var(--gutter) * 2); margin-top: 48px; }
+.food__pics { grid-column: 1; }
+.food__tables { grid-column: 2; }
+@media (max-width: 860px) {
+  .around__grid, .food__grid { grid-template-columns: minmax(0, 1fr); }
+  .around__pic, .around__tables, .food__pics, .food__tables { grid-column: auto; }
+  .trips__map { height: min(56svh, 440px); min-height: 0; }
+}
+.year { margin-top: 0; padding-block: 104px; gap: 48px; }
+.foot { min-height: 0; grid-template-rows: auto auto auto; row-gap: 64px; padding-top: 104px; }
+
+.hero__photo { font-size: var(--step-small); color: var(--muted); }
+
+/* Album: one group per trip, in date order */
+.album { padding: 72px var(--m) 0; display: grid; gap: 64px; }
+.album__group { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 16px calc(var(--gutter) * 2); align-items: start; }
+.album__head { position: sticky; top: 24px; }
+.album__title { font-size: var(--step-lead); line-height: 1.1; }
+.album__when { margin-top: 6px; font-size: var(--step-small); color: var(--muted); }
+.album__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.album__grid figure { margin: 0; cursor: zoom-in; }
+.album__grid img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: var(--surface); }
+.album__grid figcaption { font-size: var(--step-small); color: var(--muted); padding-top: 6px; }
+@media (hover: hover) and (pointer: fine) { .album__grid img { transition: opacity var(--t-hover) ease; } .album__grid figure:hover img { opacity: 0.88; } }
+@media (max-width: 860px) {
+  .album { gap: 48px; }
+  .album__group { grid-template-columns: minmax(0, 1fr); }
+  .album__head { position: static; }
+  .album__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 }
