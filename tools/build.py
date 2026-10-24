@@ -103,7 +103,7 @@ for k, key in {"APPLY": "gla-strath_2", "MATCH": "gla-uog_2", "FLY": "glenfinnan
 
 # Intro thumbs
 for k, key in picks["intro"].items():
-    src, w, h = export(key, f"intro/{k}.jpg", 4 / 3, (300, 225))
+    src, w, h = export(key, f"intro/{k}-p.jpg", 4 / 5, (640, 800))
     R["INTRO_" + k.upper()] = src
 
 # Trips: fallback list (visible without JS) and the data the map uses
